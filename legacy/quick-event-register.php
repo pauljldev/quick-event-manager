@@ -2502,6 +2502,7 @@ function qem_messages()
     $unixtime = get_post_meta( $event, 'event_date', true );
     $date = date_i18n( "d M Y", $unixtime );
     $noregistration = '<p>' . esc_html__( 'No event selected', 'quick-event-manager' ) . '</p>';
+    $extra_args = array();
     $category = 'All Categories';
     
     if ( isset( $_POST['qem_reset_message'] ) ) {
@@ -2685,7 +2686,10 @@ function qem_messages()
         
         if ( false !== $new_row ) {
             $selected = array(
-                '0' => $new_row,
+                $new_row => $new_row,
+            );
+            $extra_args = array(
+                'do_not_sort' => true,
             );
         } else {
             $selected = array_map( function ( $row ) {
@@ -2769,7 +2773,8 @@ function qem_messages()
         '',
         $event,
         $qem_edit,
-        $selected
+        $selected,
+        $extra_args
     );
     
     if ( $content ) {

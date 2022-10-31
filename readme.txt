@@ -2,7 +2,7 @@
 Contributors: Fullworks
 Tags: event manager, calendar, events, event booking, event calendar
 Tested up to: 6.1
-Stable tag: 9.6.0
+Stable tag: 9.6.1
 Type: freemium
 
 Simple event manager. No messing about, just add events and a shortcode and the plugin does the rest for you.
@@ -90,6 +90,9 @@ Well OK yes you can add more fields if you want but you are going to have to fid
 
 
 == Changelog ==
+= 9.6.1 =
+* minor fix to new feature of addding option to manually add attendee via the admin interface
+
 = 9.6.0 =
 * add new features cutoff time and ticket start date time ( Pro Only )
 * keep tags on calendar title shortner so translation plugins work
