@@ -2564,6 +2564,7 @@ function qem_messages()
     $new_row = false;
     
     if ( isset( $_POST['qem_add_row'] ) ) {
+        $event = (int) $_POST["qem_download_form"];
         $message = get_option( 'qem_messages_' . $event );
         $message[] = apply_filters( 'qem_new_attendee_defaults', array() );
         update_option( 'qem_messages_' . $event, $message );
