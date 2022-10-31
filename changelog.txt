@@ -1,6 +1,8 @@
 == Changelog ==
 = 9.6.0 =
 * add new features cutoff time and ticket start date time ( Pro Only )
+* keep tags on calendar title shortner so translation plugins work
+* add option to manually add attendee via the admin interface
 
 = 9.5.1 =
 * fix for 5.6 compatability
