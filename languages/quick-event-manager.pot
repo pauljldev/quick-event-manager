@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-10-17 11:39+0000\n"
+"POT-Creation-Date: 2022-10-31 18:52+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -379,7 +379,7 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:585, src/legacy/quick-event-register.php:1145, src/legacy/quick-event-register.php:3128, src/legacy/settings.php:1899, src/legacy/settings.php:3349
+#: src/legacy/quick-event-editor.php:585, src/legacy/quick-event-register.php:1145, src/legacy/quick-event-register.php:3148, src/legacy/settings.php:1899, src/legacy/settings.php:3349
 msgid "Email"
 msgstr ""
 
@@ -523,7 +523,7 @@ msgstr ""
 msgid "Send to this email address"
 msgstr ""
 
-#: src/legacy/quick-event-extensions__premium_only.php:576, src/legacy/quick-event-extensions__premium_only.php:622
+#: src/legacy/quick-event-extensions__premium_only.php:576, src/legacy/quick-event-extensions__premium_only.php:622, src/legacy/quick-event-register.php:3125
 msgid "Email List"
 msgstr ""
 
@@ -1102,56 +1102,100 @@ msgstr ""
 msgid "Selected registrations have been deleted."
 msgstr ""
 
-#: src/legacy/quick-event-register.php:2956
+#: src/legacy/quick-event-register.php:2938
+msgid "New attendee added."
+msgstr ""
+
+#: src/legacy/quick-event-register.php:2951
+msgid "Blanks registrations have been deleted."
+msgstr ""
+
+#: src/legacy/quick-event-register.php:2969
 msgid "Selected registrations have been approved."
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3012
-msgid "Applications for"
+#: src/legacy/quick-event-register.php:3025
+msgid "Attendees for"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3012
+#: src/legacy/quick-event-register.php:3025
 msgid "have been updated"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3062
+#: src/legacy/quick-event-register.php:3081
 msgid "Registration list has been sent to"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3087
+#: src/legacy/quick-event-register.php:3106
 msgid "Event Registration Report"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3092, src/ui/user/templates__premium_only/show-registrations-form.php:10
+#: src/legacy/quick-event-register.php:3111, src/ui/user/templates__premium_only/show-registrations-form.php:10
 msgid "All Events"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3120
+#: src/legacy/quick-event-register.php:3124
+msgid "Export to CSV"
+msgstr ""
+
+#: src/legacy/quick-event-register.php:3126
+msgid "Delete All Attendees"
+msgstr ""
+
+#: src/legacy/quick-event-register.php:3126
+msgid "Are you sure you want to delete all the attendees for %s?"
+msgstr ""
+
+#: src/legacy/quick-event-register.php:3127
+msgid "Delete Selected"
+msgstr ""
+
+#: src/legacy/quick-event-register.php:3127
+msgid "Are you sure you want to delete the selected attendees?"
+msgstr ""
+
+#: src/legacy/quick-event-register.php:3128
+msgid "Delete Blanks"
+msgstr ""
+
+#: src/legacy/quick-event-register.php:3128
+msgid "Are you sure you want to delete the blanks?"
+msgstr ""
+
+#: src/legacy/quick-event-register.php:3129
+msgid "Add Attendee"
+msgstr ""
+
+#: src/legacy/quick-event-register.php:3129
+msgid "Are you sure you want to manually add an attendee? The number of free places will not be checked here. They WILL NOT get an auto email so you may need to email them details manually"
+msgstr ""
+
+#: src/legacy/quick-event-register.php:3140
 msgid "Sort by:"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3124
+#: src/legacy/quick-event-register.php:3144
 msgid "Last Name"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3130
+#: src/legacy/quick-event-register.php:3150
 msgid "Date Added (Ascending)"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3131
+#: src/legacy/quick-event-register.php:3151
 msgid "Date Added (Decending)"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3138
-msgid "Edit Applications"
+#: src/legacy/quick-event-register.php:3158
+msgid "Edit Attendees"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3138
+#: src/legacy/quick-event-register.php:3158
 msgid "Edit Selected"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3136
-msgid "Update Applications"
+#: src/legacy/quick-event-register.php:3156
+msgid "Update Attendees"
 msgstr ""
 
 #: src/legacy/quick-event-widget.php:8

@@ -1,4 +1,7 @@
 == Changelog ==
+= 9.6.0 =
+* add new features cutoff time and ticket start date time ( Pro Only )
+
 = 9.5.1 =
 * fix for 5.6 compatability
 * add unsupported notice if less than PHP 7.1

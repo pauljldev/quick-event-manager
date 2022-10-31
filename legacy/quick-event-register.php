@@ -2182,7 +2182,7 @@ function qem_build_registration_table(
                         $content .= '<td class="yourname">';
                         
                         if ( $qem_edit == 'selected' && qem_get_element( $selected, $i_array ) || $qem_edit == 'all' ) {
-                            $content .= '<input style="width:100%" type="text" value="' . qem_get_element( $value, 'yourname' ) . '" name="message[' . qem_get_element( $value, 'orig_key' ) . '][yourname]">';
+                            $content .= '<input style="width:100%" type="text" required value="' . qem_get_element( $value, 'yourname' ) . '" name="message[' . qem_get_element( $value, 'orig_key' ) . '][yourname]">';
                         } else {
                             $content .= qem_get_element( $value, 'yourname' );
                         }
@@ -2197,7 +2197,7 @@ function qem_build_registration_table(
                         $content .= '<td class="youremail">';
                         
                         if ( $qem_edit == 'selected' && qem_get_element( $selected, $i_array ) || $qem_edit == 'all' ) {
-                            $content .= '<input style="width:100%" type="text" value="' . qem_get_element( $value, 'youremail' ) . '" name="message[' . qem_get_element( $value, 'orig_key' ) . '][youremail]">';
+                            $content .= '<input style="width:100%" type="email" value="' . qem_get_element( $value, 'youremail' ) . '" name="message[' . qem_get_element( $value, 'orig_key' ) . '][youremail]">';
                         } else {
                             $content .= qem_get_element( $value, 'youremail' );
                         }
@@ -2242,7 +2242,7 @@ function qem_build_registration_table(
                         $content .= '<td class="yourplaces">';
                         
                         if ( $qem_edit == 'selected' && qem_get_element( $selected, $i_array ) || $qem_edit == 'all' ) {
-                            $content .= '<input style="width:100%" type="number" min="1" value="' . qem_get_element( $value, 'yourplaces' ) . '" name="message[' . qem_get_element( $value, 'orig_key' ) . '][yourplaces]">';
+                            $content .= '<input style="width:100%" type="number" required min="1" value="' . qem_get_element( $value, 'yourplaces' ) . '" name="message[' . qem_get_element( $value, 'orig_key' ) . '][yourplaces]">';
                         } else {
                             $content .= qem_get_element( $value, 'yourplaces' ) . qem_get_element( $value, 'products' );
                         }
@@ -2560,6 +2560,16 @@ function qem_messages()
         qem_admin_notice( esc_html__( 'Selected registrations have been deleted.', 'quick-event-manager' ) );
     }
     
+    $new_row = false;
+    
+    if ( isset( $_POST['qem_add_row'] ) ) {
+        $message = get_option( 'qem_messages_' . $event );
+        $message[] = apply_filters( 'qem_new_attendee_defaults', array() );
+        update_option( 'qem_messages_' . $event, $message );
+        $new_row = count( $message ) - 1;
+        qem_admin_notice( esc_html__( 'New attendee added.', 'quick-event-manager' ) );
+    }
+    
     
     if ( isset( $_POST['qem_delete_blanks'] ) ) {
         $event = (int) $_POST["qem_download_form"];
@@ -2571,7 +2581,7 @@ function qem_messages()
         }
         $message = array_values( $message );
         update_option( 'qem_messages_' . $event, $message );
-        qem_admin_notice( 'Blanks registrations have been deleted.' );
+        qem_admin_notice( esc_html__( 'Blanks registrations have been deleted.', 'quick-event-manager' ) );
     }
     
     
@@ -2649,7 +2659,7 @@ function qem_messages()
             }
         }
         update_option( 'qem_messages_' . $event, $message );
-        qem_admin_notice( esc_html__( 'Applications for', 'quick-event-manager' ) . ' ' . get_the_title( $event ) . ' ' . esc_html__( 'have been updated', 'quick-event-manager' ) );
+        qem_admin_notice( esc_html__( 'Attendees for', 'quick-event-manager' ) . ' ' . get_the_title( $event ) . ' ' . esc_html__( 'have been updated', 'quick-event-manager' ) );
     }
     
     $qem_edit = '';
@@ -2666,15 +2676,23 @@ function qem_messages()
     
     // Edit selected applications
     
-    if ( isset( $_POST['qem_edit_selected'] ) ) {
+    if ( isset( $_POST['qem_edit_selected'] ) || false !== $new_row ) {
         $event = (int) $_POST["qem_download_form"];
         $unixtime = get_post_meta( $event, 'event_date', true );
         $date = date_i18n( "d M Y", $unixtime );
         $title = get_the_title( $event );
         $qem_edit = 'selected';
-        $selected = array_map( function ( $row ) {
-            return sanitize_text_field( $row );
-        }, $_POST );
+        
+        if ( false !== $new_row ) {
+            $selected = array(
+                '0' => $new_row,
+            );
+        } else {
+            $selected = array_map( function ( $row ) {
+                return sanitize_text_field( $row );
+            }, $_POST );
+        }
+    
     }
     
     
@@ -2760,20 +2778,21 @@ function qem_messages()
         $dashboard .= $content;
         $dashboard .= '<div class="bottom-actions"><input type="hidden" name="qem_download_form" value = "' . $event . '" />
         <input type="hidden" name="qem_download_title" value = "' . $title . '" />
-        <input type="submit" name="qem_download_csv" class="button-primary" value="Export to CSV" />
-        <input type="submit" name="qem_emaillist" class="button-primary" value="Email List" />
-        <input type="submit" name="qem_reset_message" class="button-secondary" value="Delete All Registrants" onclick="return window.confirm( \'Are you sure you want to delete all the registrants for ' . $title . '?\' );"/>
-        <input type="submit" name="qem_delete_selected" class="button-secondary" value="Delete Selected" onclick="return window.confirm( \'Are you sure you want to delete the selected registrants?\' );"/>
-        <input type="submit" name="qem_delete_blanks" class="button-secondary" value="Delete Blanks" onclick="return window.confirm( \'Are you sure you want to delete the blanks?\' );"/>';
+        <input type="submit" name="qem_download_csv" class="button-primary" value="' . esc_html__( 'Export to CSV', 'quick-event-manager' ) . '" />
+        <input type="submit" name="qem_emaillist" class="button-primary" value="' . esc_html__( 'Email List', 'quick-event-manager' ) . '" />
+        <input type="submit" name="qem_reset_message" class="button-secondary" value="' . esc_html__( 'Delete All Attendees', 'quick-event-manager' ) . '" onclick="return window.confirm( \'' . sprintf( esc_html__( 'Are you sure you want to delete all the attendees for %s?', 'quick-event-manager' ), $title ) . '\' );"/>
+        <input type="submit" name="qem_delete_selected" class="button-secondary" value="' . esc_html__( 'Delete Selected', 'quick-event-manager' ) . '" onclick="return window.confirm( \'' . esc_html__( 'Are you sure you want to delete the selected attendees?', 'quick-event-manager' ) . '\' );"/>
+        <input type="submit" name="qem_delete_blanks" class="button-secondary" value="' . esc_html__( 'Delete Blanks', 'quick-event-manager' ) . '" onclick="return window.confirm( \'' . esc_html__( 'Are you sure you want to delete the blanks?', 'quick-event-manager' ) . '\' );"/>
+		<input type="submit" name="qem_add_row" class="button-secondary" value="' . esc_html__( 'Add Attendee', 'quick-event-manager' ) . '" onclick="return window.confirm( \'' . esc_html__( 'Are you sure you want to manually add an attendee? The number of free places will not be checked here. They WILL NOT get an auto email so you may need to email them details manually', 'quick-event-manager' ) . '\' );"/>';
         
         if ( $qem_edit ) {
-            $dashboard .= ' <input type="submit" name="qem_update" class="button-primary" value="' . __( 'Update Applications', 'quick-event-manager' ) . '" /> ';
+            $dashboard .= ' <input type="submit" name="qem_update" class="button-primary" value="' . __( 'Update Attendees', 'quick-event-manager' ) . '" /> ';
         } else {
-            $dashboard .= ' <input type="submit" name="qem_edit" class="button-secondary" value="' . __( 'Edit Applications', 'quick-event-manager' ) . '" /> <input type="submit" name="qem_edit_selected" class="button-secondary" value="' . __( 'Edit Selected', 'quick-event-manager' ) . '" /> ';
+            $dashboard .= ' <input type="submit" name="qem_edit" class="button-secondary" value="' . __( 'Edit Attendees', 'quick-event-manager' ) . '" /> <input type="submit" name="qem_edit_selected" class="button-secondary" value="' . __( 'Edit Selected', 'quick-event-manager' ) . '" /> ';
         }
         
         if ( qem_get_element( $register, 'moderate' ) ) {
-            $dashboard .= ' <input type="submit" name="qem_approve_selected" class="button-secondary" value="Approve Selected" onclick="return window.confirm( \'Are you sure you want to approve the selected registrants?\' );"/>';
+            $dashboard .= ' <input type="submit" name="qem_approve_selected" class="button-secondary" value="Approve Selected" onclick="return window.confirm( \'Are you sure you want to approve the selected attendees?\' );"/>';
         }
         $dashboard .= '</div></form>';
         

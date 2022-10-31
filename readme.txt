@@ -1,8 +1,8 @@
 === Quick Event Manager ===
 Contributors: Fullworks
 Tags: event manager, calendar, events, event booking, event calendar
-Tested up to: 6.0
-Stable tag: 9.5.1.01-beta
+Tested up to: 6.1
+Stable tag: 9.6.0
 Type: freemium
 
 Simple event manager. No messing about, just add events and a shortcode and the plugin does the rest for you.
@@ -92,5 +92,8 @@ Well OK yes you can add more fields if you want but you are going to have to fid
 == Changelog ==
 = 9.6.0 =
 * add new features cutoff time and ticket start date time ( Pro Only )
+* keep tags on calendar title shortner so translation plugins work
+* add option to manually add attendee via the admin interface
 
-For all previous changes refer to changelog.txt
+
+[Full Change History](https://plugins.trac.wordpress.org/browser/quick-event-manager/trunk/changelog.txt)
