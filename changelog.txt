@@ -1,4 +1,7 @@
 == Changelog ==
+= 9.6.2 =
+* Fix external link issue ( Pro Only )
+
 = 9.6.1 =
 * minor fix to new feature of addding option to manually add attendee via the admin interface
 

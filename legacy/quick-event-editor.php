@@ -291,12 +291,12 @@ function event_details_meta()
     2. ' . sprintf( __( 'If you are using the %1$sautoresponder%2$s you can create a reply message for this event. See the \'Registration Confirmation Message\' at the bottom of this page.', 'quick-event-manager' ), '<a href="options-general.php?page=' . QUICK_EVENT_MANAGER_PLUGIN_NAME . '&tab=auto">', '</a>' ) . '.</td>
     </tr>';
     $output .= '<tr><td width="20%"><label>' . __( 'External Event / Registration', 'quick-event-manager' ) . ': </label></td>
-    <td width="80%"><input disabled type="text" class="qem_input" name="not_available"  value="' . 'https://' . esc_html__( 'your-external-event-link-here', 'quick-event-manager' ) . '"><em>' . esc_html__( 'Upgrade to be able to specify a link to a third party event detail / registration system, e.g. Eventbrite / Ticketmaster etc. No registration form wil be shown or processed by Quick Event Manager', 'quick-event-manager__upsell' ) . '</em></td>
+    <td width="80%"><input disabled type="text" class="qem_input" name="not_available"  value="' . 'https://' . esc_html__( 'your-external-event-link-here', 'quick-event-manager' ) . '"><em>' . esc_html__( 'Upgrade to be able to specify a link to a third party event detail / registration system, e.g. Eventbrite / Ticketmaster etc. No registration form wil be shown or processed by Quick Event Manager', 'quick-event-manager' ) . '</em></td>
     </tr>';
     $out_registration_dates = '<tr>
     <td width="20%"><label>' . esc_html__( 'Registration Start Date', 'quick-event-manager' ) . ': </label></td>
     <td><input type="text" class="qem_input" style="width:40%;" disabled id="qem_reg_start_date" name="qem_reg_start_date" value="" />
-    <input type="time" name="qem_reg_start_time" value="00:00" disabled/><a href="' . esc_url( $qem_fs->get_upgrade_url() ) . '" target="_blank">' . esc_html__( 'Upgrade to set registration start', 'quick-event-manager__upsell' ) . '</a></td>
+    <input type="time" name="qem_reg_start_time" value="00:00" disabled/><a href="' . esc_url( $qem_fs->get_upgrade_url() ) . '" target="_blank">' . esc_html__( 'Upgrade to set registration start', 'quick-event-manager' ) . '</a></td>
     </tr>
     <tr>
     <td></td>
@@ -307,7 +307,7 @@ function event_details_meta()
     <tr>
     <td width="20%"><label>' . esc_html__( 'Registration Cutoff Date', 'quick-event-manager' ) . ': </label></td>
     <td><input type="text" class="qem_input" style="width:40%;" id="qemcutoffdate" name="event_cutoff_date" value="' . $cutoffdate . '" />
-    <input type="time" name="qem_cutoff_time" value="00:00" disabled/><a href="' . esc_url( $qem_fs->get_upgrade_url() ) . '" target="_blank">' . esc_html__( 'Upgrade to set time', 'quick-event-manager__upsell' ) . '</a></td>
+    <input type="time" name="qem_cutoff_time" value="00:00" disabled/><a href="' . esc_url( $qem_fs->get_upgrade_url() ) . '" target="_blank">' . esc_html__( 'Upgrade to set time', 'quick-event-manager' ) . '</a></td>
     </tr>
     <tr>
     <td></td>
@@ -488,7 +488,7 @@ function event_details_reg()
     global  $post ;
     global  $qem_fs ;
     $disabled = 'disabled';
-    $disabled_text = esc_html__( 'Upgrade to premium to enable changes', 'quick-event-manager__upsell' );
+    $disabled_text = esc_html__( 'Upgrade to premium to enable changes', 'quick-event-manager' );
     $event = event_get_stored_options();
     $register = qem_get_stored_register();
     $payment = qem_get_stored_payment();

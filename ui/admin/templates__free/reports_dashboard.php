@@ -5,7 +5,7 @@
 $output = '
     <div class="wrap">
         <h2>' . esc_html( $data->settings_title ) . '</h2>
-        <h3>' . esc_html__( 'These reports are available in the premium version', 'quick-event-manager__upsell' ) . '</h3>
+        <h3>' . esc_html__( 'These reports are available in the premium version', 'quick-event-manager' ) . '</h3>
         <div class="qem-options">
             <h2>' . esc_html__( 'Registration Report', 'quick-event-manager' ) . '</h2>
             <p>' . esc_html__( 'Displays all events and registrations.', 'quick-event-manager' ) . '</p>

@@ -69,9 +69,6 @@ class Plugin
         add_action( 'init', function () {
             load_plugin_textdomain( $this->plugin_name, false, basename( QUICK_EVENT_MANAGER_PLUGIN_DIR ) . '/languages/' );
         } );
-        add_action( 'init', function () {
-            load_plugin_textdomain( $this->plugin_name . '__upsell', false, basename( QUICK_EVENT_MANAGER_PLUGIN_DIR ) . '/languages/upsell/' );
-        } );
     }
     
     private function settings_pages()

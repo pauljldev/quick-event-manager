@@ -2740,7 +2740,7 @@ function qem_incontext()
         will keep all your settings.</p>
         <p>* single site, when paid annually, excludes taxes</p>
         <form id="" method="post" action="">
-        <p><a target="_blank" href="' . $link . '" class="button-primary" style="color: #FFF;" >' . esc_html__( 'Upgrade to Pro - Free Trial', 'quick-event-manager__upsell' ) . ' </a></p>
+        <p><a target="_blank" href="' . $link . '" class="button-primary" style="color: #FFF;" >' . esc_html__( 'Upgrade to Pro - Free Trial', 'quick-event-manager' ) . ' </a></p>
         ';
     $content .= '</p>';
     $content .= wp_nonce_field( "save_qem" );
