@@ -216,9 +216,8 @@ function event_register()
             'excerpt',
             'revisions'
         ),
-            'show_ui'             => true,
         );
-        register_post_type( 'event', $args );
+        register_post_type( 'event', apply_filters( 'qem_event_register', $args ) );
     }
 
 }

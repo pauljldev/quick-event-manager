@@ -2,7 +2,7 @@
 Contributors: Fullworks
 Tags: event manager, calendar, events, event booking, event calendar
 Tested up to: 6.1
-Stable tag: 9.6.2
+Stable tag: 9.6.3
 Type: freemium
 
 Simple event manager. No messing about, just add events and a shortcode and the plugin does the rest for you.
@@ -90,12 +90,11 @@ Well OK yes you can add more fields if you want but you are going to have to fid
 
 
 == Changelog ==
+= 9.6.3 =
+* Add filter for CPT creation
+
 = 9.6.2 =
 * Fix external link issue ( Pro Only )
-
-= 9.6.1 =
-* minor fix to new feature of addding option to manually add attendee via the admin interface
-
 
 
 [Full Change History](https://plugins.trac.wordpress.org/browser/quick-event-manager/trunk/changelog.txt)
