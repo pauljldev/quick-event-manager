@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-11-24 19:17+0000\n"
+"POT-Creation-Date: 2022-12-09 18:41+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -38,7 +38,7 @@ msgstr ""
 msgid "Leave blank for one day events."
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:85, src/legacy/quick-event-extensions__premium_only.php:642, src/legacy/quick-event-payments.php:129, src/legacy/quick-event-register.php:401, src/legacy/settings.php:1432
+#: src/legacy/quick-event-editor.php:85, src/legacy/quick-event-extensions__premium_only.php:642, src/legacy/quick-event-payments.php:129, src/legacy/quick-event-register.php:401, src/legacy/settings.php:1431
 msgid "Event"
 msgstr ""
 
@@ -166,7 +166,7 @@ msgstr ""
 msgid "Organiser Contact Details"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:299, src/legacy/quick-event-options.php:42, src/legacy/quick-event-options.php:722, src/legacy/settings.php:478, src/legacy/settings.php:1854
+#: src/legacy/quick-event-editor.php:299, src/legacy/quick-event-options.php:42, src/legacy/quick-event-options.php:722, src/legacy/settings.php:478, src/legacy/settings.php:1853
 msgid "Registration Form"
 msgstr ""
 
@@ -319,7 +319,7 @@ msgstr ""
 msgid "Hide this event in the event list (only display on the calendar)"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:485, src/legacy/quick-event-options.php:723, src/legacy/settings.php:1366
+#: src/legacy/quick-event-editor.php:485, src/legacy/quick-event-options.php:723, src/legacy/settings.php:1365
 msgid "Event Image"
 msgstr ""
 
@@ -383,7 +383,7 @@ msgstr ""
 msgid "Check the fields you want to display on the form."
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:582, src/legacy/settings.php:114, src/legacy/settings.php:203, src/legacy/settings.php:2609
+#: src/legacy/quick-event-editor.php:582, src/legacy/settings.php:114, src/legacy/settings.php:203, src/legacy/settings.php:2613
 msgid "Registration"
 msgstr ""
 
@@ -391,27 +391,27 @@ msgstr ""
 msgid "page for options and to change the order of the fields."
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:584, src/legacy/settings.php:1892
+#: src/legacy/quick-event-editor.php:584, src/legacy/settings.php:1891
 msgid "Name"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:585, src/legacy/quick-event-register.php:1145, src/legacy/quick-event-register.php:3156, src/legacy/settings.php:1899, src/legacy/settings.php:3349
+#: src/legacy/quick-event-editor.php:585, src/legacy/quick-event-register.php:1145, src/legacy/quick-event-register.php:3156, src/legacy/settings.php:1898, src/legacy/settings.php:3358
 msgid "Email"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:586, src/legacy/quick-event-options.php:721, src/legacy/quick-event-options.php:744, src/legacy/settings.php:1913
+#: src/legacy/quick-event-editor.php:586, src/legacy/quick-event-options.php:721, src/legacy/quick-event-options.php:744, src/legacy/settings.php:1912
 msgid "Telephone"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:587, src/legacy/settings.php:1920
+#: src/legacy/quick-event-editor.php:587, src/legacy/settings.php:1919
 msgid "Places"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:588, src/legacy/quick-event-options.php:327, src/legacy/settings.php:1927
+#: src/legacy/quick-event-editor.php:588, src/legacy/quick-event-options.php:327, src/legacy/settings.php:1926
 msgid "Message"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:589, src/legacy/settings.php:1906, src/ui/admin/templates__free/reports_dashboard.php:25, src/ui/admin/templates__premium_only/reports_dashboard.php:27
+#: src/legacy/quick-event-editor.php:589, src/legacy/settings.php:1905, src/ui/admin/templates__free/reports_dashboard.php:25, src/ui/admin/templates__premium_only/reports_dashboard.php:27
 msgid "Not Attending"
 msgstr ""
 
@@ -419,7 +419,7 @@ msgstr ""
 msgid "User defined"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:592, src/legacy/settings.php:1962
+#: src/legacy/quick-event-editor.php:592, src/legacy/settings.php:1961
 msgid "Dropdown 1"
 msgstr ""
 
@@ -427,7 +427,7 @@ msgstr ""
 msgid "Values"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:594, src/legacy/settings.php:1983
+#: src/legacy/quick-event-editor.php:594, src/legacy/settings.php:1982
 msgid "Dropdown 2"
 msgstr ""
 
@@ -435,7 +435,7 @@ msgstr ""
 msgid "Number"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:598, src/legacy/settings.php:1997
+#: src/legacy/quick-event-editor.php:598, src/legacy/settings.php:1996
 msgid "Options"
 msgstr ""
 
@@ -443,7 +443,7 @@ msgstr ""
 msgid "Additional Info (displays as plain text)"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:603, src/legacy/settings.php:2042
+#: src/legacy/quick-event-editor.php:603, src/legacy/settings.php:2041
 msgid "Show box to add more names if number attending is greater than 1"
 msgstr ""
 
@@ -451,15 +451,15 @@ msgstr ""
 msgid "Collect email addresses for all attendees"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:605, src/legacy/settings.php:1941
+#: src/legacy/quick-event-editor.php:605, src/legacy/settings.php:1940
 msgid "Copy Message"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:606, src/legacy/settings.php:2055
+#: src/legacy/quick-event-editor.php:606, src/legacy/settings.php:2054
 msgid "Include Terms and Conditions checkbox"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:607, src/legacy/quick-event-options.php:724, src/legacy/settings.php:1934
+#: src/legacy/quick-event-editor.php:607, src/legacy/quick-event-options.php:724, src/legacy/settings.php:1933
 msgid "Captcha"
 msgstr ""
 
@@ -503,7 +503,7 @@ msgstr ""
 msgid "Email Attendees"
 msgstr ""
 
-#: src/legacy/quick-event-extensions__premium_only.php:333, src/legacy/settings.php:2429
+#: src/legacy/quick-event-extensions__premium_only.php:333, src/legacy/settings.php:2433
 msgid "From Name:"
 msgstr ""
 
@@ -515,23 +515,23 @@ msgstr ""
 msgid "Site Title"
 msgstr ""
 
-#: src/legacy/quick-event-extensions__premium_only.php:333, src/legacy/quick-event-extensions__premium_only.php:335, src/legacy/settings.php:2429, src/legacy/settings.php:2432
+#: src/legacy/quick-event-extensions__premium_only.php:333, src/legacy/quick-event-extensions__premium_only.php:335, src/legacy/settings.php:2433, src/legacy/settings.php:2436
 msgid "if left blank"
 msgstr ""
 
-#: src/legacy/quick-event-extensions__premium_only.php:335, src/legacy/settings.php:2431
+#: src/legacy/quick-event-extensions__premium_only.php:335, src/legacy/settings.php:2435
 msgid "From Email:"
 msgstr ""
 
-#: src/legacy/quick-event-extensions__premium_only.php:335, src/legacy/settings.php:2431
+#: src/legacy/quick-event-extensions__premium_only.php:335, src/legacy/settings.php:2435
 msgid "Defaults to the"
 msgstr ""
 
-#: src/legacy/quick-event-extensions__premium_only.php:335, src/legacy/settings.php:2431
+#: src/legacy/quick-event-extensions__premium_only.php:335, src/legacy/settings.php:2435
 msgid "Admin Email"
 msgstr ""
 
-#: src/legacy/quick-event-extensions__premium_only.php:337, src/legacy/settings.php:2434
+#: src/legacy/quick-event-extensions__premium_only.php:337, src/legacy/settings.php:2438
 msgid "Subject:"
 msgstr ""
 
@@ -579,7 +579,7 @@ msgstr ""
 msgid "Warning!"
 msgstr ""
 
-#: src/legacy/quick-event-extensions__premium_only.php:1290, src/legacy/settings.php:2440, src/legacy/settings.php:2539
+#: src/legacy/quick-event-extensions__premium_only.php:1290, src/legacy/settings.php:2444, src/legacy/settings.php:2543
 msgid "Event Editor"
 msgstr ""
 
@@ -630,11 +630,11 @@ msgstr ""
 msgid "Since June 2016 you need to have a valid API key enabled to display Google maps, see plugin settings"
 msgstr ""
 
-#: src/legacy/quick-event-manager.php:2786, src/legacy/quick-event-register.php:2766, src/legacy/quick-event-register.php:2777
+#: src/legacy/quick-event-manager.php:2788, src/legacy/quick-event-register.php:2766, src/legacy/quick-event-register.php:2777
 msgid "Pending"
 msgstr ""
 
-#: src/legacy/quick-event-manager.php:3009, src/legacy/settings.php:110, src/legacy/settings.php:194, src/legacy/settings.php:195
+#: src/legacy/quick-event-manager.php:3011, src/legacy/settings.php:110, src/legacy/settings.php:194, src/legacy/settings.php:195
 msgid "Settings"
 msgstr ""
 
@@ -650,7 +650,7 @@ msgstr ""
 msgid "Places Taken"
 msgstr ""
 
-#: src/legacy/quick-event-options.php:43, src/legacy/quick-event-options.php:62, src/legacy/quick-event-options.php:708, src/legacy/settings.php:479, src/legacy/settings.php:1107, src/legacy/settings.php:1409
+#: src/legacy/quick-event-options.php:43, src/legacy/quick-event-options.php:62, src/legacy/quick-event-options.php:708, src/legacy/settings.php:479, src/legacy/settings.php:1106, src/legacy/settings.php:1408
 msgid "Category"
 msgstr ""
 
@@ -674,7 +674,7 @@ msgstr ""
 msgid "Share on Twitter"
 msgstr ""
 
-#: src/legacy/quick-event-options.php:65, src/legacy/settings.php:689
+#: src/legacy/quick-event-options.php:65, src/legacy/settings.php:688
 msgid "Download to Calendar"
 msgstr ""
 
@@ -1375,7 +1375,7 @@ msgstr ""
 msgid "Access using the %1$sRegistration%2$s link on your dashboard menu"
 msgstr ""
 
-#: src/legacy/settings.php:221, src/legacy/settings.php:3339
+#: src/legacy/settings.php:221, src/legacy/settings.php:3348
 msgid "Template"
 msgstr ""
 
@@ -1383,7 +1383,7 @@ msgstr ""
 msgid "Create an event template based on your theme single.php"
 msgstr ""
 
-#: src/legacy/settings.php:223, src/legacy/settings.php:3129
+#: src/legacy/settings.php:223, src/legacy/settings.php:3138
 msgid "Guest Events"
 msgstr ""
 
@@ -1431,7 +1431,7 @@ msgstr ""
 msgid "Plugin Website"
 msgstr ""
 
-#: src/legacy/settings.php:257, src/legacy/settings.php:3134
+#: src/legacy/settings.php:257, src/legacy/settings.php:3143
 msgid "link opens in a new tab"
 msgstr ""
 
@@ -1543,15 +1543,15 @@ msgstr ""
 msgid "Make publication date the same as the event date"
 msgstr ""
 
-#: src/legacy/settings.php:450, src/legacy/settings.php:870, src/legacy/settings.php:1131, src/legacy/settings.php:1484, src/legacy/settings.php:2468, src/legacy/settings.php:2643, src/legacy/settings.php:3028, src/legacy/settings.php:3273, src/legacy/settings.php:3315, src/legacy/settings.php:3323, src/legacy/settings.php:3336, src/legacy/settings.php:3376
+#: src/legacy/settings.php:450, src/legacy/settings.php:869, src/legacy/settings.php:1130, src/legacy/settings.php:1483, src/legacy/settings.php:2472, src/legacy/settings.php:2647, src/legacy/settings.php:3033, src/legacy/settings.php:3282, src/legacy/settings.php:3324, src/legacy/settings.php:3332, src/legacy/settings.php:3345, src/legacy/settings.php:3385
 msgid "Save Changes"
 msgstr ""
 
-#: src/legacy/settings.php:451, src/legacy/settings.php:871, src/legacy/settings.php:1132, src/legacy/settings.php:1485, src/legacy/settings.php:2211, src/legacy/settings.php:2469, src/legacy/settings.php:2644, src/legacy/settings.php:3275
+#: src/legacy/settings.php:451, src/legacy/settings.php:870, src/legacy/settings.php:1131, src/legacy/settings.php:1484, src/legacy/settings.php:2210, src/legacy/settings.php:2473, src/legacy/settings.php:2648, src/legacy/settings.php:3284
 msgid "Reset"
 msgstr ""
 
-#: src/legacy/settings.php:452, src/legacy/settings.php:872, src/legacy/settings.php:3275
+#: src/legacy/settings.php:452, src/legacy/settings.php:871, src/legacy/settings.php:3284
 msgid "Are you sure you want to reset the display settings?"
 msgstr ""
 
@@ -1591,2444 +1591,2444 @@ msgstr ""
 msgid "The display settings have been reset"
 msgstr ""
 
-#: src/legacy/settings.php:595
+#: src/legacy/settings.php:594
 msgid "End Date Display"
 msgstr ""
 
-#: src/legacy/settings.php:599
+#: src/legacy/settings.php:598
 msgid "Show end date in event list"
 msgstr ""
 
-#: src/legacy/settings.php:603
+#: src/legacy/settings.php:602
 msgid "Combine Start and End dates into one box"
 msgstr ""
 
-#: src/legacy/settings.php:607
+#: src/legacy/settings.php:606
 msgid "Show combined Start and End dates if in the same month"
 msgstr ""
 
-#: src/legacy/settings.php:611
+#: src/legacy/settings.php:610
 msgid "Only show icon on first event if more than one event on that day"
 msgstr ""
 
-#: src/legacy/settings.php:615
+#: src/legacy/settings.php:614
 msgid "Show start and end dates above one another"
 msgstr ""
 
-#: src/legacy/settings.php:619
+#: src/legacy/settings.php:618
 msgid "Event Messages"
 msgstr ""
 
-#: src/legacy/settings.php:623
+#: src/legacy/settings.php:622
 msgid "Read more caption"
 msgstr ""
 
-#: src/legacy/settings.php:627
+#: src/legacy/settings.php:626
 msgid "No events message"
 msgstr ""
 
-#: src/legacy/settings.php:631
+#: src/legacy/settings.php:630
 msgid "Event List Options"
 msgstr ""
 
-#: src/legacy/settings.php:636
+#: src/legacy/settings.php:635
 msgid "Show full event details in the event list ( includes registration form when enabled )"
 msgstr ""
 
-#: src/legacy/settings.php:641
+#: src/legacy/settings.php:640
 msgid "List events in reverse order (from future to past)"
 msgstr ""
 
-#: src/legacy/settings.php:646
+#: src/legacy/settings.php:645
 msgid "Show past events in the events list"
 msgstr ""
 
-#: src/legacy/settings.php:646
+#: src/legacy/settings.php:645
 msgid "If you only want to display past events use the shortcode: [qem id=\"archive\"]"
 msgstr ""
 
-#: src/legacy/settings.php:651
+#: src/legacy/settings.php:650
 msgid "Split the list into month/year sections"
 msgstr ""
 
-#: src/legacy/settings.php:656
+#: src/legacy/settings.php:655
 msgid "Short (Aug)"
 msgstr ""
 
-#: src/legacy/settings.php:656
+#: src/legacy/settings.php:655
 msgid "Full (August)"
 msgstr ""
 
-#: src/legacy/settings.php:661, src/legacy/settings.php:1308
+#: src/legacy/settings.php:660, src/legacy/settings.php:1307
 msgid "Order"
 msgstr ""
 
-#: src/legacy/settings.php:666
+#: src/legacy/settings.php:665
 msgid "Show events in recent posts list"
 msgstr ""
 
-#: src/legacy/settings.php:670
+#: src/legacy/settings.php:669
 msgid "Show category"
 msgstr ""
 
-#: src/legacy/settings.php:674
+#: src/legacy/settings.php:673
 msgid "Next to title"
 msgstr ""
 
-#: src/legacy/settings.php:674
+#: src/legacy/settings.php:673
 msgid "Next to date (if no icon styling)"
 msgstr ""
 
-#: src/legacy/settings.php:678
+#: src/legacy/settings.php:677
 msgid "Show as grid"
 msgstr ""
 
-#: src/legacy/settings.php:678
+#: src/legacy/settings.php:677
 msgid "Using this option will disable the date icon styling, month and year sections, images and maps"
 msgstr ""
 
-#: src/legacy/settings.php:682
+#: src/legacy/settings.php:681
 msgid "Traditional"
 msgstr ""
 
-#: src/legacy/settings.php:682
+#: src/legacy/settings.php:681
 msgid "Show as tiled (Pinterest type)"
 msgstr ""
 
-#: src/legacy/settings.php:686
+#: src/legacy/settings.php:685
 msgid "Event Border:"
 msgstr ""
 
-#: src/legacy/settings.php:690
+#: src/legacy/settings.php:689
 msgid "This allows users to download the event as a calendar file"
 msgstr ""
 
-#: src/legacy/settings.php:694
+#: src/legacy/settings.php:693
 msgid "Add download button to event"
 msgstr ""
 
-#: src/legacy/settings.php:698
+#: src/legacy/settings.php:697
 msgid "Add download button to event list"
 msgstr ""
 
-#: src/legacy/settings.php:702
+#: src/legacy/settings.php:701
 msgid "Button text:"
 msgstr ""
 
-#: src/legacy/settings.php:705
+#: src/legacy/settings.php:704
 msgid "Event Linking Options"
 msgstr ""
 
-#: src/legacy/settings.php:709
+#: src/legacy/settings.php:708
 msgid "Link to external website from event list"
 msgstr ""
 
-#: src/legacy/settings.php:713
+#: src/legacy/settings.php:712
 msgid "Open external links in new tab/page"
 msgstr ""
 
-#: src/legacy/settings.php:717
+#: src/legacy/settings.php:716
 msgid "Open event in lightbox"
 msgstr ""
 
-#: src/legacy/settings.php:717
+#: src/legacy/settings.php:716
 msgid "Warning: doesn't always behave as expected on small screens"
 msgstr ""
 
-#: src/legacy/settings.php:721
+#: src/legacy/settings.php:720
 msgid "Width:"
 msgstr ""
 
-#: src/legacy/settings.php:725
+#: src/legacy/settings.php:724
 msgid "Show full event details in popup"
 msgstr ""
 
-#: src/legacy/settings.php:729
+#: src/legacy/settings.php:728
 msgid "Remove link from event title and event image"
 msgstr ""
 
-#: src/legacy/settings.php:733
+#: src/legacy/settings.php:732
 msgid "Hide Read More link"
 msgstr ""
 
-#: src/legacy/settings.php:737
+#: src/legacy/settings.php:736
 msgid "Hide links to event if not logged in"
 msgstr ""
 
-#: src/legacy/settings.php:741
+#: src/legacy/settings.php:740
 msgid "Add a link to events to go back to the event list"
 msgstr ""
 
-#: src/legacy/settings.php:745
+#: src/legacy/settings.php:744
 msgid "Enter URL to link to a specific page. Leave blank to just go back one page"
 msgstr ""
 
-#: src/legacy/settings.php:750
+#: src/legacy/settings.php:749
 msgid "Link caption"
 msgstr ""
 
-#: src/legacy/settings.php:753
+#: src/legacy/settings.php:752
 msgid "Maps and Images"
 msgstr ""
 
-#: src/legacy/settings.php:758
+#: src/legacy/settings.php:757
 msgid "Show event image in event list"
 msgstr ""
 
-#: src/legacy/settings.php:762
+#: src/legacy/settings.php:761
 msgid "Show map on event page"
 msgstr ""
 
-#: src/legacy/settings.php:766
+#: src/legacy/settings.php:765
 msgid "Show map in event list"
 msgstr ""
 
-#: src/legacy/settings.php:770
+#: src/legacy/settings.php:769
 msgid "Use featured images"
 msgstr ""
 
-#: src/legacy/settings.php:773
+#: src/legacy/settings.php:772
 msgid "Notes:"
 msgstr ""
 
-#: src/legacy/settings.php:773
+#: src/legacy/settings.php:772
 msgid "The map will only display if you have a valid address."
 msgstr ""
 
-#: src/legacy/settings.php:774
+#: src/legacy/settings.php:773
 msgid "To display a Google Map you need a valid "
 msgstr ""
 
-#: src/legacy/settings.php:777
+#: src/legacy/settings.php:776
 msgid "Google API Key:"
 msgstr ""
 
-#: src/legacy/settings.php:780
+#: src/legacy/settings.php:779
 msgid "Image and Map Width"
 msgstr ""
 
-#: src/legacy/settings.php:781
+#: src/legacy/settings.php:780
 msgid "This is the maximum width of Map and Image on large screens."
 msgstr ""
 
-#: src/legacy/settings.php:784
+#: src/legacy/settings.php:783
 msgid "Max Width"
 msgstr ""
 
-#: src/legacy/settings.php:785
+#: src/legacy/settings.php:784
 msgid "This is the maximum width of Map and Image compared to the whole event on smaller screens."
 msgstr ""
 
-#: src/legacy/settings.php:788
+#: src/legacy/settings.php:787
 msgid "Event list width"
 msgstr ""
 
-#: src/legacy/settings.php:791
+#: src/legacy/settings.php:790
 msgid "Map Height"
 msgstr ""
 
-#: src/legacy/settings.php:795
+#: src/legacy/settings.php:794
 msgid "Open map in new tab/window"
 msgstr ""
 
-#: src/legacy/settings.php:800, src/legacy/settings.php:1451
+#: src/legacy/settings.php:799, src/legacy/settings.php:1450
 msgid "Categories"
 msgstr ""
 
-#: src/legacy/settings.php:803
+#: src/legacy/settings.php:802
 msgid "Display category dropdown"
 msgstr ""
 
-#: src/legacy/settings.php:804
+#: src/legacy/settings.php:803
 msgid "Displays a list of all categories"
 msgstr ""
 
-#: src/legacy/settings.php:806
+#: src/legacy/settings.php:805
 msgid "Full width dropdown."
 msgstr ""
 
-#: src/legacy/settings.php:809, src/legacy/settings.php:1454
+#: src/legacy/settings.php:808, src/legacy/settings.php:1453
 msgid "Display category key"
 msgstr ""
 
-#: src/legacy/settings.php:810
+#: src/legacy/settings.php:809
 msgid "Show above event list"
 msgstr ""
 
-#: src/legacy/settings.php:811
+#: src/legacy/settings.php:810
 msgid "Show below event list"
 msgstr ""
 
-#: src/legacy/settings.php:814, src/legacy/settings.php:822, src/legacy/settings.php:1330, src/legacy/settings.php:1477
+#: src/legacy/settings.php:813, src/legacy/settings.php:821, src/legacy/settings.php:1329, src/legacy/settings.php:1476
 msgid "Caption"
 msgstr ""
 
-#: src/legacy/settings.php:818
+#: src/legacy/settings.php:817
 msgid "Add link back to all events"
 msgstr ""
 
-#: src/legacy/settings.php:819
+#: src/legacy/settings.php:818
 msgid "This uses the URL set on the"
 msgstr ""
 
-#: src/legacy/settings.php:819
+#: src/legacy/settings.php:818
 msgid "Event List"
 msgstr ""
 
-#: src/legacy/settings.php:819, src/legacy/settings.php:827
+#: src/legacy/settings.php:818, src/legacy/settings.php:826
 msgid "page"
 msgstr ""
 
-#: src/legacy/settings.php:826
+#: src/legacy/settings.php:825
 msgid "Category Colours"
 msgstr ""
 
-#: src/legacy/settings.php:826
+#: src/legacy/settings.php:825
 msgid "Use category colours for the event border"
 msgstr ""
 
-#: src/legacy/settings.php:827
+#: src/legacy/settings.php:826
 msgid "Options are set on the"
 msgstr ""
 
-#: src/legacy/settings.php:827
+#: src/legacy/settings.php:826
 msgid "Calendar Settings"
 msgstr ""
 
-#: src/legacy/settings.php:830
+#: src/legacy/settings.php:829
 msgid "Show name of current category"
 msgstr ""
 
-#: src/legacy/settings.php:834
+#: src/legacy/settings.php:833
 msgid "Current category label"
 msgstr ""
 
-#: src/legacy/settings.php:837
+#: src/legacy/settings.php:836
 msgid "Linking"
 msgstr ""
 
-#: src/legacy/settings.php:838, src/legacy/settings.php:1464
+#: src/legacy/settings.php:837, src/legacy/settings.php:1463
 msgid "Link keys to categories"
 msgstr ""
 
-#: src/legacy/settings.php:839, src/legacy/settings.php:1465
+#: src/legacy/settings.php:838, src/legacy/settings.php:1464
 msgid "Show uncategorised key"
 msgstr ""
 
-#: src/legacy/settings.php:842
+#: src/legacy/settings.php:841
 msgid "Category Linking Option"
 msgstr ""
 
-#: src/legacy/settings.php:845
+#: src/legacy/settings.php:844
 msgid "Use this option to link from the event list to a URL for a category."
 msgstr ""
 
-#: src/legacy/settings.php:845
+#: src/legacy/settings.php:844
 msgid "Seperate using a comma for multiple catagories"
 msgstr ""
 
-#: src/legacy/settings.php:848
+#: src/legacy/settings.php:847
 msgid "Category slug"
 msgstr ""
 
-#: src/legacy/settings.php:852
+#: src/legacy/settings.php:851
 msgid "URL"
 msgstr ""
 
-#: src/legacy/settings.php:858
+#: src/legacy/settings.php:857
 msgid "Timezones"
 msgstr ""
 
-#: src/legacy/settings.php:863
+#: src/legacy/settings.php:862
 msgid "Show timeszones on your events"
 msgstr ""
 
-#: src/legacy/settings.php:866
+#: src/legacy/settings.php:865
 msgid "timezone"
 msgstr ""
 
-#: src/legacy/settings.php:867
+#: src/legacy/settings.php:866
 msgid "This doesn't change the time of the event, it just shows the name of the local timeszone. Set the event timezone in the event editor."
 msgstr ""
 
-#: src/legacy/settings.php:879, src/legacy/settings.php:1138
+#: src/legacy/settings.php:878, src/legacy/settings.php:1137
 msgid "Event List Preview"
 msgstr ""
 
-#: src/legacy/settings.php:940
+#: src/legacy/settings.php:939
 msgid "The form styles have been updated"
 msgstr ""
 
-#: src/legacy/settings.php:944
+#: src/legacy/settings.php:943
 msgid "The style settings have been reset"
 msgstr ""
 
-#: src/legacy/settings.php:965
+#: src/legacy/settings.php:964
 msgid "Event Width"
 msgstr ""
 
-#: src/legacy/settings.php:967
+#: src/legacy/settings.php:966
 msgid "100% (fill the available space)"
 msgstr ""
 
-#: src/legacy/settings.php:968
+#: src/legacy/settings.php:967
 msgid "Pixel (fixed)"
 msgstr ""
 
-#: src/legacy/settings.php:969
+#: src/legacy/settings.php:968
 msgid "Enter the max-width "
 msgstr ""
 
-#: src/legacy/settings.php:969
+#: src/legacy/settings.php:968
 msgid "(Just enter the value, no need to add 'px')"
 msgstr ""
 
-#: src/legacy/settings.php:971
+#: src/legacy/settings.php:970
 msgid "Font Options"
 msgstr ""
 
-#: src/legacy/settings.php:974
+#: src/legacy/settings.php:973
 msgid "Use your theme font styles"
 msgstr ""
 
-#: src/legacy/settings.php:975
+#: src/legacy/settings.php:974
 msgid "Use Plugin font styles (enter font family and size below)"
 msgstr ""
 
-#: src/legacy/settings.php:977
+#: src/legacy/settings.php:976
 msgid "Font Family"
 msgstr ""
 
-#: src/legacy/settings.php:980
+#: src/legacy/settings.php:979
 msgid "Font Size"
 msgstr ""
 
-#: src/legacy/settings.php:984
+#: src/legacy/settings.php:983
 msgid "Header Size"
 msgstr ""
 
-#: src/legacy/settings.php:985
+#: src/legacy/settings.php:984
 msgid "This the size of the title in the event list"
 msgstr ""
 
-#: src/legacy/settings.php:988
+#: src/legacy/settings.php:987
 msgid "Header Colour"
 msgstr ""
 
-#: src/legacy/settings.php:992
+#: src/legacy/settings.php:991
 msgid "Calender Icon"
 msgstr ""
 
-#: src/legacy/settings.php:995
+#: src/legacy/settings.php:994
 msgid "Remove styles"
 msgstr ""
 
-#: src/legacy/settings.php:996
+#: src/legacy/settings.php:995
 msgid "Do not style the calendar icon"
 msgstr ""
 
-#: src/legacy/settings.php:997
+#: src/legacy/settings.php:996
 msgid "Also removes the event border"
 msgstr ""
 
-#: src/legacy/settings.php:999
+#: src/legacy/settings.php:998
 msgid "Show the full day name"
 msgstr ""
 
-#: src/legacy/settings.php:1002
+#: src/legacy/settings.php:1001
 msgid "Show the full month name"
 msgstr ""
 
-#: src/legacy/settings.php:1005
+#: src/legacy/settings.php:1004
 msgid "Show date above event name"
 msgstr ""
 
-#: src/legacy/settings.php:1008
+#: src/legacy/settings.php:1007
 msgid "Size"
 msgstr ""
 
-#: src/legacy/settings.php:1010
+#: src/legacy/settings.php:1009
 msgid "Small"
 msgstr ""
 
-#: src/legacy/settings.php:1011
+#: src/legacy/settings.php:1010
 msgid "Medium"
 msgstr ""
 
-#: src/legacy/settings.php:1012
+#: src/legacy/settings.php:1011
 msgid "Large"
 msgstr ""
 
-#: src/legacy/settings.php:1015, src/legacy/settings.php:1354
+#: src/legacy/settings.php:1014, src/legacy/settings.php:1353
 msgid "Corners"
 msgstr ""
 
-#: src/legacy/settings.php:1017, src/legacy/settings.php:1356
+#: src/legacy/settings.php:1016, src/legacy/settings.php:1355
 msgid "Square"
 msgstr ""
 
-#: src/legacy/settings.php:1018, src/legacy/settings.php:1357
+#: src/legacy/settings.php:1017, src/legacy/settings.php:1356
 msgid "Rounded"
 msgstr ""
 
-#: src/legacy/settings.php:1021
+#: src/legacy/settings.php:1020
 msgid "Border Thickness"
 msgstr ""
 
-#: src/legacy/settings.php:1025
+#: src/legacy/settings.php:1024
 msgid "Border Colour"
 msgstr ""
 
-#: src/legacy/settings.php:1027
+#: src/legacy/settings.php:1026
 msgid "There is an option below to use category colours for the icon border"
 msgstr ""
 
-#: src/legacy/settings.php:1030
+#: src/legacy/settings.php:1029
 msgid "Calendar Icon Order"
 msgstr ""
 
-#: src/legacy/settings.php:1032
+#: src/legacy/settings.php:1031
 msgid "DMY"
 msgstr ""
 
-#: src/legacy/settings.php:1033
+#: src/legacy/settings.php:1032
 msgid "MDY"
 msgstr ""
 
-#: src/legacy/settings.php:1034
+#: src/legacy/settings.php:1033
 msgid "YDM"
 msgstr ""
 
-#: src/legacy/settings.php:1035
+#: src/legacy/settings.php:1034
 msgid "DM"
 msgstr ""
 
-#: src/legacy/settings.php:1036
+#: src/legacy/settings.php:1035
 msgid "MD"
 msgstr ""
 
-#: src/legacy/settings.php:1039
+#: src/legacy/settings.php:1038
 msgid "Start/Finish Labels"
 msgstr ""
 
-#: src/legacy/settings.php:1040
+#: src/legacy/settings.php:1039
 msgid "Show start/finish labels"
 msgstr ""
 
-#: src/legacy/settings.php:1041
+#: src/legacy/settings.php:1040
 msgid "Start"
 msgstr ""
 
-#: src/legacy/settings.php:1041
+#: src/legacy/settings.php:1040
 msgid "Finish"
 msgstr ""
 
-#: src/legacy/settings.php:1045
+#: src/legacy/settings.php:1044
 msgid "Day Name"
 msgstr ""
 
-#: src/legacy/settings.php:1046
+#: src/legacy/settings.php:1045
 msgid "Show day name"
 msgstr ""
 
-#: src/legacy/settings.php:1047
+#: src/legacy/settings.php:1046
 msgid "Show day name inline with date"
 msgstr ""
 
-#: src/legacy/settings.php:1050
+#: src/legacy/settings.php:1049
 msgid "Date Background Colour"
 msgstr ""
 
-#: src/legacy/settings.php:1052
+#: src/legacy/settings.php:1051
 msgid "Grey"
 msgstr ""
 
-#: src/legacy/settings.php:1053
+#: src/legacy/settings.php:1052
 msgid "Red"
 msgstr ""
 
-#: src/legacy/settings.php:1054
+#: src/legacy/settings.php:1053
 msgid "Category Border"
 msgstr ""
 
-#: src/legacy/settings.php:1055, src/legacy/settings.php:1066, src/legacy/settings.php:1090, src/legacy/settings.php:2273
+#: src/legacy/settings.php:1054, src/legacy/settings.php:1065, src/legacy/settings.php:1089, src/legacy/settings.php:2272
 msgid "Set your own"
 msgstr ""
 
-#: src/legacy/settings.php:1059
+#: src/legacy/settings.php:1058
 msgid "Date Text Colour"
 msgstr ""
 
-#: src/legacy/settings.php:1063
+#: src/legacy/settings.php:1062
 msgid "Month Background Colour"
 msgstr ""
 
-#: src/legacy/settings.php:1065, src/legacy/settings.php:1088, src/legacy/settings.php:2272
+#: src/legacy/settings.php:1064, src/legacy/settings.php:1087, src/legacy/settings.php:2271
 msgid "White"
 msgstr ""
 
-#: src/legacy/settings.php:1070
+#: src/legacy/settings.php:1069
 msgid "Month Text Colour"
 msgstr ""
 
-#: src/legacy/settings.php:1074
+#: src/legacy/settings.php:1073
 msgid "Month Text Style"
 msgstr ""
 
-#: src/legacy/settings.php:1075, src/legacy/settings.php:1362
+#: src/legacy/settings.php:1074, src/legacy/settings.php:1361
 msgid "Bold"
 msgstr ""
 
-#: src/legacy/settings.php:1076, src/legacy/settings.php:1363
+#: src/legacy/settings.php:1075, src/legacy/settings.php:1362
 msgid "Italic"
 msgstr ""
 
-#: src/legacy/settings.php:1079
+#: src/legacy/settings.php:1078
 msgid "Event Content"
 msgstr ""
 
-#: src/legacy/settings.php:1082, src/legacy/settings.php:1346
+#: src/legacy/settings.php:1081, src/legacy/settings.php:1345
 msgid "Event Border"
 msgstr ""
 
-#: src/legacy/settings.php:1083
+#: src/legacy/settings.php:1082
 msgid "Add a border to the event post"
 msgstr ""
 
-#: src/legacy/settings.php:1084
+#: src/legacy/settings.php:1083
 msgid "Thickness and colour will be the same as the calendar icon"
 msgstr ""
 
-#: src/legacy/settings.php:1087
+#: src/legacy/settings.php:1086
 msgid "Event Background Colour"
 msgstr ""
 
-#: src/legacy/settings.php:1089, src/legacy/settings.php:2271
+#: src/legacy/settings.php:1088, src/legacy/settings.php:2270
 msgid "Use theme colours"
 msgstr ""
 
-#: src/legacy/settings.php:1094, src/legacy/settings.php:2318
+#: src/legacy/settings.php:1093, src/legacy/settings.php:2317
 msgid "Margins and Padding"
 msgstr ""
 
-#: src/legacy/settings.php:1095
+#: src/legacy/settings.php:1094
 msgid "Set the margins and padding of each bit using CSS shortcodes"
 msgstr ""
 
-#: src/legacy/settings.php:1098
+#: src/legacy/settings.php:1097
 msgid "Event Margin"
 msgstr ""
 
-#: src/legacy/settings.php:1099
+#: src/legacy/settings.php:1098
 msgid "Set the margin or each event using CSS shortcodes"
 msgstr ""
 
-#: src/legacy/settings.php:1103
+#: src/legacy/settings.php:1102
 msgid "Event Category Colours"
 msgstr ""
 
-#: src/legacy/settings.php:1108, src/legacy/settings.php:1410, src/legacy/settings.php:2266, src/legacy/settings.php:2338
+#: src/legacy/settings.php:1107, src/legacy/settings.php:1409, src/legacy/settings.php:2265, src/legacy/settings.php:2337
 msgid "Background"
 msgstr ""
 
-#: src/legacy/settings.php:1108, src/legacy/settings.php:1410, src/ui/admin/class-admin-settings.php:150
+#: src/legacy/settings.php:1107, src/legacy/settings.php:1409, src/ui/admin/class-admin-settings.php:150
 msgid "Text"
 msgstr ""
 
-#: src/legacy/settings.php:1117
+#: src/legacy/settings.php:1116
 msgid "Styles Location"
 msgstr ""
 
-#: src/legacy/settings.php:1118
+#: src/legacy/settings.php:1117
 msgid "Extenal Stylesheet"
 msgstr ""
 
-#: src/legacy/settings.php:1119
+#: src/legacy/settings.php:1118
 msgid "Document Head"
 msgstr ""
 
-#: src/legacy/settings.php:1122
+#: src/legacy/settings.php:1121
 msgid "Custom CSS"
 msgstr ""
 
-#: src/legacy/settings.php:1123
+#: src/legacy/settings.php:1122
 msgid "Use Custom CSS"
 msgstr ""
 
-#: src/legacy/settings.php:1124, src/legacy/settings.php:1126
+#: src/legacy/settings.php:1123, src/legacy/settings.php:1125
 msgid "This feature is deprecated: please move custom CSS to the Customizer / Additional CSS as this feature will be removed in the future"
 msgstr ""
 
-#: src/legacy/settings.php:1127
+#: src/legacy/settings.php:1126
 msgid "The main style wrapper is the <code>.qem</code> class."
 msgstr ""
 
-#: src/legacy/settings.php:1132
+#: src/legacy/settings.php:1131
 msgid "Are you sure you want to reset the style settings?"
 msgstr ""
 
-#: src/legacy/settings.php:1139
+#: src/legacy/settings.php:1138
 msgid "Check the event list in your site as the Wordpress Dashboard can do funny things with styles"
 msgstr ""
 
-#: src/legacy/settings.php:1215
+#: src/legacy/settings.php:1214
 msgid "The calendar settings have been updated"
 msgstr ""
 
-#: src/legacy/settings.php:1220
+#: src/legacy/settings.php:1219
 msgid "The calendar settings have been reset"
 msgstr ""
 
-#: src/legacy/settings.php:1247
+#: src/legacy/settings.php:1246
 msgid "Using the Calendar"
 msgstr ""
 
-#: src/legacy/settings.php:1248
+#: src/legacy/settings.php:1247
 msgid "To add a calendar to your site use the shortcode: [qemcalendar]"
 msgstr ""
 
-#: src/legacy/settings.php:1252, src/legacy/settings.php:1766
+#: src/legacy/settings.php:1251, src/legacy/settings.php:1765
 msgid "General Settings"
 msgstr ""
 
-#: src/legacy/settings.php:1255
+#: src/legacy/settings.php:1254
 msgid "Linking to Events"
 msgstr ""
 
-#: src/legacy/settings.php:1256
+#: src/legacy/settings.php:1255
 msgid "Link opens event page"
 msgstr ""
 
-#: src/legacy/settings.php:1257
+#: src/legacy/settings.php:1256
 msgid "Link opens event summary in a popup"
 msgstr ""
 
-#: src/legacy/settings.php:1258
+#: src/legacy/settings.php:1257
 msgid "Show full event details in popup."
 msgstr ""
 
-#: src/legacy/settings.php:1262
+#: src/legacy/settings.php:1261
 msgid "Old Events"
 msgstr ""
 
-#: src/legacy/settings.php:1263
+#: src/legacy/settings.php:1262
 msgid "Show past events in the calendar"
 msgstr ""
 
-#: src/legacy/settings.php:1266
+#: src/legacy/settings.php:1265
 msgid "Linking Calendar to the Event List"
 msgstr ""
 
-#: src/legacy/settings.php:1267
+#: src/legacy/settings.php:1266
 msgid "Link Event List to Calendar Page"
 msgstr ""
 
-#: src/legacy/settings.php:1268
+#: src/legacy/settings.php:1267
 msgid "You will need to create pages for the calendar and the event list"
 msgstr ""
 
-#: src/legacy/settings.php:1272
+#: src/legacy/settings.php:1271
 msgid "Calendar link text"
 msgstr ""
 
-#: src/legacy/settings.php:1273
+#: src/legacy/settings.php:1272
 msgid "Calendar page URL"
 msgstr ""
 
-#: src/legacy/settings.php:1274
+#: src/legacy/settings.php:1273
 msgid "Event list link text"
 msgstr ""
 
-#: src/legacy/settings.php:1276
+#: src/legacy/settings.php:1275
 msgid "Event list page"
 msgstr ""
 
-#: src/legacy/settings.php:1284
+#: src/legacy/settings.php:1283
 msgid "Navigation Icons"
 msgstr ""
 
-#: src/legacy/settings.php:1286, src/ui/admin/templates__free/reports_dashboard.php:28, src/ui/admin/templates__premium_only/reports_dashboard.php:29
+#: src/legacy/settings.php:1285, src/ui/admin/templates__free/reports_dashboard.php:28, src/ui/admin/templates__premium_only/reports_dashboard.php:29
 msgid "None"
 msgstr ""
 
-#: src/legacy/settings.php:1288, src/legacy/settings.php:1387
+#: src/legacy/settings.php:1287, src/legacy/settings.php:1386
 msgid "Other"
 msgstr ""
 
-#: src/legacy/settings.php:1288
+#: src/legacy/settings.php:1287
 msgid "enter"
 msgstr ""
 
-#: src/legacy/settings.php:1289
+#: src/legacy/settings.php:1288
 msgid "hex code"
 msgstr ""
 
-#: src/legacy/settings.php:1289
+#: src/legacy/settings.php:1288
 msgid "below"
 msgstr ""
 
-#: src/legacy/settings.php:1294
+#: src/legacy/settings.php:1293
 msgid "Jump to links"
 msgstr ""
 
-#: src/legacy/settings.php:1295
+#: src/legacy/settings.php:1294
 msgid "Jump to the top of the calendar when linking to a new month."
 msgstr ""
 
-#: src/legacy/settings.php:1298
+#: src/legacy/settings.php:1297
 msgid "Calendar Options"
 msgstr ""
 
-#: src/legacy/settings.php:1301
+#: src/legacy/settings.php:1300
 msgid "Month and Date Header"
 msgstr ""
 
-#: src/legacy/settings.php:1310
+#: src/legacy/settings.php:1309
 msgid "Month Year"
 msgstr ""
 
-#: src/legacy/settings.php:1310
+#: src/legacy/settings.php:1309
 msgid "Year Month"
 msgstr ""
 
-#: src/legacy/settings.php:1314
+#: src/legacy/settings.php:1313
 msgid "Day Border"
 msgstr ""
 
-#: src/legacy/settings.php:1318
+#: src/legacy/settings.php:1317
 msgid "Cellspacing"
 msgstr ""
 
-#: src/legacy/settings.php:1322
+#: src/legacy/settings.php:1321
 msgid "Months"
 msgstr ""
 
-#: src/legacy/settings.php:1325
+#: src/legacy/settings.php:1324
 msgid "Display 12 month navigation"
 msgstr ""
 
-#: src/legacy/settings.php:1326, src/legacy/settings.php:1455
+#: src/legacy/settings.php:1325, src/legacy/settings.php:1454
 msgid "Show above calendar"
 msgstr ""
 
-#: src/legacy/settings.php:1327, src/legacy/settings.php:1456
+#: src/legacy/settings.php:1326, src/legacy/settings.php:1455
 msgid "Show below calendar"
 msgstr ""
 
-#: src/legacy/settings.php:1335
+#: src/legacy/settings.php:1334
 msgid "Hide navigation"
 msgstr ""
 
-#: src/legacy/settings.php:1336
+#: src/legacy/settings.php:1335
 msgid "Remove Prev and Next links"
 msgstr ""
 
-#: src/legacy/settings.php:1339
+#: src/legacy/settings.php:1338
 msgid "Event Options"
 msgstr ""
 
-#: src/legacy/settings.php:1342
+#: src/legacy/settings.php:1341
 msgid "Multi-day Events"
 msgstr ""
 
-#: src/legacy/settings.php:1343
+#: src/legacy/settings.php:1342
 msgid "Show event on all days"
 msgstr ""
 
-#: src/legacy/settings.php:1347
+#: src/legacy/settings.php:1346
 msgid "enter 'none' to remove border"
 msgstr ""
 
-#: src/legacy/settings.php:1351
+#: src/legacy/settings.php:1350
 msgid "Lock border colour (ignore category colours)"
 msgstr ""
 
-#: src/legacy/settings.php:1360
+#: src/legacy/settings.php:1359
 msgid "Text Styles"
 msgstr ""
 
-#: src/legacy/settings.php:1368
+#: src/legacy/settings.php:1367
 msgid "Show event image on the calendar"
 msgstr ""
 
-#: src/legacy/settings.php:1368
+#: src/legacy/settings.php:1367
 msgid "Image Width"
 msgstr ""
 
-#: src/legacy/settings.php:1371
+#: src/legacy/settings.php:1370
 msgid "Hover Message"
 msgstr ""
 
-#: src/legacy/settings.php:1372
+#: src/legacy/settings.php:1371
 msgid "Show full event title on hover"
 msgstr ""
 
-#: src/legacy/settings.php:1375
+#: src/legacy/settings.php:1374
 msgid "Character Number"
 msgstr ""
 
-#: src/legacy/settings.php:1379, src/legacy/settings.php:1392
+#: src/legacy/settings.php:1378, src/legacy/settings.php:1391
 msgid "Small Screens"
 msgstr ""
 
-#: src/legacy/settings.php:1380
+#: src/legacy/settings.php:1379
 msgid "What to display on small screens"
 msgstr ""
 
-#: src/legacy/settings.php:1381
+#: src/legacy/settings.php:1380
 msgid "Full message"
 msgstr ""
 
-#: src/legacy/settings.php:1386
+#: src/legacy/settings.php:1385
 msgid "Blank"
 msgstr ""
 
-#: src/legacy/settings.php:1387
+#: src/legacy/settings.php:1386
 msgid "enter escaped"
 msgstr ""
 
-#: src/legacy/settings.php:1388
+#: src/legacy/settings.php:1387
 msgid "or hex code below"
 msgstr ""
 
-#: src/legacy/settings.php:1392
+#: src/legacy/settings.php:1391
 msgid "Text Size"
 msgstr ""
 
-#: src/legacy/settings.php:1394
+#: src/legacy/settings.php:1393
 msgid "Trigger Width"
 msgstr ""
 
-#: src/legacy/settings.php:1395
+#: src/legacy/settings.php:1394
 msgid "This is the text size when the screen is below the trigger width"
 msgstr ""
 
-#: src/legacy/settings.php:1398
+#: src/legacy/settings.php:1397
 msgid "Flag Attendees"
 msgstr ""
 
-#: src/legacy/settings.php:1401
+#: src/legacy/settings.php:1400
 msgid "Adds a marker on the event if people have registered"
 msgstr ""
 
-#: src/legacy/settings.php:1401
+#: src/legacy/settings.php:1400
 msgid "Defaults to a dot if field is left blank"
 msgstr ""
 
-#: src/legacy/settings.php:1405
+#: src/legacy/settings.php:1404
 msgid "Calendar Colours"
 msgstr ""
 
-#: src/legacy/settings.php:1414
+#: src/legacy/settings.php:1413
 msgid "Days of the Week"
 msgstr ""
 
-#: src/legacy/settings.php:1420
+#: src/legacy/settings.php:1419
 msgid "Normal Day"
 msgstr ""
 
-#: src/legacy/settings.php:1426
+#: src/legacy/settings.php:1425
 msgid "Event Day"
 msgstr ""
 
-#: src/legacy/settings.php:1438
+#: src/legacy/settings.php:1437
 msgid "Event Hover"
 msgstr ""
 
-#: src/legacy/settings.php:1444
+#: src/legacy/settings.php:1443
 msgid "Past Day"
 msgstr ""
 
-#: src/legacy/settings.php:1459
+#: src/legacy/settings.php:1458
 msgid "Caption:"
 msgstr ""
 
-#: src/legacy/settings.php:1468
+#: src/legacy/settings.php:1467
 msgid "Category link style"
 msgstr ""
 
-#: src/legacy/settings.php:1469
+#: src/legacy/settings.php:1468
 msgid "Use Category color as background color"
 msgstr ""
 
-#: src/legacy/settings.php:1470
+#: src/legacy/settings.php:1469
 msgid "Use Category color as border color"
 msgstr ""
 
-#: src/legacy/settings.php:1473
+#: src/legacy/settings.php:1472
 msgid "Add link back to all categories"
 msgstr ""
 
-#: src/legacy/settings.php:1474
+#: src/legacy/settings.php:1473
 msgid "This uses the Calendar page URL set at the top of this page"
 msgstr ""
 
-#: src/legacy/settings.php:1481
+#: src/legacy/settings.php:1480
 msgid "Start the Week"
 msgstr ""
 
-#: src/legacy/settings.php:1482
+#: src/legacy/settings.php:1481
 msgid "On Sunday"
 msgstr ""
 
-#: src/legacy/settings.php:1483
+#: src/legacy/settings.php:1482
 msgid "On Monday"
 msgstr ""
 
-#: src/legacy/settings.php:1486
+#: src/legacy/settings.php:1485
 msgid "Are you sure you want to reset the calendar settings?"
 msgstr ""
 
-#: src/legacy/settings.php:1491
+#: src/legacy/settings.php:1490
 msgid "Calendar Preview"
 msgstr ""
 
-#: src/legacy/settings.php:1492
+#: src/legacy/settings.php:1491
 msgid "The"
 msgstr ""
 
 #. translators: prev is an abbreviation of previous in context of a back button
-#: src/legacy/settings.php:1494
+#: src/legacy/settings.php:1493
 msgid "prev"
 msgstr ""
 
-#: src/legacy/settings.php:1495
+#: src/legacy/settings.php:1494
 msgid "and"
 msgstr ""
 
 #. translators: context is  a next button
-#: src/legacy/settings.php:1497
+#: src/legacy/settings.php:1496
 msgid "next"
 msgstr ""
 
-#: src/legacy/settings.php:1498
+#: src/legacy/settings.php:1497
 msgid "buttons only work on your Posts and Pages - so don't click on them!"
 msgstr ""
 
-#: src/legacy/settings.php:1650
+#: src/legacy/settings.php:1649
 msgid "The registration form settings have been updated"
 msgstr ""
 
-#: src/legacy/settings.php:1654
+#: src/legacy/settings.php:1653
 msgid "The registration form settings have been reset"
 msgstr ""
 
 #. translators: please leave $s placeholder they create a link.
-#: src/legacy/settings.php:1761
+#: src/legacy/settings.php:1760
 msgid "Use the %1$sSettings%2$s to enable the registration form. You can then manage forms for individual events using the event editor"
 msgstr ""
 
-#: src/legacy/settings.php:1769
+#: src/legacy/settings.php:1768
 msgid "Add form to all new events"
 msgstr ""
 
-#: src/legacy/settings.php:1773
+#: src/legacy/settings.php:1772
 msgid "Hide form until registration button is clicked"
 msgstr ""
 
-#: src/legacy/settings.php:1777
+#: src/legacy/settings.php:1776
 msgid "Display the registration form on the right below the event image and map (if used)"
 msgstr ""
 
-#: src/legacy/settings.php:1781
+#: src/legacy/settings.php:1780
 msgid "Do not display registration form on old events"
 msgstr ""
 
-#: src/legacy/settings.php:1785
+#: src/legacy/settings.php:1784
 msgid "Pre-fill user name if logged in"
 msgstr ""
 
-#: src/legacy/settings.php:1789
+#: src/legacy/settings.php:1788
 msgid "Only users who have logged in can register"
 msgstr ""
 
-#: src/legacy/settings.php:1793
+#: src/legacy/settings.php:1792
 msgid "Allow a person to register more than once for each event ( note: if someone registers for a paid event but fails to complete payment they will still be able to re-register to complete payment)"
 msgstr ""
 
-#: src/legacy/settings.php:1797
+#: src/legacy/settings.php:1796
 msgid "Hide registration form when event is full"
 msgstr ""
 
-#: src/legacy/settings.php:1801, src/legacy/settings.php:2177
+#: src/legacy/settings.php:1800, src/legacy/settings.php:2176
 msgid "Message to display"
 msgstr ""
 
-#: src/legacy/settings.php:1806
+#: src/legacy/settings.php:1805
 msgid "Allow HTML tags"
 msgstr ""
 
-#: src/legacy/settings.php:1806
+#: src/legacy/settings.php:1805
 msgid "Warning: this may leave your site open to CSRF and XSS attacks so be careful."
 msgstr ""
 
-#: src/legacy/settings.php:1809
+#: src/legacy/settings.php:1808
 msgid "Click Here for Form Styling"
 msgstr ""
 
-#: src/legacy/settings.php:1812, src/legacy/settings.php:1824
+#: src/legacy/settings.php:1811, src/legacy/settings.php:1823
 msgid "Anti Spam Protection"
 msgstr ""
 
-#: src/legacy/settings.php:1814
+#: src/legacy/settings.php:1813
 msgid "Protect your forms from annoying spam"
 msgstr ""
 
-#: src/legacy/settings.php:1815
+#: src/legacy/settings.php:1814
 msgid "Simply install"
 msgstr ""
 
-#: src/legacy/settings.php:1817
+#: src/legacy/settings.php:1816
 msgid "Fullworks' Anti Spam"
 msgstr ""
 
-#: src/legacy/settings.php:1818
+#: src/legacy/settings.php:1817
 msgid "No Recaptcha, no annoying quizes or images, simply effective. Free trial available."
 msgstr ""
 
-#: src/legacy/settings.php:1826
+#: src/legacy/settings.php:1825
 msgid "Brilliant - you are automatically protect from spam"
 msgstr ""
 
-#: src/legacy/settings.php:1827
+#: src/legacy/settings.php:1826
 msgid "By"
 msgstr ""
 
-#: src/legacy/settings.php:1827
+#: src/legacy/settings.php:1826
 msgid "Fullworks' Anti Spam - see the settings here"
 msgstr ""
 
-#: src/legacy/settings.php:1833
+#: src/legacy/settings.php:1832
 msgid "Notifications"
 msgstr ""
 
-#: src/legacy/settings.php:1835
+#: src/legacy/settings.php:1834
 msgid "Primary Email Address"
 msgstr ""
 
-#: src/legacy/settings.php:1836
+#: src/legacy/settings.php:1835
 msgid "This is where registration notifications will be sent from and sent to, make sure it is a good email address"
 msgstr ""
 
-#: src/legacy/settings.php:1844, src/legacy/settings.php:1839
+#: src/legacy/settings.php:1843, src/legacy/settings.php:1838
 msgid "Copy notifications"
 msgstr ""
 
-#: src/legacy/settings.php:1845
+#: src/legacy/settings.php:1844
 msgid "Upgrade to a premium version to enable multiple admin registration notification addreses"
 msgstr ""
 
-#: src/legacy/settings.php:1841
+#: src/legacy/settings.php:1840
 msgid "Copy of admin notifications of registrations, can be a comma separated list"
 msgstr ""
 
-#: src/legacy/settings.php:1857
+#: src/legacy/settings.php:1856
 msgid "Form title"
 msgstr ""
 
-#: src/legacy/settings.php:1861
+#: src/legacy/settings.php:1860
 msgid "Form blurb"
 msgstr ""
 
-#: src/legacy/settings.php:1865
+#: src/legacy/settings.php:1864
 msgid "Check those fields you want to use. Drag and drop to change the order"
 msgstr ""
 
-#: src/legacy/settings.php:1881
+#: src/legacy/settings.php:1880
 msgid "Field"
 msgstr ""
 
-#: src/legacy/settings.php:1882, src/legacy/settings.php:2101
+#: src/legacy/settings.php:1881, src/legacy/settings.php:2100
 msgid "Label"
 msgstr ""
 
-#: src/legacy/settings.php:1936, src/legacy/settings.php:2020
+#: src/legacy/settings.php:1935, src/legacy/settings.php:2019
 msgid "Adds a maths captcha to confuse the spammers."
 msgstr ""
 
-#: src/legacy/settings.php:1948
+#: src/legacy/settings.php:1947
 msgid "User defined 1"
 msgstr ""
 
-#: src/legacy/settings.php:1955
+#: src/legacy/settings.php:1954
 msgid "User defined 2"
 msgstr ""
 
-#: src/legacy/settings.php:1969
+#: src/legacy/settings.php:1968
 msgid "Number ( user defined input field for a number)"
 msgstr ""
 
-#: src/legacy/settings.php:1976
+#: src/legacy/settings.php:1975
 msgid "Additional Info"
 msgstr ""
 
-#: src/legacy/settings.php:1990
+#: src/legacy/settings.php:1989
 msgid "Optin Checkbox"
 msgstr ""
 
-#: src/legacy/settings.php:2001
+#: src/legacy/settings.php:2000
 msgid "Display as radio buttons: "
 msgstr ""
 
-#: src/legacy/settings.php:2007
+#: src/legacy/settings.php:2006
 msgid "Donation if enabled"
 msgstr ""
 
-#: src/legacy/settings.php:2034, src/legacy/settings.php:2335
+#: src/legacy/settings.php:2033, src/legacy/settings.php:2334
 msgid "Submit Button"
 msgstr ""
 
-#: src/legacy/settings.php:2038
+#: src/legacy/settings.php:2037
 msgid "Show box for more names"
 msgstr ""
 
-#: src/legacy/settings.php:2046
+#: src/legacy/settings.php:2045
 msgid "More names label"
 msgstr ""
 
-#: src/legacy/settings.php:2051
+#: src/legacy/settings.php:2050
 msgid "Terms and Conditions"
 msgstr ""
 
-#: src/legacy/settings.php:2059
+#: src/legacy/settings.php:2058
 msgid "T&C label"
 msgstr ""
 
-#: src/legacy/settings.php:2064
+#: src/legacy/settings.php:2063
 msgid "T&C URL"
 msgstr ""
 
-#: src/legacy/settings.php:2069
+#: src/legacy/settings.php:2068
 msgid "Open link in new Tab/Window"
 msgstr ""
 
-#: src/legacy/settings.php:2072
+#: src/legacy/settings.php:2071
 msgid "Error and Thank-you messages"
 msgstr ""
 
-#: src/legacy/settings.php:2075
+#: src/legacy/settings.php:2074
 msgid "Thank you message title"
 msgstr ""
 
-#: src/legacy/settings.php:2079
+#: src/legacy/settings.php:2078
 msgid "Thank you message blurb"
 msgstr ""
 
-#: src/legacy/settings.php:2083
+#: src/legacy/settings.php:2082
 msgid "Error Message"
 msgstr ""
 
-#: src/legacy/settings.php:2087
+#: src/legacy/settings.php:2086
 msgid "Already Registered"
 msgstr ""
 
-#: src/legacy/settings.php:2091
+#: src/legacy/settings.php:2090
 msgid "Register without payment"
 msgstr ""
 
-#: src/legacy/settings.php:2096
+#: src/legacy/settings.php:2095
 msgid "Only displays if there is a cost and the transfer to paypal option is enabled on the"
 msgstr ""
 
-#: src/legacy/settings.php:2097
+#: src/legacy/settings.php:2096
 msgid "Payments Page"
 msgstr ""
 
-#: src/legacy/settings.php:2106
+#: src/legacy/settings.php:2105
 msgid "Pay later message"
 msgstr ""
 
-#: src/legacy/settings.php:2110
+#: src/legacy/settings.php:2109
 msgid "Name Removal"
 msgstr ""
 
-#: src/legacy/settings.php:2114
+#: src/legacy/settings.php:2113
 msgid "Use 'Not Attending' option to allow people to remove their names from the list"
 msgstr ""
 
-#: src/legacy/settings.php:2114
+#: src/legacy/settings.php:2113
 msgid "The plugin matches email addresses to identify the attendee"
 msgstr ""
 
-#: src/legacy/settings.php:2118
+#: src/legacy/settings.php:2117
 msgid "Name Removed Message"
 msgstr ""
 
-#: src/legacy/settings.php:2123
+#: src/legacy/settings.php:2122
 msgid "Display a 'return to event' message after registration"
 msgstr ""
 
-#: src/legacy/settings.php:2127
+#: src/legacy/settings.php:2126
 msgid "Return to event message:"
 msgstr ""
 
-#: src/legacy/settings.php:2131
+#: src/legacy/settings.php:2130
 msgid "Confirmation Email"
 msgstr ""
 
-#: src/legacy/settings.php:2135
+#: src/legacy/settings.php:2134
 msgid "Set default 'Copy Message' field to 'checked'"
 msgstr ""
 
-#: src/legacy/settings.php:2141
+#: src/legacy/settings.php:2140
 msgid "Redirection"
 msgstr ""
 
-#: src/legacy/settings.php:2144
+#: src/legacy/settings.php:2143
 msgid "This will redirect visitors to a URL instead of displaying the thank you message"
 msgstr ""
 
-#: src/legacy/settings.php:2148
+#: src/legacy/settings.php:2147
 msgid "Redirection URL"
 msgstr ""
 
-#: src/legacy/settings.php:2153
+#: src/legacy/settings.php:2152
 msgid "Moderation"
 msgstr ""
 
-#: src/legacy/settings.php:2157
+#: src/legacy/settings.php:2156
 msgid "Moderate all registrations"
 msgstr ""
 
-#: src/legacy/settings.php:2161, src/legacy/settings.php:2183
+#: src/legacy/settings.php:2160, src/legacy/settings.php:2182
 msgid "Message to display after registration"
 msgstr ""
 
-#: src/legacy/settings.php:2166
+#: src/legacy/settings.php:2165
 msgid "Update places available before moderation"
 msgstr ""
 
-#: src/legacy/settings.php:2170
+#: src/legacy/settings.php:2169
 msgid "Waiting Lists"
 msgstr ""
 
-#: src/legacy/settings.php:2174
+#: src/legacy/settings.php:2173
 msgid "Allow people to register even if there are no places available"
 msgstr ""
 
-#: src/legacy/settings.php:2188
+#: src/legacy/settings.php:2187
 msgid "Attendee Lists"
 msgstr ""
 
-#: src/legacy/settings.php:2192
+#: src/legacy/settings.php:2191
 msgid "Show attendees as a list"
 msgstr ""
 
 #. translators: leave the place holder
-#: src/legacy/settings.php:2205
+#: src/legacy/settings.php:2204
 msgid "If you want a link to a website use first used defined field and the %1$s shortcode."
 msgstr ""
 
-#: src/legacy/settings.php:2210
+#: src/legacy/settings.php:2209
 msgid "Save Settings"
 msgstr ""
 
-#: src/legacy/settings.php:2211
+#: src/legacy/settings.php:2210
 msgid "Are you sure you want to reset the registration form settings?"
 msgstr ""
 
 #. translators: leave Akismet ( proper noun)
-#: src/legacy/settings.php:2217
+#: src/legacy/settings.php:2216
 msgid "Use Akismet Validation"
 msgstr ""
 
-#: src/legacy/settings.php:2218
+#: src/legacy/settings.php:2217
 msgid "Enter your API Key to check all messages against the Akismet database."
 msgstr ""
 
 #. translators: leave Akismet ( proper noun)
-#: src/legacy/settings.php:2222
+#: src/legacy/settings.php:2221
 msgid "Activate Akismet Validation"
 msgstr ""
 
 #. translators: leave Akismet ( proper noun)
-#: src/legacy/settings.php:2225
+#: src/legacy/settings.php:2224
 msgid "Deactivate Aksimet Validation"
 msgstr ""
 
 #. translators: leave the \n
-#: src/legacy/settings.php:2227
+#: src/legacy/settings.php:2226
 msgid "This will delete the Akismet Key.\nAre you sure you want to do this?"
 msgstr ""
 
-#: src/legacy/settings.php:2232, src/legacy/settings.php:2361
+#: src/legacy/settings.php:2231, src/legacy/settings.php:2360
 msgid "Form Styling"
 msgstr ""
 
-#: src/legacy/settings.php:2362
+#: src/legacy/settings.php:2361
 msgid "Registration Form styling is only avaialble to Pro users."
 msgstr ""
 
-#: src/legacy/settings.php:2363
+#: src/legacy/settings.php:2362
 msgid "Find out more"
 msgstr ""
 
-#: src/legacy/settings.php:2237
+#: src/legacy/settings.php:2236
 msgid "NOTE:</b>Leave fields blank if you don't want to use them"
 msgstr ""
 
-#: src/legacy/settings.php:2240
+#: src/legacy/settings.php:2239
 msgid "Use theme styles"
 msgstr ""
 
-#: src/legacy/settings.php:2244
+#: src/legacy/settings.php:2243
 msgid "Form Width"
 msgstr ""
 
-#: src/legacy/settings.php:2248
+#: src/legacy/settings.php:2247
 msgid "Width"
 msgstr ""
 
-#: src/legacy/settings.php:2250
+#: src/legacy/settings.php:2249
 msgid "Form Border"
 msgstr ""
 
-#: src/legacy/settings.php:2251
+#: src/legacy/settings.php:2250
 msgid "Note: The rounded corners and shadows only work on CSS3 supported browsers and even then not in IE8. Don't blame me, blame Microsoft."
 msgstr ""
 
-#: src/legacy/settings.php:2254
+#: src/legacy/settings.php:2253
 msgid "Type:"
 msgstr ""
 
-#: src/legacy/settings.php:2255
+#: src/legacy/settings.php:2254
 msgid "No border"
 msgstr ""
 
-#: src/legacy/settings.php:2256
+#: src/legacy/settings.php:2255
 msgid "Plain Border"
 msgstr ""
 
-#: src/legacy/settings.php:2257
+#: src/legacy/settings.php:2256
 msgid "Round Corners (Not IE8)"
 msgstr ""
 
-#: src/legacy/settings.php:2258
+#: src/legacy/settings.php:2257
 msgid "Shadowed Border(Not IE8)"
 msgstr ""
 
-#: src/legacy/settings.php:2259
+#: src/legacy/settings.php:2258
 msgid "Rounded Shadowed Border (Not IE8)"
 msgstr ""
 
-#: src/legacy/settings.php:2277
+#: src/legacy/settings.php:2276
 msgid "Form Header"
 msgstr ""
 
-#: src/legacy/settings.php:2280
+#: src/legacy/settings.php:2279
 msgid "Header Type"
 msgstr ""
 
-#: src/legacy/settings.php:2284
+#: src/legacy/settings.php:2283
 msgid "Header Size:"
 msgstr ""
 
-#: src/legacy/settings.php:2288
+#: src/legacy/settings.php:2287
 msgid "Header Colour:"
 msgstr ""
 
-#: src/legacy/settings.php:2292
+#: src/legacy/settings.php:2291
 msgid "Input Fields"
 msgstr ""
 
-#: src/legacy/settings.php:2295, src/legacy/settings.php:2325
+#: src/legacy/settings.php:2294, src/legacy/settings.php:2324
 msgid "Font Colour:"
 msgstr ""
 
-#: src/legacy/settings.php:2299
+#: src/legacy/settings.php:2298
 msgid "Normal Border:"
 msgstr ""
 
-#: src/legacy/settings.php:2303
+#: src/legacy/settings.php:2302
 msgid "Required Fields:"
 msgstr ""
 
-#: src/legacy/settings.php:2307
+#: src/legacy/settings.php:2306
 msgid "Background:"
 msgstr ""
 
-#: src/legacy/settings.php:2311
+#: src/legacy/settings.php:2310
 msgid "Focus:"
 msgstr ""
 
-#: src/legacy/settings.php:2314
+#: src/legacy/settings.php:2313
 msgid "Corners:"
 msgstr ""
 
-#: src/legacy/settings.php:2315
+#: src/legacy/settings.php:2314
 msgid "Square Corners"
 msgstr ""
 
-#: src/legacy/settings.php:2322
+#: src/legacy/settings.php:2321
 msgid "Other text content"
 msgstr ""
 
-#: src/legacy/settings.php:2329, src/legacy/settings.php:3179
+#: src/legacy/settings.php:2328, src/legacy/settings.php:3188
 msgid "Error Messages"
 msgstr ""
 
-#: src/legacy/settings.php:2331
+#: src/legacy/settings.php:2330
 msgid "Font/Border Colour:"
 msgstr ""
 
-#: src/legacy/settings.php:2342
+#: src/legacy/settings.php:2341
 msgid "Hover"
 msgstr ""
 
-#: src/legacy/settings.php:2346
+#: src/legacy/settings.php:2345
 msgid "Border:"
 msgstr ""
 
-#: src/legacy/settings.php:2348
+#: src/legacy/settings.php:2347
 msgid "Size:"
 msgstr ""
 
-#: src/legacy/settings.php:2348
+#: src/legacy/settings.php:2347
 msgid "Same width as the form"
 msgstr ""
 
-#: src/legacy/settings.php:2353
+#: src/legacy/settings.php:2352
 msgid "Position:"
 msgstr ""
 
-#: src/legacy/settings.php:2353
+#: src/legacy/settings.php:2352
 msgid "Right"
 msgstr ""
 
-#: src/legacy/settings.php:2355
+#: src/legacy/settings.php:2354
 msgid "Save Styles"
 msgstr ""
 
-#: src/legacy/settings.php:2356
+#: src/legacy/settings.php:2355
 msgid "Reset Styles"
 msgstr ""
 
-#: src/legacy/settings.php:2357
+#: src/legacy/settings.php:2356
 msgid "Are you sure you want to reset the styles?"
 msgstr ""
 
-#: src/legacy/settings.php:2367
+#: src/legacy/settings.php:2366
 msgid "Example form"
 msgstr ""
 
-#: src/legacy/settings.php:2368
+#: src/legacy/settings.php:2367
 msgid "This is an example of the form. When it appears on your site it will use your theme styles."
 msgstr ""
 
-#: src/legacy/settings.php:2408
+#: src/legacy/settings.php:2412
 msgid "Send only after confirmed payment - for paid events which go direct to PayPal (set if %1$sPayPal IPN%2$s is active), this will also defer admin notifications until after payment. Free Events and Events that do not redirect to payment automatically will still be notified immediately."
 msgstr ""
 
-#: src/legacy/settings.php:2416
+#: src/legacy/settings.php:2420
 msgid "Send only after confirmed payment - for paid events which go direct to payment gateway (set if using Stripe or %1$sPayPal IPN%2$s is active), this will also defer admin notifications until after payment. Free Events and Events that do not redirect to payment automatically will still be notified immediately."
 msgstr ""
 
-#: src/legacy/settings.php:2423
+#: src/legacy/settings.php:2427
 msgid "Auto responder settings"
 msgstr ""
 
-#: src/legacy/settings.php:2424
+#: src/legacy/settings.php:2428
 msgid "The Auto Responder will send an email to the Registrant if enabled of if they choose to recieve a copy of their details"
 msgstr ""
 
-#: src/legacy/settings.php:2426
+#: src/legacy/settings.php:2430
 msgid "Enable Auto Responder"
 msgstr ""
 
-#: src/legacy/settings.php:2436
+#: src/legacy/settings.php:2440
 msgid "Show event title"
 msgstr ""
 
-#: src/legacy/settings.php:2437
+#: src/legacy/settings.php:2441
 msgid "Show date"
 msgstr ""
 
-#: src/legacy/settings.php:2438
+#: src/legacy/settings.php:2442
 msgid "Message Content"
 msgstr ""
 
-#: src/legacy/settings.php:2439
+#: src/legacy/settings.php:2443
 msgid "To create individual event messages use the 'Registration Confirmation Message' option at the bottom of the"
 msgstr ""
 
-#: src/legacy/settings.php:2441
+#: src/legacy/settings.php:2445
 msgid "If you are taking payments on some events you can create a message for those events on the"
 msgstr ""
 
-#: src/legacy/settings.php:2442
+#: src/legacy/settings.php:2446
 msgid "Payments settings page"
 msgstr ""
 
-#: src/legacy/settings.php:2449
+#: src/legacy/settings.php:2453
 msgid "You can use the following shortcodes in the message body:"
 msgstr ""
 
-#: src/legacy/settings.php:2451
+#: src/legacy/settings.php:2455
 msgid "Replacement Text"
 msgstr ""
 
-#: src/legacy/settings.php:2452
+#: src/legacy/settings.php:2456
 msgid "The registrants name from the form"
 msgstr ""
 
-#: src/legacy/settings.php:2453
+#: src/legacy/settings.php:2457
 msgid "Event title"
 msgstr ""
 
-#: src/legacy/settings.php:2454
+#: src/legacy/settings.php:2458
 msgid "Date of the event"
 msgstr ""
 
-#: src/legacy/settings.php:2455
+#: src/legacy/settings.php:2459
 msgid "Number of places required"
 msgstr ""
 
-#: src/legacy/settings.php:2456
+#: src/legacy/settings.php:2460
 msgid "Event location (not the address)"
 msgstr ""
 
-#: src/legacy/settings.php:2457
+#: src/legacy/settings.php:2461
 msgid "Start time"
 msgstr ""
 
-#: src/legacy/settings.php:2458
+#: src/legacy/settings.php:2462
 msgid "Finish time"
 msgstr ""
 
-#: src/legacy/settings.php:2461
+#: src/legacy/settings.php:2465
 msgid "Add registration details to the email"
 msgstr ""
 
-#: src/legacy/settings.php:2462
+#: src/legacy/settings.php:2466
 msgid "Registration details blurb"
 msgstr ""
 
-#: src/legacy/settings.php:2464
+#: src/legacy/settings.php:2468
 msgid "Add event details to the email"
 msgstr ""
 
-#: src/legacy/settings.php:2465
+#: src/legacy/settings.php:2469
 msgid "Event details blurb"
 msgstr ""
 
-#: src/legacy/settings.php:2467
+#: src/legacy/settings.php:2471
 msgid "Include link to event page"
 msgstr ""
 
-#: src/legacy/settings.php:2470
+#: src/legacy/settings.php:2474
 msgid "Are you sure you want to reset the auto responder settings?"
 msgstr ""
 
-#: src/legacy/settings.php:2511
+#: src/legacy/settings.php:2515
 msgid "The payment form settings have been updated"
 msgstr ""
 
-#: src/legacy/settings.php:2515
+#: src/legacy/settings.php:2519
 msgid "The payment form settings have been reset"
 msgstr ""
 
-#: src/legacy/settings.php:2524
+#: src/legacy/settings.php:2528
 msgid "Event Payments"
 msgstr ""
 
 #. translators: leave place holder they apply emphasic mark up
-#: src/legacy/settings.php:2527
+#: src/legacy/settings.php:2531
 msgid "This setting only works if you have a simple cost on your event. This means %1$sEntry $10%2$s will be OK but %1$s&pound;5 for adults and &pound;3 for children%2$s may cause problems."
 msgstr ""
 
-#: src/legacy/settings.php:2535
+#: src/legacy/settings.php:2539
 msgid "Transfer to Payment Provider after registration"
 msgstr ""
 
-#: src/legacy/settings.php:2538
+#: src/legacy/settings.php:2542
 msgid "After registration the plugin will link to a payment provider using the event title, cost and number of places for the payment details."
 msgstr ""
 
-#: src/legacy/settings.php:2539
+#: src/legacy/settings.php:2543
 msgid "You can also select payments on individual events using the"
 msgstr ""
 
-#: src/legacy/settings.php:2540
+#: src/legacy/settings.php:2544
 msgid "The free version of the plugin only permits payment using PayPal Standard. Upgrading to Pro gives you the option to use Stripe"
 msgstr ""
 
-#: src/legacy/settings.php:2543
+#: src/legacy/settings.php:2547
 msgid "PayPal"
 msgstr ""
 
-#: src/legacy/settings.php:2546
+#: src/legacy/settings.php:2550
 msgid "Your PayPal Email Address"
 msgstr ""
 
-#: src/legacy/settings.php:2550
+#: src/legacy/settings.php:2554
 msgid "Currency"
 msgstr ""
 
-#: src/legacy/settings.php:2553
+#: src/legacy/settings.php:2557
 msgid "Currency code"
 msgstr ""
 
-#: src/legacy/settings.php:2554
+#: src/legacy/settings.php:2558
 msgid "(For example: GBP, USD, EUR)"
 msgstr ""
 
-#: src/legacy/settings.php:2557
+#: src/legacy/settings.php:2561
 msgid "Variable Payments"
 msgstr ""
 
-#: src/legacy/settings.php:2560
+#: src/legacy/settings.php:2564
 msgid "Title"
 msgstr ""
 
-#: src/legacy/settings.php:2564
+#: src/legacy/settings.php:2568
 msgid "Currency symbol"
 msgstr ""
 
-#: src/legacy/settings.php:2568
+#: src/legacy/settings.php:2572
 msgid "Item label"
 msgstr ""
 
-#: src/legacy/settings.php:2573
+#: src/legacy/settings.php:2577
 msgid "Total label"
 msgstr ""
 
-#: src/legacy/settings.php:2577
+#: src/legacy/settings.php:2581
 msgid "Handling"
 msgstr ""
 
-#: src/legacy/settings.php:2580
+#: src/legacy/settings.php:2584
 msgid "Add processing fee"
 msgstr ""
 
-#: src/legacy/settings.php:2581
+#: src/legacy/settings.php:2585
 msgid "Percentage of the total"
 msgstr ""
 
-#: src/legacy/settings.php:2582
+#: src/legacy/settings.php:2586
 msgid "Fixed amount"
 msgstr ""
 
-#: src/legacy/settings.php:2585
+#: src/legacy/settings.php:2589
 msgid "Captions and Messages"
 msgstr ""
 
-#: src/legacy/settings.php:2588
+#: src/legacy/settings.php:2592
 msgid "Submit Label"
 msgstr ""
 
-#: src/legacy/settings.php:2592
+#: src/legacy/settings.php:2596
 msgid "Waiting Message"
 msgstr ""
 
-#: src/legacy/settings.php:2597
+#: src/legacy/settings.php:2601
 msgid "Coupons"
 msgstr ""
 
-#: src/legacy/settings.php:2598
+#: src/legacy/settings.php:2602
 msgid "Discounts are applied at checkout before any processing fees are calculated. The coupon field will appear just before the submission button on the registration form"
 msgstr ""
 
-#: src/legacy/settings.php:2599
+#: src/legacy/settings.php:2603
 msgid "Use Coupons on all events ( or you can enable on a per event basis)"
 msgstr ""
 
-#: src/legacy/settings.php:2599
+#: src/legacy/settings.php:2603
 msgid "Set coupon codes"
 msgstr ""
 
-#: src/legacy/settings.php:2600
+#: src/legacy/settings.php:2604
 msgid "Coupon code label"
 msgstr ""
 
-#: src/legacy/settings.php:2604
+#: src/legacy/settings.php:2608
 msgid "Instant Payment Notification"
 msgstr ""
 
-#: src/legacy/settings.php:2605
+#: src/legacy/settings.php:2609
 msgid "IPN only works if you have a PayPal Business or Premier account and IPN has been set up on that account"
 msgstr ""
 
-#: src/legacy/settings.php:2606, src/legacy/settings.php:2634
+#: src/legacy/settings.php:2610, src/legacy/settings.php:2638
 msgid "See the"
 msgstr ""
 
-#: src/legacy/settings.php:2606
+#: src/legacy/settings.php:2610
 msgid "PayPal IPN Integration Guide"
 msgstr ""
 
-#: src/legacy/settings.php:2606
+#: src/legacy/settings.php:2610
 msgid "for more information on how to set up IPN"
 msgstr ""
 
-#: src/legacy/settings.php:2608
+#: src/legacy/settings.php:2612
 msgid "The IPN listener URL you will need is"
 msgstr ""
 
-#: src/legacy/settings.php:2609
+#: src/legacy/settings.php:2613
 msgid "To see the Payments Report click on the"
 msgstr ""
 
-#: src/legacy/settings.php:2609
+#: src/legacy/settings.php:2613
 msgid "link in your dashboard menu or"
 msgstr ""
 
-#: src/legacy/settings.php:2609
+#: src/legacy/settings.php:2613
 msgid "click here"
 msgstr ""
 
-#: src/legacy/settings.php:2610
+#: src/legacy/settings.php:2614
 msgid "Enable IPN"
 msgstr ""
 
-#: src/legacy/settings.php:2611
+#: src/legacy/settings.php:2615
 msgid "Abandoned Cart Payment Processing"
 msgstr ""
 
-#: src/legacy/settings.php:2613
+#: src/legacy/settings.php:2617
 msgid "Pending payments, for events with a cost that that immediately redirect to payment can be cleared after a short while automatically."
 msgstr ""
 
-#: src/legacy/settings.php:2618
+#: src/legacy/settings.php:2622
 msgid "Enable auto clearing of pending payments"
 msgstr ""
 
-#: src/legacy/settings.php:2620
+#: src/legacy/settings.php:2624
 msgid "Hide registration details for pending payments ( Warning: if you limit number attending, hiding pending bookings can result in those limits being breached, so use with care with limited events )"
 msgstr ""
 
-#: src/legacy/settings.php:2622
+#: src/legacy/settings.php:2626
 msgid "Send a message when clearing down a pending payments (blank not to send)."
 msgstr ""
 
-#: src/legacy/settings.php:2625
+#: src/legacy/settings.php:2629
 msgid "Payment Report"
 msgstr ""
 
-#: src/legacy/settings.php:2627
+#: src/legacy/settings.php:2631
 msgid "Payment Report Column header"
 msgstr ""
 
-#: src/legacy/settings.php:2629
+#: src/legacy/settings.php:2633
 msgid "Payment Complete Label"
 msgstr ""
 
-#: src/legacy/settings.php:2633
+#: src/legacy/settings.php:2637
 msgid "Payments Autoresponder"
 msgstr ""
 
-#: src/legacy/settings.php:2634
+#: src/legacy/settings.php:2638
 msgid "This is the message that will be sent for events linked to payments"
 msgstr ""
 
-#: src/legacy/settings.php:2635
+#: src/legacy/settings.php:2639
 msgid "Autoresponder settings page"
 msgstr ""
 
-#: src/legacy/settings.php:2636
+#: src/legacy/settings.php:2640
 msgid "for all other options"
 msgstr ""
 
-#: src/legacy/settings.php:2645
+#: src/legacy/settings.php:2649
 msgid "Are you sure you want to reset the settings?"
 msgstr ""
 
-#: src/legacy/settings.php:2646
+#: src/legacy/settings.php:2650
 msgid "Use Paypal sandbox (developer use only)"
 msgstr ""
 
-#: src/legacy/settings.php:2651
+#: src/legacy/settings.php:2655
 msgid "IPN Simulation"
 msgstr ""
 
-#: src/legacy/settings.php:2652
+#: src/legacy/settings.php:2656
 msgid "IPN can be blocked or restricted by your server settings, theme or other plugins"
 msgstr ""
 
-#: src/legacy/settings.php:2652
+#: src/legacy/settings.php:2656
 msgid "The good news is you can simulate the notifications to check if all is working"
 msgstr ""
 
-#: src/legacy/settings.php:2653
+#: src/legacy/settings.php:2657
 msgid "To carry out a simulation"
 msgstr ""
 
-#: src/legacy/settings.php:2655
+#: src/legacy/settings.php:2659
 msgid "Enable IPN and the PayPal Sandbox on the left"
 msgstr ""
 
-#: src/legacy/settings.php:2656
+#: src/legacy/settings.php:2660
 msgid "Register for an event that has the link to paypal option selected"
 msgstr ""
 
-#: src/legacy/settings.php:2657
+#: src/legacy/settings.php:2661
 msgid "Go to the"
 msgstr ""
 
-#: src/legacy/settings.php:2658, src/ui/admin/class-admin-reports__premium_only.php:33, src/ui/admin/class-admin-reports__premium_only.php:34, src/ui/admin/templates__free/reports_dashboard.php:10, src/ui/admin/templates__premium_only/reports_dashboard.php:9
+#: src/legacy/settings.php:2662, src/ui/admin/class-admin-reports__premium_only.php:33, src/ui/admin/class-admin-reports__premium_only.php:34, src/ui/admin/templates__free/reports_dashboard.php:10, src/ui/admin/templates__premium_only/reports_dashboard.php:9
 msgid "Registration Report"
 msgstr ""
 
-#: src/legacy/settings.php:2658
+#: src/legacy/settings.php:2662
 msgid "find the event and copy the long number in the last column)"
 msgstr ""
 
-#: src/legacy/settings.php:2660
+#: src/legacy/settings.php:2664
 msgid "Go to the IPN simulation page"
 msgstr ""
 
-#: src/legacy/settings.php:2661
+#: src/legacy/settings.php:2665
 msgid "Login and enter the IPN listener URL"
 msgstr ""
 
-#: src/legacy/settings.php:2664
+#: src/legacy/settings.php:2668
 msgid "Select 'Express Checkout' from the drop down"
 msgstr ""
 
-#: src/legacy/settings.php:2666
+#: src/legacy/settings.php:2670
 msgid "Scroll to the bottom of the page and enter the long number you copied at step 3 into the 'Custom' field"
 msgstr ""
 
-#: src/legacy/settings.php:2667
+#: src/legacy/settings.php:2671
 msgid "Click 'Send IPN'. Scroll up the page and you should see an 'IPN Verified' message"
 msgstr ""
 
-#: src/legacy/settings.php:2668
+#: src/legacy/settings.php:2672
 msgid "Go back to your Registration Report, you should now see the payment completed message on the event"
 msgstr ""
 
-#: src/legacy/settings.php:2740
+#: src/legacy/settings.php:2745
 msgid "Coupons Codes"
 msgstr ""
 
-#: src/legacy/settings.php:2742
+#: src/legacy/settings.php:2747
 msgid "Leave fields blank if you don't want to use them"
 msgstr ""
 
-#: src/legacy/settings.php:2745
+#: src/legacy/settings.php:2750
 msgid "Coupon Code"
 msgstr ""
 
-#: src/legacy/settings.php:2746
+#: src/legacy/settings.php:2751
 msgid "Percentage"
 msgstr ""
 
-#: src/legacy/settings.php:2747
+#: src/legacy/settings.php:2752
 msgid "Fixed Amount"
 msgstr ""
 
-#: src/legacy/settings.php:2760
+#: src/legacy/settings.php:2765
 msgid "Are you sure you want to reset the coupon codes?"
 msgstr ""
 
-#: src/legacy/settings.php:2789
+#: src/legacy/settings.php:2794
 msgid "ERROR: Unable to create new theme file"
 msgstr ""
 
-#: src/legacy/settings.php:2793
+#: src/legacy/settings.php:2798
 msgid "Event Templates"
 msgstr ""
 
-#: src/legacy/settings.php:2811
+#: src/legacy/settings.php:2816
 msgid "Your theme doesn't appear to have the 'single.php' file needed to create an event template. To create an event template follow the instructions on the right."
 msgstr ""
 
-#: src/legacy/settings.php:2796
+#: src/legacy/settings.php:2801
 msgid "If your theme adds posting dates and other unwanted features to your event page you can set up and edit a template for single events."
 msgstr ""
 
-#: src/legacy/settings.php:2797
+#: src/legacy/settings.php:2802
 msgid "This function clones the 'single.php' theme file and saves it as 'single-event.php'."
 msgstr ""
 
-#: src/legacy/settings.php:2799
+#: src/legacy/settings.php:2804
 msgid "If you aren't confident editing theme files it may be prudent to read the"
 msgstr ""
 
-#: src/legacy/settings.php:2800
+#: src/legacy/settings.php:2805
 msgid "first"
 msgstr ""
 
-#: src/legacy/settings.php:2803
+#: src/legacy/settings.php:2808
 msgid "An Event Template already exists. Clicking the button below will overwrite the existing file."
 msgstr ""
 
-#: src/legacy/settings.php:2804
+#: src/legacy/settings.php:2809
 msgid "View Template file"
 msgstr ""
 
-#: src/legacy/settings.php:2807
+#: src/legacy/settings.php:2812
 msgid "Create Event Template"
 msgstr ""
 
-#: src/legacy/settings.php:2815
+#: src/legacy/settings.php:2820
 msgid "The DIY Option"
 msgstr ""
 
-#: src/legacy/settings.php:2816
+#: src/legacy/settings.php:2821
 msgid "It's very easy to create your own template if you have FTP access to your theme"
 msgstr ""
 
-#: src/legacy/settings.php:2817
+#: src/legacy/settings.php:2822
 msgid "1. Connect to your domain using FTP"
 msgstr ""
 
-#: src/legacy/settings.php:2818
+#: src/legacy/settings.php:2823
 msgid "2. Navigate to the theme directory. Normally wp-content/themes/your theme"
 msgstr ""
 
-#: src/legacy/settings.php:2819
+#: src/legacy/settings.php:2824
 msgid "3. Download the file called single.php to your computer"
 msgstr ""
 
-#: src/legacy/settings.php:2820
+#: src/legacy/settings.php:2825
 msgid "4. Open the file using a text editor"
 msgstr ""
 
-#: src/legacy/settings.php:2821
+#: src/legacy/settings.php:2826
 msgid "5. Add the following to the very top of the file"
 msgstr ""
 
-#: src/legacy/settings.php:2829
+#: src/legacy/settings.php:2834
 msgid "6. Save as"
 msgstr ""
 
-#: src/legacy/settings.php:2831
+#: src/legacy/settings.php:2836
 msgid "7. Upload the file to your theme directory"
 msgstr ""
 
-#: src/legacy/settings.php:2832
+#: src/legacy/settings.php:2837
 msgid "The event manager will detect the new template and use it for single events"
 msgstr ""
 
-#: src/legacy/settings.php:2896
+#: src/legacy/settings.php:2901
 msgid "The API Settings have been updated"
 msgstr ""
 
-#: src/legacy/settings.php:2902
+#: src/legacy/settings.php:2907
 msgid "The API settings have been reset"
 msgstr ""
 
-#: src/legacy/settings.php:2907
+#: src/legacy/settings.php:2912
 msgid "The messages have been reset"
 msgstr ""
 
-#: src/legacy/settings.php:2946
+#: src/legacy/settings.php:2951
 msgid "Upgrade to Pro - Free Trial"
 msgstr ""
 
-#: src/legacy/settings.php:2964
+#: src/legacy/settings.php:2969
 msgid " *** PayPal Sandbox is turned on, turn off to allow Stripe ***"
 msgstr ""
 
-#: src/legacy/settings.php:2976
+#: src/legacy/settings.php:2981
 msgid ""
 "The Stripe API lets people pay for their events without going off site. \n"
 "				Instructions on where to get your API credentials is given on the right."
 msgstr ""
 
-#: src/legacy/settings.php:2978
+#: src/legacy/settings.php:2983
 msgid "Use Stripe."
 msgstr ""
 
-#: src/legacy/settings.php:2982
+#: src/legacy/settings.php:2987
 msgid "Stripe API Settings"
 msgstr ""
 
-#: src/legacy/settings.php:2985
+#: src/legacy/settings.php:2990
 msgid "Publishable Key"
 msgstr ""
 
-#: src/legacy/settings.php:2989
+#: src/legacy/settings.php:2994
 msgid "Secret Key"
 msgstr ""
 
-#: src/legacy/settings.php:2993
+#: src/legacy/settings.php:2998
 msgid "Webhook Secret Key"
 msgstr ""
 
-#: src/legacy/settings.php:2997
+#: src/legacy/settings.php:3002
 msgid "Messages"
 msgstr ""
 
-#: src/legacy/settings.php:3000
+#: src/legacy/settings.php:3005
 msgid "Validating"
 msgstr ""
 
-#: src/legacy/settings.php:3004
+#: src/legacy/settings.php:3009
 msgid "Waiting"
 msgstr ""
 
-#: src/legacy/settings.php:3008
+#: src/legacy/settings.php:3013
 msgid "Cancel and Return Title"
 msgstr ""
 
-#: src/legacy/settings.php:3012
+#: src/legacy/settings.php:3017
 msgid "Cancel and Return Blurb"
 msgstr ""
 
-#: src/legacy/settings.php:3016
+#: src/legacy/settings.php:3021
 msgid "Try Again Anchor"
 msgstr ""
 
-#: src/legacy/settings.php:3020
+#: src/legacy/settings.php:3025
 msgid "Payment Confirmation Title"
 msgstr ""
 
-#: src/legacy/settings.php:3024
+#: src/legacy/settings.php:3029
 msgid "Payment Confirmation Blurb"
 msgstr ""
 
-#: src/legacy/settings.php:3030
+#: src/legacy/settings.php:3035
 msgid "Reset API"
 msgstr ""
 
-#: src/legacy/settings.php:3030
+#: src/legacy/settings.php:3035
 msgid "Are you sure you want to reset the API settings?"
 msgstr ""
 
-#: src/legacy/settings.php:3032
+#: src/legacy/settings.php:3037
 msgid "Reset Messages"
 msgstr ""
 
-#: src/legacy/settings.php:3033
+#: src/legacy/settings.php:3038
 msgid "Are you sure you want to reset the messages?"
 msgstr ""
 
-#: src/legacy/settings.php:3045
+#: src/legacy/settings.php:3050
 msgid "To Use Stripe"
 msgstr ""
 
-#: src/legacy/settings.php:3047
+#: src/legacy/settings.php:3052
 msgid "Login to your Stripe account (or create an account if you don't have one)"
 msgstr ""
 
-#: src/legacy/settings.php:3049
+#: src/legacy/settings.php:3054
 msgid "For detailed how-to - see %1$sknowledgebase article%2$s"
 msgstr ""
 
-#: src/legacy/settings.php:3053
+#: src/legacy/settings.php:3058
 msgid "Copy and paste the Secret and Publishable keys into the appropriate fields on the left"
 msgstr ""
 
-#: src/legacy/settings.php:3055
+#: src/legacy/settings.php:3060
 msgid "Set up a Webhook for 'checkout.session.completed' pointing to %1$s"
 msgstr ""
 
-#: src/legacy/settings.php:3058
+#: src/legacy/settings.php:3063
 msgid "Copy and paste the Webhook Secret into field on the left"
 msgstr ""
 
-#: src/legacy/settings.php:3059
+#: src/legacy/settings.php:3064
 msgid "Make sure the"
 msgstr ""
 
-#: src/legacy/settings.php:3060
+#: src/legacy/settings.php:3065
 msgid "Use Stripe"
 msgstr ""
 
-#: src/legacy/settings.php:3061
+#: src/legacy/settings.php:3066
 msgid "box is checked and save the settings"
 msgstr ""
 
-#: src/legacy/settings.php:3130
+#: src/legacy/settings.php:3139
 msgid "This feature is only available to Pro users. It lets your guests create their own events which you can then moderate and pubish. Or if your trust your visitors, publish without moderation."
 msgstr ""
 
-#: src/legacy/settings.php:3131
+#: src/legacy/settings.php:3140
 msgid "There are all sorts of options you can set to manage what guests can do. For example: images, categories, form fields, create new user and so on."
 msgstr ""
 
-#: src/legacy/settings.php:3133
+#: src/legacy/settings.php:3142
 msgid "Click Here to see an example"
 msgstr ""
 
-#: src/legacy/settings.php:3138
+#: src/legacy/settings.php:3147
 msgid "Upgrade for just $2.99 / month"
 msgstr ""
 
-#: src/legacy/settings.php:3139
+#: src/legacy/settings.php:3148
 msgid "Upgrading gives you access the Guest Event creator, CSV uploader, a range of registration reports and downloads, mailchimp subscriber and the very cool 'In Context Checkout'."
 msgstr ""
 
-#: src/legacy/settings.php:3140, src/ui/admin/templates__free/parts/upgrade_cta.php:9
+#: src/legacy/settings.php:3149, src/ui/admin/templates__free/parts/upgrade_cta.php:9
 msgid "Click to find out more"
 msgstr ""
 
-#: src/legacy/settings.php:3141
+#: src/legacy/settings.php:3150
 msgid "single site, when paid annually, excludes taxes"
 msgstr ""
 
-#: src/legacy/settings.php:3146
+#: src/legacy/settings.php:3155
 msgid "Guest Event Settings"
 msgstr ""
 
-#: src/legacy/settings.php:3148
+#: src/legacy/settings.php:3157
 msgid "Adding the guest event form to your site"
 msgstr ""
 
 #. translators: leave the shortcode [qemguest] as is
-#: src/legacy/settings.php:3151
+#: src/legacy/settings.php:3160
 msgid "Use the shortcode: [qemguest]."
 msgstr ""
 
-#: src/legacy/settings.php:3152
+#: src/legacy/settings.php:3161
 msgid "Admin Message"
 msgstr ""
 
-#: src/legacy/settings.php:3153
+#: src/legacy/settings.php:3162
 msgid "Send an email message when new guest post is published"
 msgstr ""
 
-#: src/legacy/settings.php:3154
+#: src/legacy/settings.php:3163
 msgid "Email Address:"
 msgstr ""
 
-#: src/legacy/settings.php:3155
+#: src/legacy/settings.php:3164
 msgid "Moderation and New User Creation"
 msgstr ""
 
-#: src/legacy/settings.php:3156
+#: src/legacy/settings.php:3165
 msgid "Moderate guest events before publication."
 msgstr ""
 
-#: src/legacy/settings.php:3157
+#: src/legacy/settings.php:3166
 msgid "Only allow logged in users to add guest events. "
 msgstr ""
 
-#: src/legacy/settings.php:3158
+#: src/legacy/settings.php:3167
 msgid "Submission creates new user (subscriber). If you want to let them edit the event change their role to contributor"
 msgstr ""
 
-#: src/legacy/settings.php:3159
+#: src/legacy/settings.php:3168
 msgid "Form Title and Introduction"
 msgstr ""
 
-#: src/legacy/settings.php:3160
+#: src/legacy/settings.php:3169
 msgid "Form title (leave blank if you don't want a heading):"
 msgstr ""
 
-#: src/legacy/settings.php:3162
+#: src/legacy/settings.php:3171
 msgid "This is the information that will appear below the heading and above the form (leave blank if you don't want any):"
 msgstr ""
 
-#: src/legacy/settings.php:3164
+#: src/legacy/settings.php:3173
 msgid "Thank-you Title and Blurb"
 msgstr ""
 
-#: src/legacy/settings.php:3165
+#: src/legacy/settings.php:3174
 msgid "Thank You title (leave blank if you don't want a heading):"
 msgstr ""
 
-#: src/legacy/settings.php:3167
+#: src/legacy/settings.php:3176
 msgid "This is the information that will appear below the thank you title for registered users  (leave blank if you don't want any):"
 msgstr ""
 
-#: src/legacy/settings.php:3169
+#: src/legacy/settings.php:3178
 msgid "This is the link to the event list (leave blank if you don't want a link):"
 msgstr ""
 
-#: src/legacy/settings.php:3171
+#: src/legacy/settings.php:3180
 msgid "This is the blurb that will appear below the thank you title for pending events  (leave blank if you don't want any blurb):"
 msgstr ""
 
-#: src/legacy/settings.php:3173
+#: src/legacy/settings.php:3182
 msgid "Image Upload"
 msgstr ""
 
-#: src/legacy/settings.php:3174
+#: src/legacy/settings.php:3183
 msgid "Allow guests to upload images"
 msgstr ""
 
-#: src/legacy/settings.php:3175
+#: src/legacy/settings.php:3184
 msgid "Maximum file size. Only use numbers, eg: 100000 not 100kB."
 msgstr ""
 
-#: src/legacy/settings.php:3177
+#: src/legacy/settings.php:3186
 msgid "Repeat Events"
 msgstr ""
 
-#: src/legacy/settings.php:3178
+#: src/legacy/settings.php:3187
 msgid "Allow guests to publish repeat events"
 msgstr ""
 
-#: src/legacy/settings.php:3182
+#: src/legacy/settings.php:3191
 msgid "Missing Information"
 msgstr ""
 
-#: src/legacy/settings.php:3186
+#: src/legacy/settings.php:3195
 msgid "Duplicate Title"
 msgstr ""
 
-#: src/legacy/settings.php:3190
+#: src/legacy/settings.php:3199
 msgid "Image Errors"
 msgstr ""
 
 #. translators: Captcha is a proper noun
-#: src/legacy/settings.php:3196
+#: src/legacy/settings.php:3205
 msgid "Captcha Error"
 msgstr ""
 
-#: src/legacy/settings.php:3200
+#: src/legacy/settings.php:3209
 msgid "End date problems"
 msgstr ""
 
-#: src/legacy/settings.php:3206
+#: src/legacy/settings.php:3215
 msgid "Form Fields"
 msgstr ""
 
-#: src/legacy/settings.php:3207
+#: src/legacy/settings.php:3216
 msgid "U = Use this field. R = Required field (must be completed)"
 msgstr ""
 
-#: src/legacy/settings.php:3213
+#: src/legacy/settings.php:3222
 msgid "Label (what your visitor's see)"
 msgstr ""
 
-#: src/legacy/settings.php:3276
+#: src/legacy/settings.php:3285
 msgid "Remove all jQuery  styles"
 msgstr ""
 
-#: src/legacy/settings.php:3299
+#: src/legacy/settings.php:3308
 msgid "The settings have been updated."
 msgstr ""
 
-#: src/legacy/settings.php:3304
+#: src/legacy/settings.php:3313
 msgid "The settings for have been reset."
 msgstr ""
 
-#: src/legacy/settings.php:3312
+#: src/legacy/settings.php:3321
 msgid "Notify organiser"
 msgstr ""
 
-#: src/legacy/settings.php:3313
+#: src/legacy/settings.php:3322
 msgid "Also send registration details to the event organiser"
 msgstr ""
 
-#: src/legacy/settings.php:3314
+#: src/legacy/settings.php:3323
 msgid "You need to add the organiser's email address when creating an event for this to work."
 msgstr ""
 
-#: src/legacy/settings.php:3328, src/legacy/settings.php:3319
+#: src/legacy/settings.php:3337, src/legacy/settings.php:3328
 msgid "Link QEM events to Display Eventbrite Events"
 msgstr ""
 
-#: src/legacy/settings.php:3329
+#: src/legacy/settings.php:3338
 msgid "You can Merge with Eventbrite events via the Display Eventbrite front end"
 msgstr ""
 
-#: src/legacy/settings.php:3330
+#: src/legacy/settings.php:3339
 msgid "You will need to install and enable the Display Eventbrite plugin"
 msgstr ""
 
-#: src/legacy/settings.php:3331
+#: src/legacy/settings.php:3340
 msgid "Get Display Eventbrite plugin"
 msgstr ""
 
-#: src/legacy/settings.php:3321
+#: src/legacy/settings.php:3330
 msgid "This will enable the QEM Events to Merge with Eventbrite Event on the Display Eventbrite front end"
 msgstr ""
 
-#: src/legacy/settings.php:3322
+#: src/legacy/settings.php:3331
 msgid "You will need to set Event times if you have not already."
 msgstr ""
 
-#: src/legacy/settings.php:3335
+#: src/legacy/settings.php:3344
 msgid "Add pagination to the event list"
 msgstr ""
 
-#: src/legacy/settings.php:3340
+#: src/legacy/settings.php:3349
 msgid "Create a theme template for your events."
 msgstr ""
 
-#: src/legacy/settings.php:3341
+#: src/legacy/settings.php:3350
 msgid "Click here for instructions"
 msgstr ""
 
-#: src/legacy/settings.php:3344
+#: src/legacy/settings.php:3353
 msgid "Event Importer"
 msgstr ""
 
-#: src/legacy/settings.php:3345
+#: src/legacy/settings.php:3354
 msgid "Upload and import events from a CSV."
 msgstr ""
 
-#: src/legacy/settings.php:3346
+#: src/legacy/settings.php:3355
 msgid "Upload and Import Events"
 msgstr ""
 
-#: src/legacy/settings.php:3350
+#: src/legacy/settings.php:3359
 msgid "Send an email to selected registrants."
 msgstr ""
 
-#: src/legacy/settings.php:3351
+#: src/legacy/settings.php:3360
 msgid "Shortcode: None"
 msgstr ""
 
-#: src/legacy/settings.php:3352
+#: src/legacy/settings.php:3361
 msgid "Send an email"
 msgstr ""
 
-#: src/legacy/settings.php:3355, src/ui/admin/class-admin-attendees.php:75, src/ui/admin/class-admin-attendees.php:76, src/ui/admin/class-admin-attendees.php:83, src/ui/admin/class-admin-attendees.php:84
+#: src/legacy/settings.php:3364, src/ui/admin/class-admin-attendees.php:75, src/ui/admin/class-admin-attendees.php:76, src/ui/admin/class-admin-attendees.php:83, src/ui/admin/class-admin-attendees.php:84
 msgid "Premium Reports"
 msgstr ""
 
-#: src/legacy/settings.php:3356
+#: src/legacy/settings.php:3365
 msgid "Visit the premium reports dashboard"
 msgstr ""
 
-#: src/legacy/settings.php:3357
+#: src/legacy/settings.php:3366
 msgid "to see reports available."
 msgstr ""
 
-#: src/legacy/settings.php:3358
+#: src/legacy/settings.php:3367
 msgid "Dashboard"
 msgstr ""
 
-#: src/legacy/settings.php:3361
+#: src/legacy/settings.php:3370
 msgid "Individual Registrations"
 msgstr ""
 
-#: src/legacy/settings.php:3362
+#: src/legacy/settings.php:3371
 msgid "Visitors can enter their email address to see what events they have registered for"
 msgstr ""
 
-#: src/legacy/settings.php:3363, src/ui/admin/templates__free/reports_dashboard.php:12, src/ui/admin/templates__free/reports_dashboard.php:17, src/ui/admin/templates__free/reports_dashboard.php:22, src/ui/admin/templates__free/reports_dashboard.php:27, src/ui/admin/templates__premium_only/reports_dashboard.php:11, src/ui/admin/templates__premium_only/reports_dashboard.php:17, src/ui/admin/templates__premium_only/reports_dashboard.php:23, src/ui/admin/templates__premium_only/reports_dashboard.php:29
+#: src/legacy/settings.php:3372, src/ui/admin/templates__free/reports_dashboard.php:12, src/ui/admin/templates__free/reports_dashboard.php:17, src/ui/admin/templates__free/reports_dashboard.php:22, src/ui/admin/templates__free/reports_dashboard.php:27, src/ui/admin/templates__premium_only/reports_dashboard.php:11, src/ui/admin/templates__premium_only/reports_dashboard.php:17, src/ui/admin/templates__premium_only/reports_dashboard.php:23, src/ui/admin/templates__premium_only/reports_dashboard.php:29
 msgid "Shortcode"
 msgstr ""
 
-#: src/legacy/settings.php:3366
+#: src/legacy/settings.php:3375
 msgid "Add to Mailchimp"
 msgstr ""
 
-#: src/legacy/settings.php:3367
+#: src/legacy/settings.php:3376
 msgid "This will only work if you are collecting names and email addresses and have the optin field enabled in the registration from or have selected the optout below"
 msgstr ""
 
-#: src/legacy/settings.php:3368
+#: src/legacy/settings.php:3377
 msgid "The list merge field used are"
 msgstr ""
 
-#: src/legacy/settings.php:3369
+#: src/legacy/settings.php:3378
 msgid "Help Setting Up Mailchimp"
 msgstr ""
 
-#: src/legacy/settings.php:3370
+#: src/legacy/settings.php:3379
 msgid "Mailchimp list ID"
 msgstr ""
 
-#: src/legacy/settings.php:3372
+#: src/legacy/settings.php:3381
 msgid "Mailchimp API Key"
 msgstr ""
 
-#: src/legacy/settings.php:3374
+#: src/legacy/settings.php:3383
 msgid "Optin not required"
 msgstr ""
 
-#: src/legacy/settings.php:3375
+#: src/legacy/settings.php:3384
 msgid "Create New User"
 msgstr ""
 
-#: src/legacy/settings.php:3451, src/legacy/settings.php:3452
+#: src/legacy/settings.php:3449, src/legacy/settings.php:3450
 msgid "Event Manager"
 msgstr ""
 

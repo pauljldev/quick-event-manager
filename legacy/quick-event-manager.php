@@ -2097,7 +2097,7 @@ function qem_show_calendar( $atts )
             
             if ( $xxx == $zzz && $show ) {
                 $tdstart = '<td class="eventday ' . $oldday . ' ' . $firstday . '"><' . $header . '>' . ($i - $startday + 1) . '</' . $header . '>';
-                $img = ( $eventimage[$key] && $cal['eventimage'] && !$widget ? '<br><img src="' . $eventimage[$key] . '">' : '' );
+                $img = ( qem_get_element( $eventimage, $key, false ) && qem_get_element( $cal, 'eventimage', false ) && !$widget ? '<br><img src="' . qem_get_element( $eventimage, $key, '' ) . '">' : '' );
                 $tooltip = '';
                 $tooltipclass = '';
                 
@@ -2335,7 +2335,7 @@ function qem_generate_css()
         }
     
     }
-    $lbmargin = $display['lightboxwidth'] / 2;
+    $lbmargin = (int) $display['lightboxwidth'] / 2;
     $script .= '#xlightbox {width:' . $display['lightboxwidth'] . '%;margin-left:-' . $lbmargin . '%;}
 @media only screen and (max-width: 480px) {#xlightbox {width:90%;margin-left:-45%;}}';
     if ( $register['ontheright'] ) {
@@ -3302,6 +3302,16 @@ function qem_get_element( $array, $key, $default = '' )
         return $array[$key];
     }
     return $default;
+}
+
+function qem_get_element_esc_html( $array, $key, $default = '' )
+{
+    return esc_html( qem_get_element( $array, $key, $default ) );
+}
+
+function qem_get_element_esc_attr( $array, $key, $default = '' )
+{
+    return esc_attr( qem_get_element( $array, $key, $default ) );
 }
 
 function qem_wp_mail(

@@ -25,7 +25,7 @@
  *
  *     Plugin URI: https://fullworksplugins.com/products/quick-event-manager/
  *     Description: A quick and easy to use Event Manager
- *     Version: 9.6.3
+ *     Version: 9.6.5
  *     Requires at least: 4.6
  *     Requires PHP: 5.6
  *     Author: Fullworks
@@ -64,7 +64,7 @@ if ( !function_exists( 'Quick_Event_Manager\\Plugin\\run_Quick_Event_Manager' ) 
          * @var \Freemius $freemius freemius SDK.
          */
         $freemius->add_action( 'after_uninstall', array( '\\Quick_Event_Manager\\Plugin\\Control\\Uninstall', 'uninstall' ) );
-        $plugin = new Plugin( 'quick-event-manager', '9.6.3', $freemius );
+        $plugin = new Plugin( 'quick-event-manager', '9.6.5', $freemius );
         $plugin->run();
     }
     

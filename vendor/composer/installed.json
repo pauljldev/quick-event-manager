@@ -98,18 +98,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Freemius/wordpress-sdk.git",
-                "reference": "35782eb9f19eefc63723afb3196c768bca6dfbd9"
+                "reference": "2e56d683dd7b30445940679ecb401d2aff746c9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Freemius/wordpress-sdk/zipball/35782eb9f19eefc63723afb3196c768bca6dfbd9",
-                "reference": "35782eb9f19eefc63723afb3196c768bca6dfbd9",
+                "url": "https://api.github.com/repos/Freemius/wordpress-sdk/zipball/2e56d683dd7b30445940679ecb401d2aff746c9e",
+                "reference": "2e56d683dd7b30445940679ecb401d2aff746c9e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2"
             },
-            "time": "2022-11-14T06:49:45+00:00",
+            "time": "2022-12-05T10:31:45+00:00",
             "default-branch": true,
             "type": "library",
             "installation-source": "dist",
@@ -128,7 +128,7 @@
                 "wordpress-theme"
             ],
             "support": {
-                "source": "https://github.com/Freemius/wordpress-sdk/tree/2.5.2",
+                "source": "https://github.com/Freemius/wordpress-sdk/tree/2.5.3",
                 "issues": "https://github.com/Freemius/wordpress-sdk/issues"
             },
             "install-path": "../freemius/wordpress-sdk"

@@ -270,8 +270,8 @@ function qem_event_settings()
             $event['size'][$item] = filter_var( qem_get_element( $_POST, 'size_' . $item ), FILTER_SANITIZE_STRING );
             
             if ( isset( $_POST['label_' . $item] ) && !empty($_POST['label_' . $item]) ) {
-                $event['label'][$item] = stripslashes( $_POST['label_' . $item] );
-                filter_var( $event['label'][$item], FILTER_SANITIZE_STRING );
+                $event['label'][$item] = sanitize_text_field( stripslashes( $_POST['label_' . $item] ) );
+                $event['label'][$item] = filter_var( $event['label'][$item], FILTER_SANITIZE_STRING );
             }
         
         }
@@ -531,12 +531,9 @@ function qem_display_page()
     
     $masonry = $traditional = $short = $full = $title = $date = $my = $ym = '';
     $display = event_get_stored_display();
-    
     if ( isset( $display['show_end_date'] ) ) {
         ${$display['show_end_date']} = 'checked';
-    } else {
     }
-    
     ${$display['localization']} = 'selected';
     ${$display['monthtype']} = 'checked';
     ${$display['monthheadingorder']} = 'checked';
@@ -2325,7 +2322,14 @@ function qem_autoresponse_page()
             'permalink'
         );
         foreach ( $options as $item ) {
-            $auto[$item] = stripslashes( qem_get_element( $_POST, $item ) );
+            
+            if ( 'message' === $item ) {
+                $auto[$item] = wp_kses_post( stripslashes( qem_get_element( $_POST, $item ) ) );
+            } else {
+                $auto[$item] = sanitize_text_field( stripslashes( qem_get_element( $_POST, $item ) ) );
+                $auto[$item] = filter_var( qem_get_element( $auto, $item ), FILTER_SANITIZE_STRING );
+            }
+        
         }
         update_option( 'qem_autoresponder', $auto );
         qem_admin_notice( "The autoresponder settings have been updated." );
@@ -2736,7 +2740,7 @@ function qem_incontext()
         <p>New features will only be available to the Pro version of the plugin. Two of these features will be: attach images to registrations and set adult/children payments.</p>
         <h2>Don\'t Delay - Upgrade to Pro and unleash your Events</h2>
         <p>It\'s only $3.99 per month<sup>*</sup> and there is a 14 day free trial - so just do it.</p>
-        <p><span style="color:red;font-weight:strong;">Important! Once you have downloaded the Pro plugin, disable the free plugin before activating the Pro plugin. That way you
+        <p><span style="color:red;font-weight:bold;">Important! Once you have downloaded the Pro plugin, disable the free plugin before activating the Pro plugin. That way you
         will keep all your settings.</p>
         <p>* single site, when paid annually, excludes taxes</p>
         <form id="" method="post" action="">
@@ -2780,12 +2784,16 @@ function qem_extend_guest_setup()
         $required = qem_guest_list();
         array_push( $required, 'event_captcha_label' );
         foreach ( $options as $item ) {
-            $qem_guest[$item] = stripslashes( qem_get_element( $_POST, $item ) );
+            $qem_guest[$item] = sanitize_text_field( stripslashes( qem_get_element( $_POST, $item ) ) );
+            $qem_guest[$item] = filter_var( qem_get_element( $qem_guest, $item ), FILTER_SANITIZE_STRING );
         }
         foreach ( $required as $item ) {
             $qem_guest[$item] = stripslashes( qem_get_element( $_POST, $item ) );
+            $qem_guest[$item] = filter_var( qem_get_element( $qem_guest, $item ), FILTER_SANITIZE_STRING );
             $qem_guest[$item . '_checked'] = stripslashes( qem_get_element( $_POST, $item . '_checked' ) );
+            $qem_guest[$item . '_checked'] = filter_var( qem_get_element( $qem_guest, $item . '_checked' ), FILTER_SANITIZE_STRING );
             $qem_guest[$item . '_use'] = stripslashes( qem_get_element( $_POST, $item . '_use' ) );
+            $qem_guest[$item . '_use'] = filter_var( qem_get_element( $qem_guest, $item . '_use' ), FILTER_SANITIZE_STRING );
         }
         $checked = array(
             'event_title',
