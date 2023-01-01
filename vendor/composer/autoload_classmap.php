@@ -42,5 +42,8 @@ return array(
     'Composer\\Installers\\WordPressInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/WordPressInstaller.php',
     'Composer\\Installers\\ZendInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/ZendInstaller.php',
     'Composer\\Installers\\ZikulaInstaller' => $vendorDir . '/composer/installers/src/Composer/Installers/ZikulaInstaller.php',
+    'DrewM\\MailChimp\\Batch' => $vendorDir . '/drewm/mailchimp-api/src/Batch.php',
+    'DrewM\\MailChimp\\MailChimp' => $vendorDir . '/drewm/mailchimp-api/src/MailChimp.php',
+    'DrewM\\MailChimp\\Webhook' => $vendorDir . '/drewm/mailchimp-api/src/Webhook.php',
     'Gamajo_Template_Loader' => $vendorDir . '/gamajo/template-loader/class-gamajo-template-loader.php',
 );

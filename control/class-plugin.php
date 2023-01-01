@@ -49,7 +49,6 @@ class Plugin
     {
         require_once QUICK_EVENT_MANAGER_PLUGIN_DIR . 'legacy/quick-event-manager.php';
         $this->set_locale();
-        //		$this->settings_pages();
         $this->define_admin_hooks();
         $this->define_admin_attendees_hooks();
         $this->define_business_hooks();
@@ -69,12 +68,6 @@ class Plugin
         add_action( 'init', function () {
             load_plugin_textdomain( $this->plugin_name, false, basename( QUICK_EVENT_MANAGER_PLUGIN_DIR ) . '/languages/' );
         } );
-    }
-    
-    private function settings_pages()
-    {
-        $settings = new Admin_Settings( $this->plugin_name, $this->version, $this->freemius );
-        $settings->hooks();
     }
     
     private function define_admin_hooks()

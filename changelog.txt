@@ -1,4 +1,7 @@
 == Changelog ==
+= 9.7.0 =
+* updated escaping and sanitization and restructure legacy code to meet current wp.org guidelines
+
 = 9.6.5 =
 * improve sanitization of inputs in admin settings
 

@@ -80,8 +80,8 @@ class Admin_Attendees {
 			);
 			add_submenu_page(
 				'edit.php?post_type=event',
-				esc_html__( 'Premium Reports','quick-event-manager' ),
-				esc_html__( 'Premium Reports','quick-event-manager' ),
+				esc_html__( 'Premium Reports', 'quick-event-manager' ),
+				esc_html__( 'Premium Reports', 'quick-event-manager' ),
 				'edit_posts',
 				'qem-premium-reports',
 				array( $this, 'premium_reports' )

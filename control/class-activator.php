@@ -27,12 +27,9 @@
  */
 namespace Quick_Event_Manager\Plugin\Control;
 
-use Quick_Event_Manager\Plugin\UI\Admin\Admin_Settings;
 
 class Activator {
 
 	public static function activate() {
-
 	}
-
 }

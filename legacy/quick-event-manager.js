@@ -1,3 +1,4 @@
+const { __, _x, _n, sprintf } = wp.i18n;
 var qem_dont_cancel;
 
 function pseudo_popup(content) {
@@ -51,17 +52,21 @@ function qem_calendar_ajax(e) {
     */
     var calendar = $(e).closest('.qem_calendar');
     var cid = Number(calendar.attr('id').replace('qem_calendar_', ''));
-    var params = 'action=qem_ajax_calendar';
+    var params = 'action=qem_ajax_calendar&_qemcalnonce=' + qem_cal_nonce;
 
     /*
         URL Encode the atts array
     */
-    for (property in qem_calendar_atts[cid]) {
-        params += '&atts[' + encodeURIComponent(property) + ']=' + encodeURIComponent(qem_calendar_atts[cid][property]);
-    }
 
-    params += "&qemmonth=" + qem_month[cid] + "&qemyear=" + qem_year[cid] + "&qemcalendar=" + cid;
-    if (qem_category[cid] != '') params += '&category=' + qem_category[cid];
+    let qem_calendar_atts = $('#qem_calendar_' + cid).data('qem_calendar_atts');
+    for (property in qem_calendar_atts) {
+        params += '&atts[' + encodeURIComponent(property) + ']=' + encodeURIComponent(qem_calendar_atts[property]);
+    }
+    let qem_month = $('#qem_calendar_' + cid).data('qem_month');
+    let qem_year = $('#qem_calendar_' + cid).data('qem_year');
+    let qem_category = $('#qem_calendar_' + cid).data('qem_category');
+    params += "&qemmonth=" + qem_month + "&qemyear=" + qem_year + "&qemcalendar=" + cid;
+    if (qem_category != '') params += '&category=' + qem_category;
 
     $.post(ajaxurl, params, function (v) {
         calendar.replaceWith($(v));
@@ -106,7 +111,7 @@ function qem_handle_regular(e, f) {
     if (data.blurb !== undefined) {
         var blurbText = qem.find('.qem-register').find('p').first();
         blurbText.show();
-        blurbText.text(data.blurb);
+        blurbText.html(data.blurb);
     }
 
     /*
@@ -165,17 +170,19 @@ function qem_handle_regular(e, f) {
 }
 
 function qem_validate_form(ev) {
-
     var f = $(this);
     var formid = f.attr('id');
 
     // Intercept request and handle with AJAX
     var fd = $(this).serialize();
     var action = $('<input type="text" />');
+    var nonce = $('<input type="text" />');
     action.attr('name', 'action');
     action.val('qem_validate_form');
+    nonce.attr('name', '_reg_nonce');
+    nonce.val(qem_register_nonce);
 
-    fd += '&' + action.serialize();
+    fd += '&' + action.serialize() + '&action=qem_validate_form&_reg_nonce=' + qem_register_nonce ;
     $('input[name=qemregister' + formid + ']').prop("disabled", true);
     $('.qem_validating_form[data-form-id="' + formid + '"]').show(function () {
         $.post(ajaxurl,
@@ -253,7 +260,7 @@ if (jQuery !== undefined) {
                     $('.qem_validating_form[data-form-id="' + formid + '"]').show();
 
                     var fd = $(form).serialize();
-                    fd += '&' + c.attr('name') + '=' + c.val() + '&action=qem_validate_form';
+                    fd += '&' + c.attr('name') + '=' + c.val() + '&action=qem_validate_form&_reg_nonce=' + qem_register_nonce;
                     $.ajax({
                         type: 'POST',
                         url: ajaxurl,
@@ -284,7 +291,7 @@ if (jQuery !== undefined) {
                         },
                         error: function (data) {
                             console.log(data);
-                            alert('Server Error check console log');
+                            alert(__('Server Error check console log','quick-event-manager'));
                         }
                     });
 
@@ -369,9 +376,9 @@ function qem_calendar_prep(e) {
     /*
         Set the global variables if the link would have changed them!
     */
-    if (values.qemmonth !== undefined) qem_month[cid] = values.qemmonth;
-    if (values.qemyear !== undefined) qem_year[cid] = values.qemyear;
-    if (values.category !== undefined) qem_category[cid] = values.category;
+    if (values.qemmonth !== undefined) $('#qem_calendar_' + cid).data('qem_month', values.qemmonth);
+    if (values.qemyear !== undefined) $('#qem_calendar_' + cid).data('qem_year', values.qemyear);
+    if (values.category !== undefined) $('#qem_calendar_' + cid).data('qem_category', values.category);
 }
 
 function qem_calnav() {
@@ -441,7 +448,7 @@ function xlightbox(insertContent, ajaxContentUrl) {
             },
             error: function (data) {
                 console.log(data);
-                alert('Server Error Check Console log!');
+                alert(__('Server Error Check Console log!','quick-event-manager'));
             }
         });
     }
@@ -472,6 +479,25 @@ function closeLightbox() {
 */
 jQuery(document).ready(function ($) {
 
+    // settings preview
+    $('.qem-preview').on('click' , function (e) {
+            alert(__('This is a preview of the event. To see the event go to the Events list.','quick-event-manager'));
+            return false
+    })
+
+    //  lightbox action
+    $("body").on('click', ".qem_linkpopup", function () {
+        let lightBoxData = $(this).data('xlightbox');
+        xlightbox(lightBoxData);
+    });
+
+    // fb and twitter share windows
+    $("body").on('click', ".qem_fb_share, .qem_twitter_share", function () {
+        window.open(this.href,'targetWindow','titlebar=no,toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250');
+        return false;
+    });
+
+
     $("#yourplaces").keyup(function () {
         var model = document.getElementById('yourplaces');
         var number = $('#yourplaces').val()
@@ -496,6 +522,7 @@ jQuery(document).ready(function ($) {
 */
 
 jQuery(document).ready(function () {
+    debugger;
 
     datePickerOptions = {
         closeText: "Done",

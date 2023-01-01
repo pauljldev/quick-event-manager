@@ -25,7 +25,7 @@
  *
  *     Plugin URI: https://fullworksplugins.com/products/quick-event-manager/
  *     Description: A quick and easy to use Event Manager
- *     Version: 9.6.5
+ *     Version: 9.7.0
  *     Requires at least: 4.6
  *     Requires PHP: 5.6
  *     Author: Fullworks
@@ -45,14 +45,15 @@ if ( !defined( 'WPINC' ) ) {
     die;
 }
 
-if ( !function_exists( 'Quick_Event_Manager\\Plugin\\run_Quick_Event_Manager' ) ) {
+if ( !function_exists( 'Quick_Event_Manager\\Plugin\\run_quick_event_manager' ) ) {
     define( 'QUICK_EVENT_MANAGER_PLUGIN_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
     define( 'QUICK_EVENT_MANAGER_PLUGIN_FILE', plugin_basename( __FILE__ ) );
     define( 'QUICK_EVENT_MANAGER_PLUGIN_NAME', 'quick-event-manager' );
+    define( 'QUICK_EVENT_MANAGER_PLUGIN_VERSION', '9.7.0' );
     // Include the autoloaders so we can dynamically include the classes.
     require_once QUICK_EVENT_MANAGER_PLUGIN_DIR . 'control/autoloader.php';
     require_once QUICK_EVENT_MANAGER_PLUGIN_DIR . 'vendor/autoload.php';
-    function run_Quick_Event_Manager()
+    function run_quick_event_manager()
     {
         $freemius = new Freemius_Config();
         $freemius = $freemius->init();
@@ -64,11 +65,19 @@ if ( !function_exists( 'Quick_Event_Manager\\Plugin\\run_Quick_Event_Manager' ) 
          * @var \Freemius $freemius freemius SDK.
          */
         $freemius->add_action( 'after_uninstall', array( '\\Quick_Event_Manager\\Plugin\\Control\\Uninstall', 'uninstall' ) );
-        $plugin = new Plugin( 'quick-event-manager', '9.6.5', $freemius );
+        $plugin = new Plugin( 'quick-event-manager', QUICK_EVENT_MANAGER_PLUGIN_VERSION, $freemius );
         $plugin->run();
     }
     
-    run_Quick_Event_Manager();
+    run_quick_event_manager();
 } else {
-    die( esc_html__( 'Cannot execute as the plugin already exists, if you have a free version installed deactivate that and try again', 'quick-event-manager' ) );
+    global  $wfea_fs ;
+    
+    if ( !$wfea_fs->is_premium() ) {
+        $wfea_fs->set_basename( true, __FILE__ );
+    } else {
+        die( esc_html__( 'You already have a pro version of Quick Event Manager (Premium) installed, please check versions and delete one of them. The correct one should be in the folder wp-content/quick-event-manager-premium - this one you are trying is in folder wp-content/plugins/', 'display-eventbrite-events' ) . esc_html( basename( plugin_dir_path( __FILE__ ) ) ) );
+    }
+    
+    return;
 }

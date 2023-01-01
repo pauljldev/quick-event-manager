@@ -70,8 +70,8 @@ spl_autoload_register(
         if ( null !== $qem_fs ) {
         }
         // changed to be translatable
-        $msg = sprintf( esc_html__( 'The system file attempting to be loaded at %1$s does not exist.', 'quick-event-manager' ), esc_html( $filepath ) . ' ' . esc_html( $class_name ) );
-        trigger_error( $msg, E_USER_NOTICE );
-        wp_die( $msg );
+        $msg = sprintf( __( 'The system file attempting to be loaded at %1$s does not exist.', 'quick-event-manager' ), $filepath . ' ' . $class_name );
+        trigger_error( esc_html( $msg ), E_USER_NOTICE );
+        wp_die( esc_html( $msg ) );
     }
 );
