@@ -857,7 +857,7 @@ function qem_duplicate()
     if ( !(isset( $_GET['post'] ) || isset( $_POST['post'] ) || isset( $_REQUEST['action'] ) && 'qem_duplicate_post' == $_REQUEST['action']) ) {
         wp_die( esc_html__( 'No post to duplicate has been supplied!', 'quick-event-manager' ) );
     }
-    $post_id = ( isset( $_GET['post'] ) ? $_GET['post'] : $_POST['post'] );
+    $post_id = ( isset( $_GET['post'] ) ? (int) $_GET['post'] : (int) $_POST['post'] );
     $custom = get_post_custom( $post_id );
     $new_post_id = qem_create_post(
         $custom['event_date'][0],

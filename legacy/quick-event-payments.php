@@ -22,7 +22,7 @@ function qem_process_payment_form_esc( $values, &$val = array() )
     
     
     if ( isset( $_REQUEST['action'] ) && "qem_validate_form" == $_REQUEST['action'] ) {
-        $page_url = $_SERVER["HTTP_REFERER"];
+        $page_url = sanitize_url( $_SERVER["HTTP_REFERER"] );
     } else {
         $page_url = qem_current_page_url();
     }
@@ -153,9 +153,9 @@ function qem_current_page_url()
     $pageURL .= "://";
     
     if ( $_SERVER["SERVER_PORT"] != "80" ) {
-        $pageURL .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"];
+        $pageURL .= sanitize_url( $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"] );
     } else {
-        $pageURL .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+        $pageURL .= sanitize_url( $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"] );
     }
     
     return $pageURL;

@@ -50,7 +50,7 @@ function qem_tabbed_page()
     
     if ( isset( $_GET['tab'] ) ) {
         qem_admin_tabs( $_GET['tab'] );
-        $tab = $_GET['tab'];
+        $tab = sanitize_text_field( $_GET['tab'] );
     } else {
         qem_admin_tabs( 'setup' );
         $tab = 'setup';
@@ -868,9 +868,9 @@ function qem_styles()
             'j'
         );
         foreach ( $arr as $i ) {
-            $style['cat' . $i] = qem_get_element( $_POST, 'cat' . $i );
-            $style['cat' . $i . 'back'] = qem_get_element( $_POST, 'cat' . $i . 'back' );
-            $style['cat' . $i . 'text'] = qem_get_element( $_POST, 'cat' . $i . 'text' );
+            $style['cat' . $i] = sanitize_text_field( qem_get_element( $_POST, 'cat' . $i ) );
+            $style['cat' . $i . 'back'] = sanitize_text_field( qem_get_element( $_POST, 'cat' . $i . 'back' ) );
+            $style['cat' . $i . 'text'] = sanitize_text_field( qem_get_element( $_POST, 'cat' . $i . 'text' ) );
         }
         update_option( 'qem_style', $style );
         qem_admin_notice( esc_html__( 'The form styles have been updated', 'quick-event-manager' ) );
@@ -1538,7 +1538,7 @@ function qem_register()
             'paypaladdinfo'
         );
         foreach ( $options as $item ) {
-            $register[$item] = stripslashes( qem_get_element( $_POST, $item, false ) );
+            $register[$item] = stripslashes( sanitize_text_field( qem_get_element( $_POST, $item, false ) ) );
             
             if ( in_array( $item, array( 'replyblurb' ) ) ) {
                 //  textareas and allowed html
@@ -2488,7 +2488,7 @@ function event_page_init()
 function qem_admin_notice( $message = '' )
 {
     if ( !empty($message) ) {
-        echo  wp_kses_post( '<div class="updated"><p>' . $message . '</p></div>' ) ;
+        echo  '<div class="updated"><p>' . wp_kses_post( $message ) . '</p></div>' ;
     }
 }
 
@@ -2496,7 +2496,7 @@ function qem_plugin_row_meta( $links, $file = '' )
 {
     
     if ( $file == QUICK_EVENT_MANAGER_PLUGIN_FILE ) {
-        $new_links = array( '<a href="https://fullworksplugins.com/docs/quick-event-manager/"><strong>Documentation</strong></a>' );
+        $new_links = array( '<a href="https://fullworksplugins.com/docs/quick-event-manager/"><strong>' . esc_html__( 'Documentation', 'quick-event-manager' ) . '</strong></a>' );
         $links = array_merge( $links, $new_links );
     }
     

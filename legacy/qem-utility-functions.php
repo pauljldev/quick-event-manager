@@ -102,8 +102,8 @@ d</span>';
 function qem_get_the_numbers( $pid, $payment ) {
 	$str        = 0;
 	$register   = qem_get_stored_register();
-	$whoscoming =  (array) get_option( 'qem_messages_' . $pid, array() );
-	if ( ! empty($whoscoming )) {
+	$whoscoming = (array) get_option( 'qem_messages_' . $pid, array() );
+	if ( ! empty( $whoscoming ) ) {
 		foreach ( $whoscoming as $item ) {
 			if ( ! qem_check_ipnblock( $payment, $item ) &&
 			     ! qem_get_element( $item, 'notattend', false ) &&
@@ -173,14 +173,14 @@ function qem_places( $register, $pid, $event_number_max, $event = array() ) {
 */
 function qem_actual_link() {
 	if ( isset( $_REQUEST['action'] ) ) {
-		$actual_link = explode( '?', $_SERVER['HTTP_REFERER'] );
+		$actual_link = explode( '?', sanitize_text_field( $_SERVER['HTTP_REFERER'] ) );
 		$actual_link = $actual_link[0];
 	} else {
 		$prefix = 'http://';
 		if ( is_ssl() ) {
 			$prefix = 'https://';
 		}
-		$actual_link = $prefix . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		$actual_link = $prefix . sanitize_text_field($_SERVER['HTTP_HOST']) . sanitize_text_field($_SERVER['REQUEST_URI']);
 	}
 
 	return $actual_link;
@@ -246,14 +246,14 @@ function qem_get_element( $array, $keys, $default = '' ) {
 		}
 	} else {
 		$result = $array;
-		foreach ($keys as $key) {
+		foreach ( $keys as $key ) {
 			if ( array_key_exists( $key, $result ) ) {
-				$result = $result[$key];
+				$result = $result[ $key ];
 			} else {
 				return $default;
 			}
 		}
-		if ( ! is_array($result) ) {
+		if ( ! is_array( $result ) ) {
 			return $result;
 		}
 
@@ -327,7 +327,7 @@ function qem_kses_post_svg_form( $html ) {
 	$kses_defaults = wp_kses_allowed_html( 'post' );
 
 	$svg_args = array(
-		'svg'   => array(
+		'svg'    => array(
 			'class'           => true,
 			'aria-hidden'     => true,
 			'aria-labelledby' => true,
@@ -338,9 +338,9 @@ function qem_kses_post_svg_form( $html ) {
 			'height'          => true,
 			'viewbox'         => true // <= Must be lower case!
 		),
-		'g'     => array( 'fill' => true ),
-		'title' => array( 'title' => true ),
-		'path'  => array(
+		'g'      => array( 'fill' => true ),
+		'title'  => array( 'title' => true ),
+		'path'   => array(
 			'd'    => true,
 			'fill' => true,
 		),
@@ -350,7 +350,7 @@ function qem_kses_post_svg_form( $html ) {
 		'select' =>
 			array(
 				'class' => true,
-				'name' => true,
+				'name'  => true,
 			),
 		'option' =>
 			array(

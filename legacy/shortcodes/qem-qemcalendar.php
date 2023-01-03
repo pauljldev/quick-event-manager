@@ -80,7 +80,7 @@ function qem_show_calendar_esc( $atts ) {
 	}
 
 	if ( isset( $_REQUEST["qemmonth"] ) ) {
-		$month = $_REQUEST["qemmonth"];
+		$month = sanitize_text_field($_REQUEST["qemmonth"]);
 	} else {
 		if ( $month ) {
 			if ( ! is_numeric( $month ) ) {
@@ -95,7 +95,7 @@ function qem_show_calendar_esc( $atts ) {
 		}
 	}
 	if ( isset( $_REQUEST["qemyear"] ) ) {
-		$year = $_REQUEST["qemyear"];
+		$year = sanitize_text_field($_REQUEST["qemyear"]);
 	} else {
 		if ( $year ) {
 			if ( ! is_numeric( $year ) ) {

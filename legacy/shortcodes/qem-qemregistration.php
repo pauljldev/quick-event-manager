@@ -8,19 +8,7 @@ function qem_loop_esc() {
 		}
 	}
 	$id       = get_the_ID();
-/*
-	if ( isset( $_POST[ 'qemregister' . $id ] ) && ! empty( $_POST[ 'qemregister' . $id ] ) ) {
-		 $formvalues = $_POST;
-		$formerrors = array();
-		if ( ! qem_verify_form( $formvalues, $formerrors ) ) {
-			return qem_display_form_esc( $formvalues, $formerrors, null );
-		} else {
-			qem_process_form( $formvalues );
 
-			return qem_display_form_esc( $formvalues, array(), 'checked' );
-		}
-
-	} else { */
 		$values  = get_custom_registration_form( $id );
 		$payment = qem_get_stored_payment();
 		if ( is_user_logged_in() && qem_get_element( $values, 'showuser', false ) ) {
@@ -45,5 +33,4 @@ function qem_loop_esc() {
 		if ( ( is_user_logged_in() && qem_get_element( $values, 'registeredusers', false ) ) || ! qem_get_element( $values, 'registeredusers', false ) ) {
 			return qem_display_form_esc( $values, array(), null );
 		}
-	/* } */
 }

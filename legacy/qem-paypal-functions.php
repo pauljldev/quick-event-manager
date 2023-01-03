@@ -23,11 +23,11 @@ function qem_ipn()
     if ( !qem_get_element( $payment, 'ipn', false ) ) {
         return;
     }
-    if ( !defined( "DEBUG" ) ) {
-        define( "DEBUG", 0 );
+    if ( !defined( "QEMFW_DEBUG" ) ) {
+        define( "QEMFW_DEBUG", 0 );
     }
-    if ( !defined( "LOG_FILE" ) ) {
-        define( "LOG_FILE", "./ipn.log" );
+    if ( !defined( "QEMFW_LOG_FILE" ) ) {
+        define( "QEMFW_LOG_FILE", "./ipn.log" );
     }
     $raw_post_data = file_get_contents( 'php://input' );
     $raw_post_array = explode( '&', $raw_post_data );
@@ -66,17 +66,17 @@ function qem_ipn()
     ) );
     
     if ( is_wp_error( $response ) || 200 != wp_remote_retrieve_response_code( $response ) ) {
-        if ( DEBUG == true ) {
-            error_log( date( '[Y-m-d H:i e] ' ) . "Can't connect to PayPal to validate IPN message: Indetermined" . PHP_EOL, 3, LOG_FILE );
+        if ( QEMFW_DEBUG == true ) {
+            error_log( date( '[Y-m-d H:i e] ' ) . "Can't connect to PayPal to validate IPN message: Indetermined" . PHP_EOL, 3, QEMFW_LOG_FILE );
         }
         return;
     }
     
     $status = wp_remote_retrieve_body( $response );
     
-    if ( DEBUG == true ) {
-        error_log( date( '[Y-m-d H:i e] ' ) . "HTTP request of validation request:  for IPN payload: {$req}" . print_r( wp_remote_retrieve_headers( $response ), true ) . PHP_EOL, 3, LOG_FILE );
-        error_log( date( '[Y-m-d H:i e] ' ) . "HTTP response of validation request: {$status}" . PHP_EOL, 3, LOG_FILE );
+    if ( QEMFW_DEBUG == true ) {
+        error_log( date( '[Y-m-d H:i e] ' ) . "HTTP request of validation request:  for IPN payload: {$req}" . print_r( wp_remote_retrieve_headers( $response ), true ) . PHP_EOL, 3, QEMFW_LOG_FILE );
+        error_log( date( '[Y-m-d H:i e] ' ) . "HTTP response of validation request: {$status}" . PHP_EOL, 3, QEMFW_LOG_FILE );
     }
     
     
