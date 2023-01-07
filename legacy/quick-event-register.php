@@ -78,7 +78,7 @@ function qem_registration_fields()
     ),
         'yournumber1'     => array(
         'form_field'  => 12,
-        'sanitize_cb' => 'qem_sanitize_number',
+        'sanitize_cb' => 'sanitize_text_field',
         'default'     => '',
     ),
         'yourselector'    => array(
@@ -725,6 +725,7 @@ function qem_display_form_unprotected_esc( $values, $errors, $registered )
                 case 'field8':
                     
                     if ( qem_get_element( $register, 'usecopy', false ) ) {
+                        $copychecked = '';
                         if ( qem_get_element( $register, 'copychecked' ) ) {
                             $copychecked = 'checked';
                         }
@@ -931,7 +932,6 @@ function qem_verify_form( &$values, &$errors, $ajax = false )
     }
     $register = get_custom_registration_form( $id );
     $payment = qem_get_stored_payment();
-    $apikey = get_option( 'qem-akismet' );
     $event_maxplaces = get_post_meta( $id, 'event_maxplaces', true );
     $event_getemails = get_post_meta( $id, 'event_getemails', true );
     $event_getnames = get_post_meta( $id, 'event_getnames', true );
@@ -944,18 +944,6 @@ function qem_verify_form( &$values, &$errors, $ajax = false )
     if ( 'checked' == qem_get_element( $payment, 'ipn', false ) ) {
         $payment_checking = true;
     }
-    
-    if ( $apikey ) {
-        $blogurl = get_site_url();
-        $akismet = new qem_akismet( $blogurl, $apikey );
-        $akismet->setCommentAuthor( qem_get_element( $values, 'yourname' ) );
-        $akismet->setCommentAuthorEmail( qem_get_element( $values, 'youremail' ) );
-        $akismet->setCommentContent( qem_get_element( $values, 'yourmessage' ) );
-        if ( $akismet->isCommentSpam() ) {
-            $errors['spam'] = qem_get_element( $register, 'spam' );
-        }
-    }
-    
     $errors = apply_filters(
         'quick_entry_is_spam',
         $errors,

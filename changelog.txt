@@ -1,4 +1,11 @@
 == Changelog ==
+= 9.7.3 =
+* fix number validation
+* restructure js file to avoid conflicts
+
+= 9.7.2 =
+* removed legacy code causing edge case error
+
 = 9.7.1 =
 * updated further sanitization
 
