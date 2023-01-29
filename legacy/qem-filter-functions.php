@@ -28,7 +28,6 @@ function qem_enqueue_scripts()
         true
     );
     wp_set_script_translations( 'event_script', 'quick-event-manager' );
-    wp_add_inline_script( 'event_script', 'qem_cal_nonce="' . wp_create_nonce( 'qem_cal_nonce' ) . '";', 'before' );
     wp_enqueue_script( 'jquery-ui-datepicker' );
 }
 

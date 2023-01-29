@@ -1,4 +1,34 @@
 == Changelog ==
+= 9.8.2 =
+* Change registration nonce checking due to cache issues
+
+= 9.8.1 =
+* Fix licence levels functionality ( Pro Only )
+
+= 9.8.0 =
+* add ticket number generation ( Pro Only)
+* fix html in some emails
+* add email header to stop grouping as conversations
+
+= 9.7.8 =
+* fix category link on lists
+* remove extra calendar nonce validation, not required
+* namespace Mailchimp library to avoid conflicts ( Pro only )
+
+
+= 9.7.7 =
+* fix javascript issue with lightbox
+
+= 9.7.6 =
+* Fix commas on blank cells in CSV
+
+= 9.7.5 =
+* Improve nonce checking and sanitization
+
+= 9.7.4 =
+* Set default sort on event edit table to be event date descending
+* Add some extra report options to premium reports dashboard to make finding the easier ( Pro only )
+
 = 9.7.3 =
 * fix number validation
 * restructure js file to avoid conflicts

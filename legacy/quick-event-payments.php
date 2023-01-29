@@ -7,19 +7,7 @@ function qem_process_payment_form_esc( $values, &$val = array() )
     $payments = qem_get_stored_payment();
     $register = get_custom_registration_form( $post->ID );
     $ic = qem_get_incontext();
-    
-    if ( !isset( $_POST['_reg_nonce'] ) || !wp_verify_nonce( $_POST['_reg_nonce'], 'qem_register' ) ) {
-        echo  wp_json_encode( array(
-            'success' => false,
-            'title'   => esc_html__( 'Invalid Security, Form not Processed, Contact Support', 'quick-event-manager' ),
-            'errors'  => array(
-            'name'  => 'id',
-            'error' => 'Invalid Security',
-        ),
-        ) ) ;
-        exit;
-    }
-    
+    // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Nonce not required user action.
     
     if ( isset( $_REQUEST['action'] ) && "qem_validate_form" == $_REQUEST['action'] ) {
         $page_url = sanitize_url( $_SERVER["HTTP_REFERER"] );
@@ -153,9 +141,9 @@ function qem_current_page_url()
     $pageURL .= "://";
     
     if ( $_SERVER["SERVER_PORT"] != "80" ) {
-        $pageURL .= sanitize_url( $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"] );
+        $pageURL .= sanitize_text_field( $_SERVER["SERVER_NAME"] ) . ":" . sanitize_text_field( $_SERVER["SERVER_PORT"] ) . sanitize_text_field( $_SERVER["REQUEST_URI"] );
     } else {
-        $pageURL .= sanitize_url( $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"] );
+        $pageURL .= sanitize_text_field( $_SERVER["SERVER_NAME"] ) . sanitize_text_field( $_SERVER["REQUEST_URI"] );
     }
     
     return $pageURL;

@@ -150,9 +150,12 @@ function qem_event_construct_esc( $atts )
         );
     }
     // Build pop up
+    
     if ( $atts['popup'] && !$display['fullevent'] ) {
         $popupcontent = get_event_popup( $atts );
+        // $popupcontent .= qem_loop_esc();
     }
+    
     // Combine end date
     
     if ( qem_get_element( $display, 'show_end_date', false ) && $enddate || $enddate && qem_get_element( $atts, 'eventfull' ) ) {
@@ -181,7 +184,7 @@ function qem_event_construct_esc( $atts )
         $linkclose = '</a>';
         
         if ( $atts['popup'] ) {
-            $linkopen = '<a href="javascript:xlightbox(\'' . $popupcontent . '\'); ">';
+            $linkopen = '<a class="qem_linkpopup" data-xlightbox="' . $popupcontent . '"  >';
         } else {
             
             if ( $category && in_category( $category ) ) {
@@ -761,12 +764,14 @@ function qem_build_event(
                     }
                 } else {
                     foreach ( $whoscoming as $item ) {
-                        $num = $num + (int) $item['yourplaces'];
+                        if ( isset( $item['yourplaces'] ) ) {
+                            $num = $num + (int) $item['yourplaces'];
+                        }
                         $ipn = qem_check_ipnblock( $payment, $item );
                         
-                        if ( ('' === $event_number_max || (int) $num <= (int) $event_number_max) && !$item['notattend'] && !$ipn && ($register['moderate'] && $item['approved'] || !$register['moderate']) ) {
-                            $str = $str . $item['yourname'] . ', ';
-                            $grav = $grav . '<img title="' . $item['yourname'] . '" src="http://www.gravatar.com/avatar/' . md5( $item['youremail'] ) . '?s=40&&d=identicon" /> ';
+                        if ( ('' === $event_number_max || (int) $num <= (int) $event_number_max) && !qem_get_element( $item, 'notattend', false ) && !$ipn && ($register['moderate'] && $item['approved'] || !$register['moderate']) ) {
+                            $str = $str . esc_attr( qem_get_element( $item, 'yourname' ) ) . ', ';
+                            $grav = $grav . '<img title="' . esc_attr( qem_get_element( $item, 'yourname' ) ) . '" src="http://www.gravatar.com/avatar/' . md5( qem_get_element( $item, 'youremail' ) ) . '?s=40&&d=identicon" /> ';
                         }
                     
                     }
@@ -823,7 +828,7 @@ function qem_build_event(
             $output .= '<h4>';
             
             if ( $event['facebook_label'] ) {
-                $facebook_svg = '<svg fill="#3B5998" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 64 64" width="24px" height="24px"><path d="M32,6C17.642,6,6,17.642,6,32c0,13.035,9.603,23.799,22.113,25.679V38.89H21.68v-6.834h6.433v-4.548	c0-7.529,3.668-10.833,9.926-10.833c2.996,0,4.583,0.223,5.332,0.323v5.965h-4.268c-2.656,0-3.584,2.52-3.584,5.358v3.735h7.785	l-1.055,6.834h-6.73v18.843C48.209,56.013,58,45.163,58,32C58,17.642,46.359,6,32,6z"/></svg>';
+                $facebook_svg = '<svg fill="#3B5998" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 64 64" width="24px" height="24px"><path d="M32,6C17.642,6,6,17.642,6,32c0,13.035,9.603,23.799,22.113,25.679V38.89H21.68v-6.834h6.433v-4.548	c0-7.529,3.668-10.833,9.926-10.833c4.166,0,4.583,0.223,5.332,0.323v5.965h-4.268c-2.656,0-3.584,2.52-3.584,5.358v3.735h7.785	l-1.055,6.834h-6.73v18.843C48.209,56.013,58,45.163,58,32C58,17.642,46.359,6,32,6z"/></svg>';
                 $output .= '<a 
                 	style="display: inline-flex;align-items: center; margin-right: 10px;" 
                 	target="_blank" 

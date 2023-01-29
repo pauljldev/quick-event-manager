@@ -4,6 +4,7 @@
 	Add: WordPress hooks for ajax
 */
 use  Quick_Event_Manager\Plugin\Control\Admin_Template_Loader ;
+use  Quick_Event_Manager\Plugin\Core\Utilities ;
 add_action( 'wp_ajax_qem_validate_form', 'qem_ajax_validation' );
 add_action( 'wp_ajax_nopriv_qem_validate_form', 'qem_ajax_validation' );
 function qem_registration_fields()
@@ -184,19 +185,7 @@ function qem_sanitize_forms_values( $input )
 function qem_ajax_validation()
 {
     header( "Content-Type: application/json", true );
-    
-    if ( !isset( $_POST['_reg_nonce'] ) || !wp_verify_nonce( $_POST['_reg_nonce'], 'qem_register' ) ) {
-        echo  wp_json_encode( array(
-            'success' => false,
-            'title'   => esc_html__( 'Invalid Security, Form not Processed, Contact Support', 'quick-event-manager' ),
-            'errors'  => array(
-            'name'  => 'id',
-            'error' => 'Invalid Security',
-        ),
-        ) ) ;
-        exit;
-    }
-    
+    // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Nonce not required end user form
     global  $post ;
     global  $qem_fs ;
     $event = $_POST['id'];
@@ -574,7 +563,7 @@ function qem_display_form_unprotected_esc( $values, $errors, $registered )
                 }
             }
             if ( qem_get_element( $errors, 'yourcoupon' ) ) {
-                $register['blurb'] = '<p>Invalid Coupon Code</p>';
+                $register['blurb'] = '<p>' . esc_html__( 'Invalid Coupon Code', 'quick-event-manager' ) . '</p>';
             }
             if ( qem_get_element( $errors, 'yourplaces' ) ) {
                 $errors['yourplaces'] = 'border:1px solid red;';
@@ -1297,7 +1286,7 @@ function qem_process_form( $values, $ajax = false )
             $multi['yourname'] = qem_get_element( $multi, 'name' . $i );
             $multi['youremail'] = qem_get_element( $multi, 'email' . $i );
             if ( qem_get_element( $multi, 'yourname' ) ) {
-                $qem_messages[] = qem_add_attendee( $multi );
+                $qem_messages[] = qem_add_attendee( $multi, $register );
             }
             if ( (qem_get_element( $auto, 'enable' ) || qem_get_element( $multi, 'qem-copy' )) && qem_get_element( $multi, 'youremail' ) && !qem_get_element( $register, 'moderate' ) && qem_get_element( $auto, 'whenconfirm' ) == 'aftersubmission' ) {
                 qem_send_confirmation(
@@ -1314,7 +1303,7 @@ function qem_process_form( $values, $ajax = false )
         $values['yourname'] = qem_get_element( $multi, 'name1' );
         $values['youremail'] = qem_get_element( $multi, 'email1' );
     } else {
-        $qem_messages[] = qem_add_attendee( $values );
+        $qem_messages[] = qem_add_attendee( $values, $register );
     }
     
     
@@ -1476,8 +1465,9 @@ function qem_admin_notification(
  *
  * @return array
  */
-function qem_add_attendee( $values )
+function qem_add_attendee( $values, $register )
 {
+    global  $qem_fs ;
     $newmessage = array();
     $sentdate = date_i18n( 'd M Y' );
     $arr = array(
@@ -1498,7 +1488,6 @@ function qem_add_attendee( $values )
         'products',
         'checkslist'
     );
-    // @TODO  what is this section seems to do nothing with an undefined variable
     foreach ( $arr as $item ) {
         if ( $values[$item] != $register[$item] ) {
             $newmessage[$item] = $values[$item];
@@ -1512,6 +1501,7 @@ function qem_add_attendee( $values )
     $newmessage['datetime_added'] = time();
     $newmessage['ipn'] = qem_get_element( $values, 'ipn' );
     $newmessage['custom'] = qem_get_element( $values, 'ipn' );
+    $newmessage['ticket_no'] = qem_get_element( $values, 'ticket_no' );
     return $newmessage;
 }
 
@@ -1613,6 +1603,7 @@ function qem_send_confirmation(
     $id
 )
 {
+    global  $qem_fs ;
     $event = event_get_stored_options();
     $payment = qem_get_stored_payment();
     $rcm = get_post_meta( $id, 'event_registration_message', true );
@@ -1964,230 +1955,232 @@ function qem_build_registration_table_esc(
     $content_escaped .= '</tr>';
     $num = 0;
     $sort_message = qem_add_message_key( $message );
-    foreach ( $sort_message as $value ) {
-        $num += (int) qem_get_element( $value, 'yourplaces', 0 );
-        $span = '';
-        if ( $number && $num > $number ) {
-            $span = 'color:#CCC;';
-        }
-        if ( !qem_get_element( $value, 'approved', false ) && $register['moderate'] ) {
-            $span = $span . 'font-style:italic;';
-        }
-        if ( $span ) {
-            $span = ' style="' . $span . '" ';
-        }
-        $content_escaped .= '<tr' . esc_attr( $span ) . '>';
-        foreach ( $sort as $name ) {
-            switch ( $name ) {
-                case 'field1':
-                    $content_escaped .= qem_build_reg_input_esc(
-                        'type="text"',
-                        'usename',
-                        'yourname',
-                        $register,
-                        $selected,
-                        $i_array,
-                        $value,
-                        $qem_edit
-                    );
-                    break;
-                case 'field2':
-                    $content_escaped .= qem_build_reg_input_esc(
-                        'type="text"',
-                        'usemail',
-                        'youremail',
-                        $register,
-                        $selected,
-                        $i_array,
-                        $value,
-                        $qem_edit
-                    );
-                    break;
-                case 'field3':
-                    $content_escaped .= qem_build_reg_input_esc(
-                        'type="text"',
-                        'useattend',
-                        'yourattend',
-                        $register,
-                        $selected,
-                        $i_array,
-                        $value,
-                        $qem_edit
-                    );
-                    break;
-                case 'field4':
-                    $content_escaped .= qem_build_reg_input_esc(
-                        'type="text"',
-                        'usetelephone',
-                        'yourtelephone',
-                        $register,
-                        $selected,
-                        $i_array,
-                        $value,
-                        $qem_edit
-                    );
-                    break;
-                case 'field5':
-                    
-                    if ( qem_get_element( $register, 'useplaces' ) && empty(qem_get_element( $value, 'notattend' )) ) {
-                        $content_escaped .= '<td class="yourplaces">';
+    if ( is_array( $sort_message ) ) {
+        foreach ( $sort_message as $value ) {
+            $num += (int) qem_get_element( $value, 'yourplaces', 0 );
+            $span = '';
+            if ( $number && $num > $number ) {
+                $span = 'color:#CCC;';
+            }
+            if ( !qem_get_element( $value, 'approved', false ) && $register['moderate'] ) {
+                $span = $span . 'font-style:italic;';
+            }
+            if ( $span ) {
+                $span = ' style="' . $span . '" ';
+            }
+            $content_escaped .= '<tr' . esc_attr( $span ) . '>';
+            foreach ( $sort as $name ) {
+                switch ( $name ) {
+                    case 'field1':
+                        $content_escaped .= qem_build_reg_input_esc(
+                            'type="text"',
+                            'usename',
+                            'yourname',
+                            $register,
+                            $selected,
+                            $i_array,
+                            $value,
+                            $qem_edit
+                        );
+                        break;
+                    case 'field2':
+                        $content_escaped .= qem_build_reg_input_esc(
+                            'type="text"',
+                            'usemail',
+                            'youremail',
+                            $register,
+                            $selected,
+                            $i_array,
+                            $value,
+                            $qem_edit
+                        );
+                        break;
+                    case 'field3':
+                        $content_escaped .= qem_build_reg_input_esc(
+                            'type="text"',
+                            'useattend',
+                            'yourattend',
+                            $register,
+                            $selected,
+                            $i_array,
+                            $value,
+                            $qem_edit
+                        );
+                        break;
+                    case 'field4':
+                        $content_escaped .= qem_build_reg_input_esc(
+                            'type="text"',
+                            'usetelephone',
+                            'yourtelephone',
+                            $register,
+                            $selected,
+                            $i_array,
+                            $value,
+                            $qem_edit
+                        );
+                        break;
+                    case 'field5':
                         
-                        if ( $qem_edit == 'selected' && qem_get_element( $selected, $i_array ) || $qem_edit == 'all' ) {
-                            $content_escaped .= '<input style="width:100%" type="number" required min="1" value="' . esc_attr( qem_get_element( $value, 'yourplaces' ) ) . '" name="message[' . esc_attr( qem_get_element( $value, 'orig_key' ) ) . '][yourplaces]">';
-                        } else {
-                            $content_escaped .= wp_kses_post( qem_get_element( $value, 'yourplaces' ) . qem_get_element( $value, 'products' ) );
+                        if ( qem_get_element( $register, 'useplaces' ) && empty(qem_get_element( $value, 'notattend' )) ) {
+                            $content_escaped .= '<td class="yourplaces">';
+                            
+                            if ( $qem_edit == 'selected' && qem_get_element( $selected, $i_array ) || $qem_edit == 'all' ) {
+                                $content_escaped .= '<input style="width:100%" type="number" required min="1" value="' . esc_attr( qem_get_element( $value, 'yourplaces' ) ) . '" name="message[' . esc_attr( qem_get_element( $value, 'orig_key' ) ) . '][yourplaces]">';
+                            } else {
+                                $content_escaped .= wp_kses_post( qem_get_element( $value, 'yourplaces' ) . qem_get_element( $value, 'products' ) );
+                            }
+                            
+                            $content_escaped .= '</td>';
+                        } elseif ( qem_get_element( $register, 'useplaces' ) ) {
+                            $content_escaped .= '<td></td>';
                         }
                         
-                        $content_escaped .= '</td>';
-                    } elseif ( qem_get_element( $register, 'useplaces' ) ) {
-                        $content_escaped .= '<td></td>';
-                    }
-                    
-                    $content_escaped .= qem_build_reg_input_esc(
-                        'type="text"',
-                        'usemorenames',
-                        'morenames',
-                        $register,
-                        $selected,
-                        $i_array,
-                        $value,
-                        $qem_edit
-                    );
-                    break;
-                case 'field6':
-                    if ( qem_get_element( $register, 'usemessage', false ) ) {
-                        $content_escaped .= '<td class="yourmessage">' . wp_kses_post( qem_get_element( $value, 'yourmessage' ) ) . '</td>';
-                    }
-                    break;
-                case 'field9':
-                    $content_escaped .= qem_build_reg_input_esc(
-                        'type="text"',
-                        'useblank1',
-                        'yourblank1',
-                        $register,
-                        $selected,
-                        $i_array,
-                        $value,
-                        $qem_edit
-                    );
-                    break;
-                case 'field10':
-                    $content_escaped .= qem_build_reg_input_esc(
-                        'type="text"',
-                        'useblank2',
-                        'yourblank2',
-                        $register,
-                        $selected,
-                        $i_array,
-                        $value,
-                        $qem_edit
-                    );
-                    break;
-                case 'field11':
-                    $content_escaped .= qem_build_reg_input_esc(
-                        'type="text"',
-                        'usedropdown',
-                        'yourdropdown',
-                        $register,
-                        $selected,
-                        $i_array,
-                        $value,
-                        $qem_edit
-                    );
-                    break;
-                case 'field12':
-                    $content_escaped .= qem_build_reg_input_esc(
-                        'type="text"',
-                        'usenumber1',
-                        'yournumber1',
-                        $register,
-                        $selected,
-                        $i_array,
-                        $value,
-                        $qem_edit
-                    );
-                    break;
-                case 'field14':
-                    $content_escaped .= qem_build_reg_input_esc(
-                        'type="text"',
-                        'usedselector',
-                        'yourselector',
-                        $register,
-                        $selected,
-                        $i_array,
-                        $value,
-                        $qem_edit
-                    );
-                    break;
-                case 'field15':
-                    $content_escaped .= qem_build_reg_input_esc(
-                        'type="text"',
-                        'useoptin',
-                        'youroptin',
-                        $register,
-                        $selected,
-                        $i_array,
-                        $value,
-                        $qem_edit
-                    );
-                    break;
-                case 'field16':
-                    $content_escaped .= qem_build_reg_input_esc(
-                        'type="text"',
-                        'usechecks',
-                        'checkslist',
-                        $register,
-                        $selected,
-                        $i_array,
-                        $value,
-                        $qem_edit
-                    );
-                    break;
-                case 'field17':
-                    break;
+                        $content_escaped .= qem_build_reg_input_esc(
+                            'type="text"',
+                            'usemorenames',
+                            'morenames',
+                            $register,
+                            $selected,
+                            $i_array,
+                            $value,
+                            $qem_edit
+                        );
+                        break;
+                    case 'field6':
+                        if ( qem_get_element( $register, 'usemessage', false ) ) {
+                            $content_escaped .= '<td class="yourmessage">' . wp_kses_post( qem_get_element( $value, 'yourmessage' ) ) . '</td>';
+                        }
+                        break;
+                    case 'field9':
+                        $content_escaped .= qem_build_reg_input_esc(
+                            'type="text"',
+                            'useblank1',
+                            'yourblank1',
+                            $register,
+                            $selected,
+                            $i_array,
+                            $value,
+                            $qem_edit
+                        );
+                        break;
+                    case 'field10':
+                        $content_escaped .= qem_build_reg_input_esc(
+                            'type="text"',
+                            'useblank2',
+                            'yourblank2',
+                            $register,
+                            $selected,
+                            $i_array,
+                            $value,
+                            $qem_edit
+                        );
+                        break;
+                    case 'field11':
+                        $content_escaped .= qem_build_reg_input_esc(
+                            'type="text"',
+                            'usedropdown',
+                            'yourdropdown',
+                            $register,
+                            $selected,
+                            $i_array,
+                            $value,
+                            $qem_edit
+                        );
+                        break;
+                    case 'field12':
+                        $content_escaped .= qem_build_reg_input_esc(
+                            'type="text"',
+                            'usenumber1',
+                            'yournumber1',
+                            $register,
+                            $selected,
+                            $i_array,
+                            $value,
+                            $qem_edit
+                        );
+                        break;
+                    case 'field14':
+                        $content_escaped .= qem_build_reg_input_esc(
+                            'type="text"',
+                            'usedselector',
+                            'yourselector',
+                            $register,
+                            $selected,
+                            $i_array,
+                            $value,
+                            $qem_edit
+                        );
+                        break;
+                    case 'field15':
+                        $content_escaped .= qem_build_reg_input_esc(
+                            'type="text"',
+                            'useoptin',
+                            'youroptin',
+                            $register,
+                            $selected,
+                            $i_array,
+                            $value,
+                            $qem_edit
+                        );
+                        break;
+                    case 'field16':
+                        $content_escaped .= qem_build_reg_input_esc(
+                            'type="text"',
+                            'usechecks',
+                            'checkslist',
+                            $register,
+                            $selected,
+                            $i_array,
+                            $value,
+                            $qem_edit
+                        );
+                        break;
+                    case 'field17':
+                        break;
+                }
             }
-        }
-        if ( qem_get_element( $value, 'yourname' ) || qem_get_element( $value, 'youremail' ) ) {
-            $output = true;
-        }
-        $content_escaped .= '<td class="sentdate">' . esc_attr( qem_get_element( $value, 'sentdate' ) ) . '</td>';
-        
-        if ( qem_get_element( $payment, 'ipn' ) || qem_get_element( $ic, 'useincontext' ) || qem_get_element( $register, 'ignorepayment' ) ) {
-            $paid_sel = '';
-            $pending_sel = '';
-            
-            if ( 'Paid' == qem_get_element( $value, 'ipn' ) ) {
-                $paid_sel = ' selected ';
-            } else {
-                $pending_sel = ' selected ';
+            if ( qem_get_element( $value, 'yourname' ) || qem_get_element( $value, 'youremail' ) ) {
+                $output = true;
             }
+            $content_escaped .= '<td class="sentdate">' . esc_attr( qem_get_element( $value, 'sentdate' ) ) . '</td>';
             
-            $ipn = ( qem_get_element( $payment, 'sandbox' ) ? qem_get_element( $value, 'ipn' ) : esc_html__( 'Pending', 'quick-event-manager' ) );
-            if ( isset( $register['ignorepayment'] ) && $register['ignorepayment'] && isset( $value['ignore'] ) && 'checked' === $value['ignore'] ) {
-                $ipn = qem_get_element( $register, 'ignorepaymentlabel' );
-            }
-            $value['ipn'] = ( qem_get_element( $value, 'ipn' ) == "Paid" ? qem_get_element( $payment, 'paid' ) : $ipn );
-            $content_escaped .= '<td class="payment">';
-            
-            if ( $qem_edit == 'selected' && qem_get_element( $selected, $i_array ) || $qem_edit == 'all' ) {
-                //		$content .= '<input style="width:100%" type="text" value="' . $value['ipn'] . '" name="message[' . $i . '][ipn]">';
-                $content_escaped .= '<select style="width:100%"' . '" name="message[' . esc_attr( qem_get_element( $value, 'orig_key' ) ) . '][ipn]">';
-                $content_escaped .= '<option value="Paid"' . esc_attr( $paid_sel ) . '>' . esc_attr( qem_get_element( $payment, 'paid' ) ) . '</option>';
-                $content_escaped .= '<option value="' . esc_attr( qem_get_element( $value, 'custom' ) ) . '"' . $pending_sel . '>' . esc_html__( 'Pending', 'quick-event-manager' ) . '</option>';
-                $content_escaped .= '</select>';
-            } else {
-                $content_escaped .= esc_html( qem_get_element( $value, 'ipn' ) );
+            if ( qem_get_element( $payment, 'ipn' ) || qem_get_element( $ic, 'useincontext' ) || qem_get_element( $register, 'ignorepayment' ) ) {
+                $paid_sel = '';
+                $pending_sel = '';
+                
+                if ( 'Paid' == qem_get_element( $value, 'ipn' ) ) {
+                    $paid_sel = ' selected ';
+                } else {
+                    $pending_sel = ' selected ';
+                }
+                
+                $ipn = ( qem_get_element( $payment, 'sandbox' ) ? qem_get_element( $value, 'ipn' ) : esc_html__( 'Pending', 'quick-event-manager' ) );
+                if ( isset( $register['ignorepayment'] ) && $register['ignorepayment'] && isset( $value['ignore'] ) && 'checked' === $value['ignore'] ) {
+                    $ipn = qem_get_element( $register, 'ignorepaymentlabel' );
+                }
+                $value['ipn'] = ( qem_get_element( $value, 'ipn' ) == "Paid" ? qem_get_element( $payment, 'paid' ) : $ipn );
+                $content_escaped .= '<td class="payment">';
+                
+                if ( $qem_edit == 'selected' && qem_get_element( $selected, $i_array ) || $qem_edit == 'all' ) {
+                    //		$content .= '<input style="width:100%" type="text" value="' . $value['ipn'] . '" name="message[' . $i . '][ipn]">';
+                    $content_escaped .= '<select style="width:100%"' . '" name="message[' . esc_attr( qem_get_element( $value, 'orig_key' ) ) . '][ipn]">';
+                    $content_escaped .= '<option value="Paid"' . esc_attr( $paid_sel ) . '>' . esc_attr( qem_get_element( $payment, 'paid' ) ) . '</option>';
+                    $content_escaped .= '<option value="' . esc_attr( qem_get_element( $value, 'custom' ) ) . '"' . $pending_sel . '>' . esc_html__( 'Pending', 'quick-event-manager' ) . '</option>';
+                    $content_escaped .= '</select>';
+                } else {
+                    $content_escaped .= esc_html( qem_get_element( $value, 'ipn' ) );
+                }
+                
+                $content_escaped .= '</td>';
             }
             
-            $content_escaped .= '</td>';
+            if ( !$report || $report == 'edit' ) {
+                // has name of sorted position and value of table position
+                $content_escaped .= '<td class="checkbox"><input type="checkbox" name="' . esc_attr( $i_array ) . '" value="' . esc_attr( qem_get_element( $value, 'orig_key' ) ) . '" /></td>';
+            }
+            $content_escaped .= '</tr>';
+            $i_array++;
         }
-        
-        if ( !$report || $report == 'edit' ) {
-            // has name of sorted position and value of table position
-            $content_escaped .= '<td class="checkbox"><input type="checkbox" name="' . esc_attr( $i_array ) . '" value="' . esc_attr( qem_get_element( $value, 'orig_key' ) ) . '" /></td>';
-        }
-        $content_escaped .= '</tr>';
-        $i_array++;
     }
     $content_escaped .= '</table>';
     $str = qem_get_the_numbers( $pid, $payment );
@@ -2241,6 +2234,9 @@ function qem_build_reg_input_esc(
 
 function qem_add_message_key( $messages )
 {
+    if ( !is_array( $messages ) ) {
+        return $messages;
+    }
     foreach ( $messages as $key => &$row ) {
         $row['orig_key'] = $key;
     }
@@ -2290,12 +2286,6 @@ function qem_split_surname( $full_name )
  */
 function qem_messages()
 {
-    if ( isset( $_POST['_qem_download_form_nonce'] ) && !wp_verify_nonce( $_POST['_qem_download_form_nonce'], 'qem_download_form' ) ) {
-        wp_die( esc_html__( 'Invalid Nonce, sorry something went wrong', 'quick-event-manager' ) );
-    }
-    if ( isset( $_POST['_qem_changeoptions_nonce'] ) && !wp_verify_nonce( $_POST['_qem_changeoptions_nonce'], 'qem_changeoptions' ) ) {
-        wp_die( esc_html__( 'Invalid Nonce, sorry something went wrong', 'quick-event-manager' ) );
-    }
     global  $qem_fs ;
     $event = ( isset( $_GET["event"] ) ? (int) $_GET["event"] : null );
     $title = ( isset( $_GET["title"] ) ? sanitize_text_field( $_GET["title"] ) : null );
@@ -2306,6 +2296,9 @@ function qem_messages()
     $category = 'All Categories';
     
     if ( isset( $_POST['qem_reset_message'] ) ) {
+        if ( !isset( $_POST['_qem_download_form_nonce'] ) || !wp_verify_nonce( $_POST['_qem_download_form_nonce'], 'qem_download_form' ) ) {
+            wp_die( esc_html__( 'Invalid Nonce, sorry something went wrong', 'quick-event-manager' ) );
+        }
         $event = (int) $_POST['qem_download_form'];
         $title = get_the_title( $event );
         delete_option( 'qem_messages_' . $event );
@@ -2335,6 +2328,9 @@ function qem_messages()
     
     
     if ( isset( $_POST['changeoptions'] ) ) {
+        if ( !isset( $_POST['_qem_changeoptions_nonce'] ) || !wp_verify_nonce( $_POST['_qem_changeoptions_nonce'], 'qem_changeoptions' ) ) {
+            wp_die( esc_html__( 'Invalid Nonce, sorry something went wrong', 'quick-event-manager' ) );
+        }
         $options = array( 'showevents', 'category' );
         foreach ( $options as $item ) {
             $messageoptions[$item] = stripslashes( sanitize_text_field( qem_get_element( $_POST, $item ) ) );
@@ -2345,6 +2341,9 @@ function qem_messages()
     
     
     if ( isset( $_POST['qem_delete_selected'] ) ) {
+        if ( !isset( $_POST['_qem_download_form_nonce'] ) || !wp_verify_nonce( $_POST['_qem_download_form_nonce'], 'qem_download_form' ) ) {
+            wp_die( esc_html__( 'Invalid Nonce, sorry something went wrong', 'quick-event-manager' ) );
+        }
         $event = (int) $_POST["qem_download_form"];
         $message = get_option( 'qem_messages_' . $event );
         $len = count( $message );
@@ -2364,11 +2363,14 @@ function qem_messages()
     $new_row = false;
     
     if ( isset( $_POST['qem_add_row'] ) ) {
+        if ( !isset( $_POST['_qem_download_form_nonce'] ) || !wp_verify_nonce( $_POST['_qem_download_form_nonce'], 'qem_download_form' ) ) {
+            wp_die( esc_html__( 'Invalid Nonce, sorry something went wrong', 'quick-event-manager' ) );
+        }
         $event = (int) $_POST["qem_download_form"];
         $message = get_option( 'qem_messages_' . $event );
-        $message[] = apply_filters( 'qem_new_attendee_defaults', array(
+        $message[] = array(
             'datetime_added' => time(),
-        ) );
+        );
         update_option( 'qem_messages_' . $event, $message );
         $new_row = count( $message ) - 1;
         qem_admin_notice( esc_html__( 'New attendee added.', 'quick-event-manager' ) );
@@ -2376,6 +2378,9 @@ function qem_messages()
     
     
     if ( isset( $_POST['qem_delete_blanks'] ) ) {
+        if ( !isset( $_POST['_qem_download_form_nonce'] ) || !wp_verify_nonce( $_POST['_qem_download_form_nonce'], 'qem_download_form' ) ) {
+            wp_die( esc_html__( 'Invalid Nonce, sorry something went wrong', 'quick-event-manager' ) );
+        }
         $event = (int) $_POST["qem_download_form"];
         $message = get_option( 'qem_messages_' . $event );
         $message = array_filter( $message, function ( $item ) {
@@ -2387,6 +2392,9 @@ function qem_messages()
     
     
     if ( isset( $_POST['qem_approve_selected'] ) ) {
+        if ( !isset( $_POST['_qem_download_form_nonce'] ) || !wp_verify_nonce( $_POST['_qem_download_form_nonce'], 'qem_download_form' ) ) {
+            wp_die( esc_html__( 'Invalid Nonce, sorry something went wrong', 'quick-event-manager' ) );
+        }
         $event = (int) $_POST["qem_download_form"];
         $message = get_option( 'qem_messages_' . $event );
         $len = count( $message );
@@ -2415,6 +2423,9 @@ function qem_messages()
     // Update edited applications
     
     if ( isset( $_POST['qem_update'] ) ) {
+        if ( !isset( $_POST['_qem_download_form_nonce'] ) || !wp_verify_nonce( $_POST['_qem_download_form_nonce'], 'qem_download_form' ) ) {
+            wp_die( esc_html__( 'Invalid Nonce, sorry something went wrong', 'quick-event-manager' ) );
+        }
         $event = (int) $_POST["qem_download_form"];
         $unixtime = get_post_meta( $event, 'event_date', true );
         $date = date_i18n( "d M Y", $unixtime );
@@ -2468,6 +2479,9 @@ function qem_messages()
     // Edit all applications
     
     if ( isset( $_POST['qem_edit'] ) ) {
+        if ( !isset( $_POST['_qem_download_form_nonce'] ) || !wp_verify_nonce( $_POST['_qem_download_form_nonce'], 'qem_download_form' ) ) {
+            wp_die( esc_html__( 'Invalid Nonce, sorry something went wrong', 'quick-event-manager' ) );
+        }
         $event = (int) $_POST["qem_download_form"];
         $unixtime = get_post_meta( $event, 'event_date', true );
         $date = date_i18n( "d M Y", $unixtime );
@@ -2478,6 +2492,9 @@ function qem_messages()
     // Edit selected applications
     
     if ( isset( $_POST['qem_edit_selected'] ) || false !== $new_row ) {
+        if ( !isset( $_POST['_qem_download_form_nonce'] ) || !wp_verify_nonce( $_POST['_qem_download_form_nonce'], 'qem_download_form' ) ) {
+            wp_die( esc_html__( 'Invalid Nonce, sorry something went wrong', 'quick-event-manager' ) );
+        }
         $event = (int) $_POST["qem_download_form"];
         $unixtime = get_post_meta( $event, 'event_date', true );
         $date = date_i18n( "d M Y", $unixtime );
@@ -2501,6 +2518,9 @@ function qem_messages()
     
     
     if ( isset( $_POST['qem_emaillist'] ) ) {
+        if ( !isset( $_POST['_qem_download_form_nonce'] ) || !wp_verify_nonce( $_POST['_qem_download_form_nonce'], 'qem_download_form' ) ) {
+            wp_die( esc_html__( 'Invalid Nonce, sorry something went wrong', 'quick-event-manager' ) );
+        }
         
         if ( empty($register['sendemail']) ) {
             $sys_email = get_bloginfo( 'admin_email' );

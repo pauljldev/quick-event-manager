@@ -751,7 +751,7 @@ msgid "View Full Registration Details"
 msgstr "Подробности Вашей регистрации"
 
 #: src/legacy/quick-event-editor.php:427
-msgid "Upgrade to Pro for just $2.99 / month"
+msgid "Upgrade to Pro for just $4.16 / month"
 msgstr ""
 
 #: src/legacy/quick-event-editor.php:428
@@ -1291,7 +1291,7 @@ msgstr "Переводы"
 
 #: src/legacy/settings.php:202, src/legacy/settings.php:3070,
 #: src/legacy/settings.php:3260
-msgid "Upgrade for just $2.99 / month"
+msgid "Upgrade for just $4.16 / month"
 msgstr ""
 
 #: src/legacy/settings.php:203, src/legacy/settings.php:3071,

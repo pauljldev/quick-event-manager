@@ -54,7 +54,7 @@ var qem_dont_cancel;
         */
         var calendar = $(e).closest('.qem_calendar');
         var cid = Number(calendar.attr('id').replace('qem_calendar_', ''));
-        var params = 'action=qem_ajax_calendar&_qemcalnonce=' + qem_cal_nonce;
+        var params = 'action=qem_ajax_calendar';
 
         /*
             URL Encode the atts array
@@ -178,13 +178,10 @@ var qem_dont_cancel;
         // Intercept request and handle with AJAX
         var fd = $(this).serialize();
         var action = $('<input type="text" />');
-        var nonce = $('<input type="text" />');
         action.attr('name', 'action');
         action.val('qem_validate_form');
-        nonce.attr('name', '_reg_nonce');
-        nonce.val(qem_register_nonce);
 
-        fd += '&' + action.serialize() + '&action=qem_validate_form&_reg_nonce=' + qem_register_nonce;
+        fd += '&' + action.serialize() + '&action=qem_validate_form';
         $('input[name=qemregister' + formid + ']').prop("disabled", true);
         $('.qem_validating_form[data-form-id="' + formid + '"]').show(function () {
             $.post(ajaxurl,
@@ -261,7 +258,7 @@ var qem_dont_cancel;
                     $('.qem_validating_form[data-form-id="' + formid + '"]').show();
 
                     var fd = $(form).serialize();
-                    fd += '&' + c.attr('name') + '=' + c.val() + '&action=qem_validate_form&_reg_nonce=' + qem_register_nonce;
+                    fd += '&' + c.attr('name') + '=' + c.val() + '&action=qem_validate_form';
                     $.ajax({
                         type: 'POST',
                         url: ajaxurl,

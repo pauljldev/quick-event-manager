@@ -94,3 +94,4 @@ $display = event_get_stored_display();
 if ( $display['recentposts'] ) {
     add_action( 'pre_get_posts', 'qem_add_custom_post_type_to_query' );
 }
+add_action( 'pre_get_posts', 'qem_admin_edit_table_order' );

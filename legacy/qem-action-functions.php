@@ -292,8 +292,7 @@ function qem_head_ic()
     
     // should  be changed to locaizescript or add inline script
     // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- this is core WP security function
-    echo  '<script type="text/javascript"> qem_register_nonce = "' . wp_create_nonce( 'qem_register' ) . '"
-ajaxurl = "' . esc_url( admin_url( 'admin-ajax.php' ) ) . '"; qem_calendar_atts = []; qem_year = []; qem_month = []; qem_category = [];</script>' ;
+    echo  '<script type="text/javascript">ajaxurl = "' . esc_url( admin_url( 'admin-ajax.php' ) ) . '"; qem_calendar_atts = []; qem_year = []; qem_month = []; qem_category = [];</script>' ;
 }
 
 function qem_flush_rules()
@@ -306,5 +305,25 @@ function qem_add_custom_post_type_to_query( $query )
 {
     if ( is_home() ) {
         $query->set( 'post_type', array( 'post', 'event' ) );
+    }
+}
+
+/**
+ * set default order of edit events page
+ *
+ * @param $query
+ *
+ * @return void
+ */
+function qem_admin_edit_table_order( $query )
+{
+    global  $post_type, $pagenow ;
+    if ( 'edit.php' == $pagenow && 'event' == $post_type ) {
+        
+        if ( empty(get_query_var( 'order' )) && empty(get_query_var( 'orderby' )) ) {
+            $query->set( 'orderby', 'meta_value_num' );
+            $query->set( 'order', 'desc' );
+        }
+    
     }
 }

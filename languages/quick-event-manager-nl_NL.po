@@ -708,8 +708,8 @@ msgid "View Full Registration Details"
 msgstr "Bekijk alle registratie-informatie"
 
 #: src/legacy/quick-event-editor.php:427
-msgid "Upgrade to Pro for just $2.99 / month"
-msgstr "Upgrade naar Pro voor maar $2.99 / maand"
+msgid "Upgrade to Pro for just $4.16 / month"
+msgstr "Upgrade naar Pro voor maar $4.16 / maand"
 
 #: src/legacy/quick-event-editor.php:428
 msgid ""
@@ -1200,8 +1200,8 @@ msgstr "Vertalingen"
 
 #: src/legacy/settings.php:202, src/legacy/settings.php:3070,
 #: src/legacy/settings.php:3260
-msgid "Upgrade for just $2.99 / month"
-msgstr "Upgrade voor slechts $2.99 / maand"
+msgid "Upgrade for just $4.16 / month"
+msgstr "Upgrade voor slechts $4.16 / maand"
 
 #: src/legacy/settings.php:203, src/legacy/settings.php:3071,
 #: src/legacy/settings.php:3261

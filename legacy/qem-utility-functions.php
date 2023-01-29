@@ -42,6 +42,7 @@ function qem_category_key( $cal, $style, $calendar ) {
 		$catkey .= '<span class="qem-category" style="border:' . $style['date_border_width'] . 'px solid ' . $style['date_border_colour'] . ';background:#CCC"><a style="color:' . $style['date_colour'] . '" href="' . $caturl . '">' . $allcats . '</a></span>';
 	}
 
+
 	$class = 'class="qem-category qem-key"';
 	foreach ( $cat as $i ) {
 		foreach ( $arr as $option ) {
@@ -274,6 +275,10 @@ function qem_wp_mail( $type, $qem_email, $title, $content, $headers ) {
 		trigger_error( 'QEM Email message about to send: ' . esc_html( $type ) . ' To: ' . esc_html( $qem_email ), E_USER_NOTICE );
 	}
 	$decode_title = html_entity_decode( $title, ENT_QUOTES );
+	$headers .=  "X-Entity-Ref-ID: " . uniqid() . "\r\n";
+	$headers = apply_filters( 'qem_email_headers', $headers, $type, $qem_email, $title, $content, $headers );
+	$decode_title = apply_filters( 'qem_email_title', $decode_title, $type, $qem_email, $title, $content, $headers );
+	$qem_email = apply_filters( 'qem_email_to', $qem_email, $type, $qem_email, $title, $content, $headers );
 	$res          = wp_mail( $qem_email, $decode_title, $content, $headers );
 	if ( defined( 'WP_DEBUG' ) && true == WP_DEBUG ) {
 		if ( true === $res ) {
@@ -346,7 +351,18 @@ function qem_kses_post_svg_form( $html ) {
 		),
 		'form'   => array(
 			'class' => true,
+			'action' => true,
+			'method' => true,
+			'enctype' => true,
+			'id' => true,
 		),
+		'input' =>
+			array(
+				'class' => true,
+				'name'  => true,
+				'type'  => true,
+				'value' => true,
+			),
 		'select' =>
 			array(
 				'class' => true,

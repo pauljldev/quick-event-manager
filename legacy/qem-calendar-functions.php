@@ -1,11 +1,6 @@
 <?php
 function qem_ajax_calendar() {
-	if ( ! isset( $_REQUEST['_qemcalnonce'] ) || ! wp_verify_nonce( $_REQUEST['_qemcalnonce'], 'qem_cal_nonce' ) ) {
-		echo '<div class="qem_calendar">';
-		esc_html_e( 'Invalid Nonce, sorry something went wrong', 'quick-event-manager' );
-		echo '<div>';
-		exit;
-	}
+	// phpcs:ignore WordPress.Security.NonceVerification.Missing -- user front end actions nonce no required no update
 	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- qem_show_calendar_esc function is used as shortcode and display widget, ajax refreshes and more so escaped as the return is escaped inside the function https://developer.wordpress.org/apis/security/escaping/#toc_4
 	echo qem_show_calendar_esc( qem_sanitize_text_or_array_field( $_POST['atts'] ) );
 	exit;

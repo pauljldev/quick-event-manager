@@ -631,6 +631,7 @@ function save_event_details()
     update_post_meta( $post->ID, "event_productlist", $products );
     
     if ( qem_get_element( $eventdetails, 'publicationdate', false ) && $newdate ) {
+        // @TODO   post gmt date - local date this doesn't work well
         remove_action( 'save_post', 'save_event_details' );
         $updatestart = date_i18n( 'Y-m-d H:i:s', $newdate );
         wp_update_post( array(

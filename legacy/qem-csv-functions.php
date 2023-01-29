@@ -5,7 +5,7 @@ function qem_download_files()
     global  $qem_fs ;
     
     if ( isset( $_POST['qem_download_csv'] ) ) {
-        if ( isset( $_POST['_qem_download_form_nonce'] ) && !wp_verify_nonce( $_POST['_qem_download_form_nonce'], 'qem_download_form' ) ) {
+        if ( !isset( $_POST['_qem_download_form_nonce'] ) || !wp_verify_nonce( $_POST['_qem_download_form_nonce'], 'qem_download_form' ) ) {
             wp_die( esc_html__( 'Invalid Nonce, sorry something went wrong', 'quick-event-manager' ) );
         }
         $event = (int) $_POST['qem_download_form'];
@@ -187,9 +187,14 @@ function qem_download_files()
             }
             array_push( $cells, qem_get_element( $value, 'sentdate' ) );
             $row = '';
+            $i = 0;
             foreach ( $cells as $cell ) {
+                $i++;
                 // add commas except last one
-                $row .= ( next( $cells ) ? qem_csv_a_cell( $cell ) . ',' : qem_csv_a_cell( $cell ) );
+                $row .= qem_csv_a_cell( $cell );
+                if ( $i < count( $cells ) ) {
+                    $row .= ',';
+                }
             }
             echo  wp_kses_post( $row ) . PHP_EOL ;
         }
