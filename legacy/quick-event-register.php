@@ -5,6 +5,7 @@
 */
 use  Quick_Event_Manager\Plugin\Control\Admin_Template_Loader ;
 use  Quick_Event_Manager\Plugin\Core\Utilities ;
+use  Quick_Event_Manager\Vendor\Stripe\StripeClient ;
 add_action( 'wp_ajax_qem_validate_form', 'qem_ajax_validation' );
 add_action( 'wp_ajax_nopriv_qem_validate_form', 'qem_ajax_validation' );
 function qem_registration_fields()

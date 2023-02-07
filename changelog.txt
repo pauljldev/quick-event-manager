@@ -1,4 +1,11 @@
 == Changelog ==
+= 9.8.4 =
+* Fix end date when blank in Guest Post email (Pro Only)
+* Fix csv example link (Pro Only)
+
+= 9.8.3 =
+* Fix dates in Guest Post email (Pro Only)
+
 = 9.8.2 =
 * Change registration nonce checking due to cache issues
 

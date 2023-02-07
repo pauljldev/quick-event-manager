@@ -46,5 +46,17 @@ class Utilities
         }
         return self::$instance;
     }
+    
+    public function get_date_format()
+    {
+        $fmt = get_option( 'date_format' );
+        return apply_filters( 'qem_date_format', $fmt );
+    }
+    
+    public function get_time_format()
+    {
+        $fmt = get_option( 'time_format' );
+        return apply_filters( 'qem_time_format', $fmt );
+    }
 
 }

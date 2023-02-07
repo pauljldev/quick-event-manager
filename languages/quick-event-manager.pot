@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-01-29 11:16+0000\n"
+"POT-Creation-Date: 2023-02-07 15:07+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -18,7 +18,7 @@ msgstr ""
 msgid "Payment not completed for"
 msgstr ""
 
-#: src/business/class-business.php:129, src/legacy/quick-event-register.php:1912
+#: src/business/class-business.php:129, src/legacy/quick-event-register.php:1913
 msgid " on "
 msgstr ""
 
@@ -26,11 +26,11 @@ msgstr ""
 msgid "The system file attempting to be loaded at %1$s does not exist."
 msgstr ""
 
-#: src/legacy/qem-csv-functions.php:7, src/legacy/qem-ics-functions.php:20, src/legacy/quick-event-editor.php:978, src/legacy/quick-event-register.php:2838, src/legacy/quick-event-register.php:2867, src/legacy/quick-event-register.php:2879, src/legacy/quick-event-register.php:2897, src/legacy/quick-event-register.php:2914, src/legacy/quick-event-register.php:2932, src/legacy/quick-event-register.php:2954, src/legacy/quick-event-register.php:3014, src/legacy/quick-event-register.php:3026, src/legacy/quick-event-register.php:3051, src/legacy/quick-event-register.php:3081
+#: src/legacy/qem-csv-functions.php:7, src/legacy/qem-ics-functions.php:20, src/legacy/quick-event-editor.php:978, src/legacy/quick-event-register.php:2839, src/legacy/quick-event-register.php:2868, src/legacy/quick-event-register.php:2880, src/legacy/quick-event-register.php:2898, src/legacy/quick-event-register.php:2915, src/legacy/quick-event-register.php:2933, src/legacy/quick-event-register.php:2955, src/legacy/quick-event-register.php:3015, src/legacy/quick-event-register.php:3027, src/legacy/quick-event-register.php:3052, src/legacy/quick-event-register.php:3082
 msgid "Invalid Nonce, sorry something went wrong"
 msgstr ""
 
-#: src/legacy/qem-csv-functions.php:205, src/legacy/quick-event-register.php:2691, src/legacy/quick-event-register.php:2706
+#: src/legacy/qem-csv-functions.php:206, src/legacy/quick-event-register.php:2692, src/legacy/quick-event-register.php:2707
 msgid "Pending"
 msgstr ""
 
@@ -85,12 +85,32 @@ msgstr ""
 msgid "Copy of:"
 msgstr ""
 
-#: src/legacy/qem-event-guest__premium_only.php:113
+#: src/legacy/qem-event-guest__premium_only.php:114
 msgid "Errors will reset to today&#146;s date."
 msgstr ""
 
-#: src/legacy/qem-event-guest__premium_only.php:117
+#: src/legacy/qem-event-guest__premium_only.php:118
 msgid "Leave blank for one day events."
+msgstr ""
+
+#: src/legacy/qem-event-guest__premium_only.php:364, src/legacy/qem-event-guest__premium_only.php:334
+msgid "Guest Event Posted"
+msgstr ""
+
+#: src/legacy/qem-event-guest__premium_only.php:365
+msgid "New event awaiting approval"
+msgstr ""
+
+#: src/legacy/qem-event-guest__premium_only.php:328
+msgid "Author"
+msgstr ""
+
+#: src/legacy/qem-event-guest__premium_only.php:329, src/legacy/quick-event-options.php:719
+msgid "Author Email"
+msgstr ""
+
+#: src/legacy/qem-event-guest__premium_only.php:335
+msgid "A new event has been published"
 msgstr ""
 
 #: src/legacy/qem-filter-functions.php:50, src/legacy/quick-event-manager-settings.php:131, src/legacy/quick-event-manager-settings.php:213, src/legacy/quick-event-manager-settings.php:214, src/legacy/quick-event-manager-settings.php:1760
@@ -121,7 +141,7 @@ msgstr ""
 msgid "..."
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:82, src/legacy/quick-event-extensions__premium_only.php:655, src/legacy/quick-event-manager-settings.php:1450, src/legacy/quick-event-payments.php:132, src/legacy/quick-event-register.php:401
+#: src/legacy/quick-event-editor.php:82, src/legacy/quick-event-extensions__premium_only.php:655, src/legacy/quick-event-manager-settings.php:1450, src/legacy/quick-event-payments.php:132, src/legacy/quick-event-register.php:402
 msgid "Event"
 msgstr ""
 
@@ -161,7 +181,7 @@ msgstr ""
 msgid "page for options"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:183, src/legacy/quick-event-register.php:3119
+#: src/legacy/quick-event-editor.php:183, src/legacy/quick-event-register.php:3120
 msgid "Event ID:"
 msgstr ""
 
@@ -498,7 +518,7 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: src/legacy/quick-event-editor.php:613, src/legacy/quick-event-manager-settings.php:1899, src/legacy/quick-event-manager-settings.php:3256, src/legacy/quick-event-register.php:1012, src/legacy/quick-event-register.php:3150
+#: src/legacy/quick-event-editor.php:613, src/legacy/quick-event-manager-settings.php:1899, src/legacy/quick-event-manager-settings.php:3256, src/legacy/quick-event-register.php:1013, src/legacy/quick-event-register.php:3151
 msgid "Email"
 msgstr ""
 
@@ -646,11 +666,11 @@ msgstr ""
 msgid "Send to this email address"
 msgstr ""
 
-#: src/legacy/quick-event-extensions__premium_only.php:589, src/legacy/quick-event-extensions__premium_only.php:635, src/legacy/quick-event-register.php:3125
+#: src/legacy/quick-event-extensions__premium_only.php:589, src/legacy/quick-event-extensions__premium_only.php:635, src/legacy/quick-event-register.php:3126
 msgid "Email List"
 msgstr ""
 
-#: src/legacy/quick-event-extensions__premium_only.php:691, src/legacy/quick-event-register.php:2439
+#: src/legacy/quick-event-extensions__premium_only.php:691, src/legacy/quick-event-register.php:2440
 msgid "Date Sent"
 msgstr ""
 
@@ -3634,7 +3654,7 @@ msgstr ""
 msgid "Places required"
 msgstr ""
 
-#: src/legacy/quick-event-options.php:322, src/legacy/quick-event-register.php:2431
+#: src/legacy/quick-event-options.php:322, src/legacy/quick-event-register.php:2432
 msgid "Donation Amount"
 msgstr ""
 
@@ -3914,10 +3934,6 @@ msgstr ""
 msgid "Author Name"
 msgstr ""
 
-#: src/legacy/quick-event-options.php:719
-msgid "Author Email"
-msgstr ""
-
 #: src/legacy/quick-event-options.php:720, src/legacy/quick-event-options.php:738
 msgid "Event Forms"
 msgstr ""
@@ -3950,219 +3966,219 @@ msgstr ""
 msgid "Your Email"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:520
+#: src/legacy/quick-event-register.php:521
 msgid "Issue with Stripe settings - contact web admin"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:518
+#: src/legacy/quick-event-register.php:519
 msgid "Error - shown to admins: "
 msgstr ""
 
-#: src/legacy/quick-event-register.php:522
+#: src/legacy/quick-event-register.php:523
 msgid "System Error"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:970
+#: src/legacy/quick-event-register.php:971
 msgid "Invalid Coupon Code"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1010
+#: src/legacy/quick-event-register.php:1011
 msgid "Names"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1346
+#: src/legacy/quick-event-register.php:1347
 msgid "Enter the word YES in the box:"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1497
+#: src/legacy/quick-event-register.php:1498
 msgid "Your are not already attending"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1519, src/legacy/quick-event-register.php:1514, src/legacy/quick-event-register.php:1508
+#: src/legacy/quick-event-register.php:1520, src/legacy/quick-event-register.php:1515, src/legacy/quick-event-register.php:1509
 msgid "Name required"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1537, src/legacy/quick-event-register.php:1542
+#: src/legacy/quick-event-register.php:1538, src/legacy/quick-event-register.php:1543
 msgid "Valid email required"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1533, src/legacy/quick-event-register.php:1527, src/legacy/quick-event-register.php:1615, src/legacy/quick-event-register.php:1623, src/legacy/quick-event-register.php:1631, src/legacy/quick-event-register.php:1642, src/legacy/quick-event-register.php:1646
+#: src/legacy/quick-event-register.php:1534, src/legacy/quick-event-register.php:1528, src/legacy/quick-event-register.php:1616, src/legacy/quick-event-register.php:1624, src/legacy/quick-event-register.php:1632, src/legacy/quick-event-register.php:1643, src/legacy/quick-event-register.php:1647
 msgid "Required input"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1548
+#: src/legacy/quick-event-register.php:1549
 msgid "Valid phone number required"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1573
+#: src/legacy/quick-event-register.php:1574
 msgid "No places selected"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1568
+#: src/legacy/quick-event-register.php:1569
 msgid "Total Maximum places (%1$s) per registration exceeded"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1561
+#: src/legacy/quick-event-register.php:1562
 msgid "Maximum places (%1$s) per registration exceeded"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1591
+#: src/legacy/quick-event-register.php:1592
 msgid "Insufficient amount"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1603
+#: src/legacy/quick-event-register.php:1604
 msgid "Unknown Coupon Code"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1650
+#: src/legacy/quick-event-register.php:1651
 msgid "Incorrect value try again"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1658, src/legacy/quick-event-register.php:1679
+#: src/legacy/quick-event-register.php:1659, src/legacy/quick-event-register.php:1680
 msgid "You have selected zero tickets"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1676, src/legacy/quick-event-register.php:1669
+#: src/legacy/quick-event-register.php:1677, src/legacy/quick-event-register.php:1670
 msgid "Not enough places left"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:1912
+#: src/legacy/quick-event-register.php:1913
 msgid "New Registration for "
 msgstr ""
 
-#: src/legacy/quick-event-register.php:2444
+#: src/legacy/quick-event-register.php:2445
 msgid "Select"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:2832, src/legacy/quick-event-register.php:2861
+#: src/legacy/quick-event-register.php:2833, src/legacy/quick-event-register.php:2862
 msgid "No event selected"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:2859
+#: src/legacy/quick-event-register.php:2860
 msgid "Nobody has registered for"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:2859
+#: src/legacy/quick-event-register.php:2860
 msgid "yet"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:2892
+#: src/legacy/quick-event-register.php:2893
 msgid "Selected registrations have been deleted."
 msgstr ""
 
-#: src/legacy/quick-event-register.php:2909
+#: src/legacy/quick-event-register.php:2910
 msgid "New attendee added."
 msgstr ""
 
-#: src/legacy/quick-event-register.php:2927
+#: src/legacy/quick-event-register.php:2928
 msgid "Blanks registrations have been deleted."
 msgstr ""
 
-#: src/legacy/quick-event-register.php:2948
+#: src/legacy/quick-event-register.php:2949
 msgid "Selected registrations have been approved."
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3007
+#: src/legacy/quick-event-register.php:3008
 msgid "Attendees for"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3007
+#: src/legacy/quick-event-register.php:3008
 msgid "have been updated"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3075
+#: src/legacy/quick-event-register.php:3076
 msgid "Registration list has been sent to"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3102
+#: src/legacy/quick-event-register.php:3103
 msgid "Event Registration Report"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3108
+#: src/legacy/quick-event-register.php:3109
 msgid "Show"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3109, src/ui/user/templates__premium_only/show-registrations-form.php:10
+#: src/legacy/quick-event-register.php:3110, src/ui/user/templates__premium_only/show-registrations-form.php:10
 msgid "All Events"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3110, src/ui/user/templates__premium_only/show-registrations-form.php:14
+#: src/legacy/quick-event-register.php:3111, src/ui/user/templates__premium_only/show-registrations-form.php:14
 msgid "Current Events"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3124
+#: src/legacy/quick-event-register.php:3125
 msgid "Export to CSV"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3126
+#: src/legacy/quick-event-register.php:3127
 msgid "Delete All Attendees"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3126
+#: src/legacy/quick-event-register.php:3127
 msgid "Are you sure you want to delete all the attendees for %s?"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3127
+#: src/legacy/quick-event-register.php:3128
 msgid "Delete Selected"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3127
+#: src/legacy/quick-event-register.php:3128
 msgid "Are you sure you want to delete the selected attendees?"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3128
+#: src/legacy/quick-event-register.php:3129
 msgid "Delete Blanks"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3128
+#: src/legacy/quick-event-register.php:3129
 msgid "Are you sure you want to delete the blanks?"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3129
+#: src/legacy/quick-event-register.php:3130
 msgid "Add Attendee"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3129
+#: src/legacy/quick-event-register.php:3130
 msgid "Are you sure you want to manually add an attendee? The number of free places will not be checked here. They WILL NOT get an auto email so you may need to email them details manually"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3140
+#: src/legacy/quick-event-register.php:3141
 msgid "Sort by:"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3145
+#: src/legacy/quick-event-register.php:3146
 msgid "Last Name"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3153
+#: src/legacy/quick-event-register.php:3154
 msgid "Date Added (Ascending)"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3155
+#: src/legacy/quick-event-register.php:3156
 msgid "Date Added (Decending)"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3163
+#: src/legacy/quick-event-register.php:3164
 msgid "Edit Attendees"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3164
+#: src/legacy/quick-event-register.php:3165
 msgid "Edit Selected"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3161
+#: src/legacy/quick-event-register.php:3162
 msgid "Update Attendees"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3168
+#: src/legacy/quick-event-register.php:3169
 msgid "Approve Selected"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3169
+#: src/legacy/quick-event-register.php:3170
 msgid "Are you sure you want to approve the selected attendees?"
 msgstr ""
 
-#: src/legacy/quick-event-register.php:3209
+#: src/legacy/quick-event-register.php:3210
 msgid "Select an Event"
 msgstr ""
 

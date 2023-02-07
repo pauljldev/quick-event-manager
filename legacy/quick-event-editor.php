@@ -407,9 +407,9 @@ function event_details_meta()
     <td style="vertical-align:top;"><label>' . esc_html__( 'Event Image', 'quick-event-manager' ) . ': </label></td>' ;
     
     if ( qem_get_event_field( "event_image" ) ) {
-        echo  '<td><img class="qem-image qem-no-image" rel="' . esc_url( plugin_dir_url( __FILE__ ) ) . 'images/no_image.png" alt="' . esc_url( plugin_dir_url( __FILE__ ) ) . 'images/image_error.png" src=' . esc_url( qem_get_event_field( "event_image" ) ) . '></td>' ;
+        echo  '<td><img class="qem-image qem-no-image" rel="' . esc_url( QUICK_EVENT_MANAGER_PLUGIN_URL ) . 'legacy/images/no_image.png" alt="' . esc_url( QUICK_EVENT_MANAGER_PLUGIN_URL ) . 'legacy/images/image_error.png" src=' . esc_url( qem_get_event_field( "event_image" ) ) . '></td>' ;
     } else {
-        echo  '<td><img class="qem-image qem-no-image" rel="' . esc_url( plugin_dir_url( __FILE__ ) ) . 'images/no_image.png" alt="' . esc_url( plugin_dir_url( __FILE__ ) ) . 'images/image_error.png" src="' . esc_url( plugin_dir_url( __FILE__ ) ) . 'images/no_image.png"></td>' ;
+        echo  '<td><img class="qem-image qem-no-image" rel="' . esc_url( QUICK_EVENT_MANAGER_PLUGIN_URL ) . 'legacy/images/no_image.png" alt="' . esc_url( QUICK_EVENT_MANAGER_PLUGIN_URL ) . 'legacy/images/image_error.png" src="' . esc_url( QUICK_EVENT_MANAGER_PLUGIN_URL ) . 'legacy/images/no_image.png"></td>' ;
     }
     
     echo  '</tr>

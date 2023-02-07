@@ -9,7 +9,8 @@ function qem_download_files()
             wp_die( esc_html__( 'Invalid Nonce, sorry something went wrong', 'quick-event-manager' ) );
         }
         $event = (int) $_POST['qem_download_form'];
-        $title = sanitize_text_field( $_POST['qem_download_title'] );
+        // get slug of $event
+        $title = get_post_field( 'post_name', $event );
         //$register = qem_get_stored_register();
         $register = get_custom_registration_form( $event );
         $payment = qem_get_stored_payment();
