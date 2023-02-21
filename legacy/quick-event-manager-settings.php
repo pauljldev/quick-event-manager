@@ -1872,10 +1872,10 @@ function qem_register()
                 qem_reg_fields_td_e(
                     $name,
                     $register,
-                    'usedropdown2',
+                    'usedropdown',
                     '',
                     esc_html__( 'Dropdown 1', 'quick-event-manager' ),
-                    'dropdown'
+                    'yourdropdown'
                 );
                 break;
             case 'field12':

@@ -46,11 +46,11 @@ class Admin {
 	}
 
 	public function enqueue_styles() {
-		wp_enqueue_style( $this->plugin_name, QUICK_EVENT_MANAGER_PLUGIN_URL . 'css/admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, QUICK_EVENT_MANAGER_PLUGIN_URL . 'ui/admin/css/admin.css', array(), $this->version, 'all' );
 	}
 
 	public function enqueue_scripts() {
-		wp_enqueue_script( $this->plugin_name, QUICK_EVENT_MANAGER_PLUGIN_URL . 'js/admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, QUICK_EVENT_MANAGER_PLUGIN_URL . 'ui/admin/js/admin.js', array( 'jquery' ), $this->version, false );
 	}
 
 	public function admin_notices() {

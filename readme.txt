@@ -2,7 +2,7 @@
 Contributors: Fullworks
 Tags: event manager, calendar, events, event booking, event calendar
 Tested up to: 6.1
-Stable tag: 9.8.4
+Stable tag: 9.8.5
 Type: freemium
 
 Simple event manager. No messing about, just add events and a shortcode and the plugin does the rest for you.
@@ -90,15 +90,15 @@ Well OK yes you can add more fields if you want but you are going to have to fid
 
 
 == Changelog ==
+= 9.8.5 =
+* Permit multiple guest notification emails (Pro Only)
+* Fix some missing columns on reports
+* set print css to print all qem admin pages
+
 = 9.8.4 =
 * Fix end date when blank in Guest Post email (Pro Only)
 * Fix csv example link (Pro Only)
 
-= 9.8.3 =
-* Fix dates in Guest Post email (Pro Only)
-
-= 9.8.2 =
-* Change registration nonce checking due to cache issues
 
 
 

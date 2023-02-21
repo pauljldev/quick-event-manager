@@ -20,7 +20,7 @@
  *     along with  this plugin.  https://www.gnu.org/licenses/gpl-3.0.en.html
  */
 @media print {
-  .admin_page_qem-registrations-report, .admin_page_qem-registrations-by-email, .admin_page_qem-registrations-by-name, .admin_page_qem-registrations-not-attending, .toplevel_page_qem-registration {
+  .qem-admin-page {
     div.fs-notice.success,div.fs-notice.updated,div.fs-notice.promotion{
       display: none!important;
     }

@@ -1,7 +1,12 @@
 == Changelog ==
+= 9.8.5 =
+* Permit multiple guest notification emails (Pro Only)
+* Fix some missing columns on reports
+
 = 9.8.4 =
 * Fix end date when blank in Guest Post email (Pro Only)
 * Fix csv example link (Pro Only)
+* set print css to print all qem admin pages
 
 = 9.8.3 =
 * Fix dates in Guest Post email (Pro Only)

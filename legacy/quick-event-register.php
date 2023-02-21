@@ -1912,7 +1912,7 @@ function qem_build_registration_table_esc(
                 
                 if ( $register['usedropdown'] ) {
                     $arr = explode( ",", $register['yourdropdown'] );
-                    $content_escaped .= '<th class="yourdropdown">' . wp_kses_post( $arr[0] ) . '</th>';
+                    $content_escaped .= '<th class="yourdropdown">' . esc_html__( 'Dropdown 1', 'quick-event-manager' ) . '</th>';
                 }
                 
                 break;
@@ -1920,7 +1920,7 @@ function qem_build_registration_table_esc(
                 
                 if ( isset( $register['useselector'] ) && $register['useselector'] ) {
                     $arr = explode( ",", $register['yourselector'] );
-                    $content_escaped .= '<th class="yourselector">' . wp_kses_post( $arr[0] ) . '</th>';
+                    $content_escaped .= '<th class="yourselector">' . esc_html__( 'Dropdown 2', 'quick-event-manager' ) . '</th>';
                 }
                 
                 break;
@@ -2103,7 +2103,7 @@ function qem_build_registration_table_esc(
                     case 'field14':
                         $content_escaped .= qem_build_reg_input_esc(
                             'type="text"',
-                            'usedselector',
+                            'useselector',
                             'yourselector',
                             $register,
                             $selected,

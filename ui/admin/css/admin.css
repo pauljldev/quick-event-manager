@@ -20,37 +20,37 @@
  *     along with  this plugin.  https://www.gnu.org/licenses/gpl-3.0.en.html
  */
 @media print {
-  .admin_page_qem-registrations-report div.fs-notice.success, .admin_page_qem-registrations-report div.fs-notice.updated, .admin_page_qem-registrations-report div.fs-notice.promotion, .admin_page_qem-registrations-by-email div.fs-notice.success, .admin_page_qem-registrations-by-email div.fs-notice.updated, .admin_page_qem-registrations-by-email div.fs-notice.promotion, .admin_page_qem-registrations-by-name div.fs-notice.success, .admin_page_qem-registrations-by-name div.fs-notice.updated, .admin_page_qem-registrations-by-name div.fs-notice.promotion, .admin_page_qem-registrations-not-attending div.fs-notice.success, .admin_page_qem-registrations-not-attending div.fs-notice.updated, .admin_page_qem-registrations-not-attending div.fs-notice.promotion, .toplevel_page_qem-registration div.fs-notice.success, .toplevel_page_qem-registration div.fs-notice.updated, .toplevel_page_qem-registration div.fs-notice.promotion {
+  .qem-admin-page div.fs-notice.success, .qem-admin-page div.fs-notice.updated, .qem-admin-page div.fs-notice.promotion {
     display: none !important;
   }
-  .admin_page_qem-registrations-report #wpadminbar, .admin_page_qem-registrations-by-email #wpadminbar, .admin_page_qem-registrations-by-name #wpadminbar, .admin_page_qem-registrations-not-attending #wpadminbar, .toplevel_page_qem-registration #wpadminbar {
+  .qem-admin-page #wpadminbar {
     display: none;
   }
-  .admin_page_qem-registrations-report #adminmenumain, .admin_page_qem-registrations-by-email #adminmenumain, .admin_page_qem-registrations-by-name #adminmenumain, .admin_page_qem-registrations-not-attending #adminmenumain, .toplevel_page_qem-registration #adminmenumain {
+  .qem-admin-page #adminmenumain {
     display: none;
   }
-  .admin_page_qem-registrations-report #wpcontent, .admin_page_qem-registrations-by-email #wpcontent, .admin_page_qem-registrations-by-name #wpcontent, .admin_page_qem-registrations-not-attending #wpcontent, .toplevel_page_qem-registration #wpcontent {
+  .qem-admin-page #wpcontent {
     margin-left: 0;
   }
-  .admin_page_qem-registrations-report #wpfooter, .admin_page_qem-registrations-by-email #wpfooter, .admin_page_qem-registrations-by-name #wpfooter, .admin_page_qem-registrations-not-attending #wpfooter, .toplevel_page_qem-registration #wpfooter {
+  .qem-admin-page #wpfooter {
     display: none;
   }
-  .admin_page_qem-registrations-report .notice, .admin_page_qem-registrations-by-email .notice, .admin_page_qem-registrations-by-name .notice, .admin_page_qem-registrations-not-attending .notice, .toplevel_page_qem-registration .notice {
+  .qem-admin-page .notice {
     display: none;
   }
-  .admin_page_qem-registrations-report .select-form-control, .admin_page_qem-registrations-by-email .select-form-control, .admin_page_qem-registrations-by-name .select-form-control, .admin_page_qem-registrations-not-attending .select-form-control, .toplevel_page_qem-registration .select-form-control {
+  .qem-admin-page .select-form-control {
     display: none;
   }
-  .admin_page_qem-registrations-report .bottom-actions, .admin_page_qem-registrations-by-email .bottom-actions, .admin_page_qem-registrations-by-name .bottom-actions, .admin_page_qem-registrations-not-attending .bottom-actions, .toplevel_page_qem-registration .bottom-actions {
+  .qem-admin-page .bottom-actions {
     display: none;
   }
-  .admin_page_qem-registrations-report .checkbox, .admin_page_qem-registrations-by-email .checkbox, .admin_page_qem-registrations-by-name .checkbox, .admin_page_qem-registrations-not-attending .checkbox, .toplevel_page_qem-registration .checkbox {
+  .qem-admin-page .checkbox {
     display: none;
   }
-  .admin_page_qem-registrations-report #qem-widget, .admin_page_qem-registrations-by-email #qem-widget, .admin_page_qem-registrations-by-name #qem-widget, .admin_page_qem-registrations-not-attending #qem-widget, .toplevel_page_qem-registration #qem-widget {
+  .qem-admin-page #qem-widget {
     font-size: 75%;
   }
-  .admin_page_qem-registrations-report .no-print, .admin_page_qem-registrations-by-email .no-print, .admin_page_qem-registrations-by-name .no-print, .admin_page_qem-registrations-not-attending .no-print, .toplevel_page_qem-registration .no-print {
+  .qem-admin-page .no-print {
     display: none;
   }
 }
