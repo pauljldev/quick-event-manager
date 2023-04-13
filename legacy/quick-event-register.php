@@ -434,8 +434,15 @@ function qem_display_form_unprotected_esc( $values, $errors, $registered )
     global  $qem_fs ;
     global  $post ;
     $id = ( isset( $post->ID ) ? get_the_ID() : null );
-    $qem_number_places_available = qem_number_places_available( $id );
-    $event_number_max = get_post_meta( $id, 'event_number', true );
+    
+    if ( null === $id ) {
+        $qem_number_places_available = 999999;
+        $event_number_max = '';
+    } else {
+        $qem_number_places_available = qem_number_places_available( $id );
+        $event_number_max = get_post_meta( $id, 'event_number', true );
+    }
+    
     $cutoff = '';
     $notopen = '';
     $cutoff_display_date = '';
@@ -2266,6 +2273,14 @@ function qem_sort_date_desc( $messages )
 {
     usort( $messages, function ( $a, $b ) {
         return strcmp( strtolower( $b['datetime_added'] ), strtolower( $a['datetime_added'] ) );
+    } );
+    return $messages;
+}
+
+function qem_sort_date_asc( $messages )
+{
+    usort( $messages, function ( $a, $b ) {
+        return strcmp( strtolower( $a['datetime_added'] ), strtolower( $b['datetime_added'] ) );
     } );
     return $messages;
 }

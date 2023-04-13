@@ -1,4 +1,12 @@
 == Changelog ==
+= 9.8.5.2 =
+* Fix registration form not showing
+
+= 9.8.5.1 =
+* Fix individual email sending and sort into date (Pro Only)
+* Fix missing form preview
+* Make popup responsive
+
 = 9.8.5 =
 * Permit multiple guest notification emails (Pro Only)
 * Fix some missing columns on reports

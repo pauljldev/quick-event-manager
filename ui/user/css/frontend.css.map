@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAAA;;;;;;;;;;;;;;;;;;;;GAoBG;AACH,YAAa;EACX,UAAU,EAAE,oCAAoC;EAChD,eAAe,EAAE,SAAS;EAC1B,OAAO,EAAE,YAAY;EACrB,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,KAAK;EACZ,cAAc,EAAE,MAAM;EACtB,OAAO,EAAE,EAAE;EACX,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,UAAU;EAElB,sBAAY;IACV,UAAU,EAAE,OAAO",
-"sources": ["frontend.scss"],
-"names": [],
-"file": "frontend.css"
-}
+{"version":3,"sourceRoot":"","sources":["frontend.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAqBA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE","file":"frontend.css"}

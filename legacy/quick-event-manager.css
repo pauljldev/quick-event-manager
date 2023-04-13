@@ -333,6 +333,10 @@ max-width: 768px) {
 	}
 }
 
+#xlightbox .qem {
+	width: auto;
+}
+
 #xlightbox {
 	text-align: left;
 	padding: 10px;

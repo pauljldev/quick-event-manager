@@ -26,11 +26,13 @@
   visibility: hidden;
   float: right;
   vertical-align: middle;
-  opacity: .7;
+  opacity: 0.7;
   width: 20px;
   height: 20px;
-  margin: 4px 10px 0; }
-  .qem-spinner.is-active {
-    visibility: visible; }
+  margin: 4px 10px 0;
+}
+.qem-spinner.is-active {
+  visibility: visible;
+}
 
 /*# sourceMappingURL=frontend.css.map */
