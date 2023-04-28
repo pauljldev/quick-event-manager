@@ -671,8 +671,16 @@ function qem_build_event(
                 if ( !empty($event['deposit_before_label']) ) {
                     $bcaption = $event['deposit_before_label'] . ' ';
                 }
-                if ( !empty($event['deposit_after_label']) ) {
-                    $acaption = ' ' . $event['deposit_after_label'];
+                switch($custom['event_deposittype'][0]){
+                    case "perperson":
+                        $acaption = ' per person';
+                        break;
+                    case "perevent":
+                        $acaption = ' per event';
+                        break;
+                    default:
+                    $acaption = ' ';
+                        break;
                 }
                 if ( !empty($custom['event_deposit'][0]) ) {
                     $output .= ' (' . $bcaption . $custom['event_deposit'][0] . $acaption . ')';
